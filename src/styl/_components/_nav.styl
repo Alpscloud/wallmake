@@ -1,9 +1,28 @@
 .nav
-	&__item
-		display inline-block
-		margin-right 15px
-		&:last-child
-			margin-right 0
-	&__link
-		display block
-		color $text-color
+	line-height 1
+	margin-bottom -2px
+	ul
+		display flex
+		flex-wrap nowrap
+		align-items flex-start
+		li
+			margin-right 30px
+			&:last-child
+				margin-right 0
+				
+			&.current-menu-item
+				a
+					&:before
+						transform translateX(0)
+		a
+			text-transform uppercase
+			font 15px $Bold
+			@extends .link
+			
+	&-categories
+		ul
+			justify-content center
+			a
+				font-family $Med
+				text-transform none
+

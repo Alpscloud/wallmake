@@ -1,2 +1,86 @@
 .header
-	background-color $header-bg
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 10
+	color $basic-white-color
+	transition all .17s ease-in-out
+	&:before,
+	&:after
+		pseudo()
+		position absolute
+		fullSize()
+		pointer-events none
+		transition opacity .23s ease-in-out
+	&:before
+		background-color rgba($overlay-bg, .3)
+		backdrop-filter blur(5px)
+	&:after
+		background-color $header-bg
+		opacity 0
+		
+	&.is-fixed
+		color $dark-text-color
+		
+		&:after
+			opacity 1
+		&:before
+			opacity 0
+		
+		.header-border-block
+			border-color #C4C4C4
+			
+		.callback
+			border-color $dark-text-color
+			
+		.logo
+			img
+				filter brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(18%) hue-rotate(336deg) brightness(102%) contrast(86%)
+	a
+		color inherit
+		
+	&-tools
+		display flex
+		flex-wrap nowrap
+	
+		.link
+			margin-right 12px
+			line-height 1
+			vertical-align middle
+			&:last-child
+				margin-right 0
+		
+	&-container
+		padding-left 60px
+		padding-right 60px
+		
+	&-top
+		padding 7px 0
+		
+	&-center
+		position relative
+		height 60px
+		display flex
+		align-items center
+		padding 7px 0
+		
+		.logo
+			position absolute
+			position-center()
+			
+	&-bottom
+		
+		padding 12.5px 0
+		
+	&-border-block
+		border-bottom 1px solid rgba($basic-white-color, .6)
+		transition border-color .17s ease-in-out
+		position relative
+		z-index 2
+
+.callback
+	padding-left 12px
+	border-left 1px solid $basic-white-color
+	margin-left 12px
+	transition border-color .17s ease-in-out
