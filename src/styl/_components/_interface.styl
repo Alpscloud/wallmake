@@ -7,6 +7,7 @@
 	font-size inherit
 	font-family inherit
 	line-height inherit
+	white-space nowrap
 	&:before
 		pseudo()
 		position absolute
@@ -42,4 +43,51 @@
 			&:before
 				transform translate(5px, -50%)
 		
+
+.links
+	.link
+		margin-left 40px
+		font-size 14px
+
 		
+
+.socials
+	display flex
+	align-items center
+	flex-wrap nowrap
+	&-label
+		font 12px $SemiBold
+		margin-right 30px
+		display inline-block
+		
+		
+	&-list
+		white-space nowrap
+		font-size 0
+		height 24px
+		li
+			display inline-block
+			margin-right 6px
+			&:last-child
+				margin-right 0
+				
+		a
+			display block
+			width 24px
+			height 24px
+			svg
+				svg()
+				fill $basic-black-color
+			&:hover
+				svg
+					fill $dark-text-color
+	
+
+.subscribe-form
+	width 100%
+	flex 1
+	max-width 420px
+	&__title
+		padding-left 16px
+		background url('../img/icons/svg/envelope.svg') left center no-repeat / 12px 12px
+		margin-bottom 40px

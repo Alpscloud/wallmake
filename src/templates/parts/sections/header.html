@@ -5,7 +5,7 @@
 				<div class="header-tools">
 
 					<div class="header-tools__links">
-						<a href="#" class="link">Калькулятор</a>
+						<a href="#calculator" class="link js-smooth-scroll-link">Калькулятор</a>
 						<button type="button" class="link">Поиск по сайту</button>
 					</div>
 
@@ -37,16 +37,7 @@
 
 	<div class="header-bottom header-border-block">
 		<div class="header-container">
-			<nav class="nav nav-categories">
-				<ul>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Интерьеры</a></li>
-					<li><a href="#">Строительство</a></li>
-					<li><a href="#">Проекты домов</a></li>
-					<li><a href="#">Крупные объекты</a></li>
-					<li><a href="#">Все услуги</a></li>
-				</ul>
-			</nav>
+			{% include '../components/nav.html' %}
 		</div>
 	</div>
 	<!-- //top bottom -->

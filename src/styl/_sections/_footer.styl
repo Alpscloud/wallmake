@@ -1,2 +1,49 @@
 .footer
 	background-color $footer-bg
+	padding 50px 0 40px
+	color $dark-text-color
+	font 12px $SemiBold
+	
+	.logo
+		margin-bottom 40px
+		&:before
+			display none
+	
+	a
+		@extends .link
+		font-size inherit
+		font-family inherit
+	
+	&__row
+		position relative
+		
+	&-bottom
+		padding-top 24px
+		border-top 1px solid $border-color
+		
+		&-nav
+			li
+				display inline-block
+				margin-right 26px
+				
+				&:last-child
+					margin-right 0
+	&-center
+		margin-bottom 110px
+		
+.copyright
+	position absolute
+	position-center()
+	
+.footer-nav
+	column-count 3
+	column-gap 30px
+	margin-bottom -20px
+	li
+		margin-bottom 20px
+		
+	a[href^="tel:"]
+		font-size 16px
+		
+	
+

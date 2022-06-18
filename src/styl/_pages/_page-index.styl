@@ -74,9 +74,6 @@
 				&:last-child
 					margin-bottom 0
 					
-	&-links
-		.link
-			margin-left 40px
 
 
 	
@@ -122,3 +119,154 @@
 		flex 1
 		width 100%
 		max-width 490px
+		
+	.links
+		margin-top 40px
+		
+	&-total
+		letter-spacing 0.02em
+		font-size 14px
+		line-height 1
+	
+		span
+			white-space nowrap
+			line-height 1
+			color $dark-text-color
+			font 24px $Med
+			margin-left 4px
+			
+	&-range
+		margin-bottom 35px
+		max-width 380px
+		
+		&__value
+			margin-bottom 30px
+			display flex
+			flex-wrap nowrap
+			justify-content space-between
+			align-items center
+			&-label
+				font-size 14px
+			&-val
+				font 24px $Med
+				color $dark-text-color
+				display inline-block
+				position relative
+				
+				.sup
+					font-size 16px
+					color $text-color
+					vertical-align middle
+					
+		
+		&__input
+			height 4px
+			border-radius 50px
+			background-color rgba($border-color, .5)
+			box-shadow none
+			border none !important
+			
+			.ui-slider-range
+				background-color $dark-text-color
+				
+			.ui-slider-handle
+				border-radius 50%
+				width 30px
+				height 30px
+				background-color $basic-white-color
+				border 1px solid $border-color
+				box-shadow 0px 0px 6px rgba(78, 60, 16, 0.25)
+				vertical-center()
+				margin-left -15px
+				&.ui-state-focus
+					border 1px solid $border-color
+					color $border-color
+		
+	&-radios
+		display flex
+		flex-wrap nowrap
+		margin-bottom 40px
+		
+	&-radio
+		display block
+		input
+			display none
+			&:checked
+				+ span
+					color $dark-text-color
+					&:before
+						transform translateX(0)
+			
+		span
+			letter-spacing 0.02em
+			display block
+			padding-bottom 16px
+			border-bottom 1px solid $border-color
+			padding-right 15px
+			position relative
+			overflow hidden
+			&:hover
+				cursor pointer
+			&:before
+				pseudo()
+				position absolute
+				z-index 1
+				width 100%
+				left 0
+				height 3px
+				background-color currentColor
+				bottom 0
+				transition transform .17s ease-in-out
+				transform translateX(-101%)
+			
+		&:last-child
+			span
+				padding-right 0
+		
+	&-notice
+		margin-bottom 40px
+		background-color $color-bg
+		padding 12px
+		font 12px $Med
+		color $dark-text-color
+		max-width 380px
+		
+// Work steps
+.work-steps
+	margin-left -1px
+	margin-right -1px
+	margin-bottom -2px
+	
+.work-step
+	background-color $color-bg
+	height 100%
+	padding 40px 20px
+	font 12px $Med
+	line-height 16px
+	&__title
+		font 12px $Med
+		color $dark-text-color
+		text-transform uppercase
+		display flex
+		margin-bottom 10px
+		align-items flex-start
+		min-height 34px
+		i
+			font-size 15px
+			display inline-block
+			margin-top -3px
+			margin-right 4px
+	&__img
+		height 185px
+		flex-col-center()
+		margin-bottom 40px
+		img
+			@extends .content-img
+			
+	&__wrapper
+		padding-left 1px
+		padding-right 1px
+		margin-bottom 2px
+		
+.btn-wrapper
+	margin-top 60px

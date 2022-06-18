@@ -4,6 +4,8 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../parts/components/preloader.html' %}
+
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
@@ -90,7 +92,7 @@
 						</header>
 
 						<div class="chapter-card__img">
-							<img src="img/chapters/1.png" alt="">
+							<img src="img/chapters/3.svg" alt="">
 						</div>
 
 						<div class="chapter-card__information">
@@ -121,7 +123,7 @@
 								<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
 							</div>
 
-							<div class="story-links row align-vertical-center align-horisontal-start row-nowrap">
+							<div class="links row align-vertical-center align-horisontal-start row-nowrap">
 								<button type="button" class="btn">Заказать услугу</button>
 
 								<a href="#" class="link">Читать далее</a>
@@ -212,12 +214,57 @@
 			</button>
 			<!-- //video -->
 
-			<section class="sect__calculator gutters">
+			<section class="sect__calculator gutters" id="calculator">
 				<div class="container">
-					<div class="calculator row row-nowrap row-gutters align-vertical-center align-horisontal-between gutter-right">
+					<div class="calculator-row row row-nowrap row-gutters align-vertical-center align-horisontal-between gutter-right">
 						
 						<div class="calculator-content col-gutters">
 							<h2 class="sect-title">Стоимость объекта<br><i>“под ключ”</i></h2>
+
+							<div class="calculator">
+								<div class="calculator-radios">
+									<label class="calculator-radio">
+										<input type="radio" name="type" value="5000" checked>
+										<span>Интерьер</span>
+									</label>
+
+									<label class="calculator-radio">
+										<input type="radio" name="type" value="20000">
+										<span>Строительство</span>
+									</label>
+
+									<label class="calculator-radio">
+										<input type="radio" name="type" value="50000">
+										<span>Крупные объекты</span>
+									</label>
+								</div>
+
+								<div class="calculator-notice text-center">
+									<p>Проектирование + ремонт + мебелирование и декор </p>
+								</div>
+
+								<div class="calculator-range">
+									<div class="calculator-range__value">
+										<span class="calculator-range__value-label l-spacing">Квадратура объекта:</span>
+										<span class="calculator-range__value-val" >
+											<span class="js-calculator-range-value">1</span>
+											<span class="sup">м&#178;</span>
+
+										</span>
+									</div>
+									<div class="calculator-range__input js-calculator-range" data-max="1000"></div>
+								</div>
+
+
+								<p class="calculator-total">Стоимость : <span class="js-calculator-total">от 5000 руб.</span></p>
+
+
+								<div class="links row align-vertical-center align-horisontal-between row-nowrap">
+									<button class="btn" type="button">Записаться на консультацию</button>
+
+									<a href="#" class="link">Интерьер поэтапно</a>
+								</div>
+							</div>
 						</div>
 
 						<div class="simple-slider__wrapper col-gutters">
@@ -234,6 +281,64 @@
 				<!-- //container -->
 			</section>
 			<!-- //sect calculator -->
+
+			<section class="sect__work-steps gutter-bottom">
+				<div class="container">
+					<h2 class="sect-title">Этапы работы<br><i>СДАЧА ПРОЕКТА</i></h2>
+
+					<div class="work-steps row align-horisontal-start">
+						<div class="work-step__wrapper col-w-25">
+							<div class="work-step">
+								<h3 class="work-step__title"><i>01</i> ТОЧНЫЙ РАССЧЕТ</h3>
+								<div class="work-step__img">
+									<img src="img/steps/1.png" alt="">
+								</div>
+								<p>Разработанная нами программа, рассчитывает абсолютно любой дом с точностью до 98%. Выезд прораба и менеджера проекта</p>
+							</div>
+						</div>
+						<!-- //step -->
+
+						<div class="work-step__wrapper col-w-25">
+							<div class="work-step">
+								<h3 class="work-step__title"><i>02</i> ПОДПИСАНИЕ ДОГОВОРА</h3>
+								<div class="work-step__img">
+									<img src="img/steps/2.png" alt="">
+								</div>
+								<p>5 лет гарантии и постгарантийное облуживание</p>
+							</div>
+						</div>
+						<!-- //step -->
+
+						<div class="work-step__wrapper col-w-25">
+							<div class="work-step">
+								<h3 class="work-step__title"><i>03</i> СТРОИТЕЛЬСТВО, РЕМОНТные работы, МЕБЕЛИРОВКА, декор</h3>
+								<div class="work-step__img">
+									<img src="img/steps/3.png" alt="">
+								</div>
+								<p>Видео отчет на каждом этапе. Фиксированные сроки. Мебель и декор с дополнительной скидкой</p>
+							</div>
+						</div>
+						<!-- //step -->
+
+						<div class="work-step__wrapper col-w-25">
+							<div class="work-step">
+								<h3 class="work-step__title"><i>04</i> ПЕРЕЕЗД  в  готовое пространство</h3>
+								<div class="work-step__img">
+									<img src="img/steps/4.png" alt="">
+								</div>
+								<p>Помощь в переезде</p>
+							</div>
+						</div>
+						<!-- //step -->
+					</div>
+
+					<div class="btn-wrapper text-center">
+						<a href="#" class="btn">Рассчитать стоимость прямо сейчас</a>
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+			<!-- //sect work steps -->
 
 		</main>
 		<!-- //Main -->

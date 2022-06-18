@@ -18,34 +18,33 @@ input[type="search"]::-webkit-search-results-decoration
 	&-input
 		display block
 		width 100%
-		padding 10px 15px
+		padding 0 0 10px 0
 		text-align left
-		background-color $light-color
-		border 2px solid transparent
-		font 1em $Reg
-		color $text-color
+		border-bottom 1px solid $border-color
+		font 12px $SemiBold
+		color $dark-text-color
 		&:hover,
 		&:focus
 			border-color $accent-color
 		&::-webkit-input-placeholder
-			font 1em $Reg
-			color $text-color
+			font 12px $SemiBold
+			color $dark-text-color
 		&::-moz-placeholder
-			font 1em $Reg
-			color $text-color
+			font 12px $SemiBold
+			color $dark-text-color
 		&:-moz-placeholder
-			font 1em $Reg
-			color $text-color
+			font 12px $SemiBold
+			color $dark-text-color
 		&:-ms-input-placeholder
-			font 1em $Reg
-			color $text-color
+			font 12px $SemiBold
+			color $dark-text-color
 			
 		&.is-error
 			border-color red
 			
 	&-group
 		position relative
-		margin-bottom 10px
+		margin-bottom 25px
 		&:last-child
 			margin-bottom 0
 			

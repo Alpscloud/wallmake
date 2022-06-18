@@ -5,6 +5,16 @@ $(document).ready(function() {
 			timer; // for disable scroll
 	// ========= =========== =========== ===========
 
+	var headerHeight = $('.header').innerHeight();
+
+	$('.js-smooth-scroll-link').on('click', function (e) {
+		e.preventDefault();
+		var id = $(this).attr('href'),
+			top = $(id).offset().top - headerHeight;
+
+		$('html, body').animate({scrollTop: top}, 400);
+	});	
+
 	// Disable hover effect when client scrolles the page
 	$(window).on('scroll',function() {
 		clearTimeout(timer);
@@ -71,6 +81,61 @@ $(document).ready(function() {
 
 		});
 	}
+
+
+
+
+
+	if ($('.js-calculator-range').length > 0) {
+
+		var price = parseInt($('.calculator-radio input[type=radio]:checked').val());
+
+		$('.calculator-radio input[type=radio]').on('change', function() {
+			price = parseInt($(this).val());
+
+			calculate();
+			return price;
+
+			
+
+			
+		});
+
+
+		var range = $('.js-calculator-range');
+		var max = parseInt(range.attr('data-max'));
+		var rangeVal = 1;
+
+		range.slider({
+			animate: "slow",
+			range: "min",
+			min: 0,
+			max: max,
+			steps: 20,
+			value: 1,
+			slide: function(event, ui) {
+				rangeVal = ui.value;
+
+				$('.js-calculator-range-value').text(rangeVal);
+				$('.js-calculator-total').html('от ' + (ui.value * price).toLocaleString() + ' руб.');
+
+				return rangeVal;
+			
+			}
+		});
+
+		
+
+		function calculate() {
+			$('.js-calculator-total').html('от ' + (rangeVal * price).toLocaleString() + ' руб.');
+		}
+
+	}
+
+
+	setTimeout(function(){
+		$('body').addClass('is-loaded');
+	}, 1500);
 
 
 });
