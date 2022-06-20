@@ -105,7 +105,8 @@
 		width 100%
 		height 100%
 		object-fit cover
-	
+		will-change transform
+		transition transform .17s ease-in-out
 
 .content
 	*
@@ -151,3 +152,21 @@
 
 .l-spacing
 	letter-spacing 0.02em
+	
+.page-inner
+	.main
+		padding-top 146px
+		
+.sect__consultation
+	background-color $consultation-section-bg
+	text-align center
+	color $basic-white-color
+	.sect-title
+		color inherit
+		
+.consultation-form
+	margin -32px auto 0
+	&__title
+		font 14px $Reg
+		margin-bottom 40px
+		color #F3F3F3

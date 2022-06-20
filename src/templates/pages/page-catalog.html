@@ -1,0 +1,127 @@
+{% include '../parts/head.html' %}
+<body class="page-inner page-with-light-header">
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		{% include '../parts/components/preloader.html' %}
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main">
+			<section class="sect__catalog">
+				<h1 class="w3c">Каталог</h1>
+
+				<div class="container">
+
+
+					<div class="catalog">
+						<form class="catalog-filter row align-horisontal-center">
+							<label class="catalog-filter__category">
+								<input type="checkbox" name="Все">
+								<span>Все</span>
+							</label>
+
+							<label class="catalog-filter__category">
+								<input type="checkbox" name="Интерьеры">
+								<span>Интерьеры</span>
+							</label>
+
+							<label class="catalog-filter__category">
+								<input type="checkbox" name="Строительство">
+								<span>Строительство</span>
+							</label>
+
+							<label class="catalog-filter__category">
+								<input type="checkbox" name="Крупные объекты">
+								<span>Крупные объекты</span>
+							</label>
+
+							<label class="catalog-filter__category">
+								<input type="checkbox" name="Готовые проекты">
+								<span>Готовые проекты</span>
+							</label>
+
+							<label class="catalog-filter__category">
+								<input type="checkbox" name="Коммерческие объекты">
+								<span>Коммерческие объекты</span>
+							</label>
+
+						</form>
+
+						<div class="projects-cards row align-horisontal-start">
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+							<article class="project-card__wrapper col-w-33">
+								{% include '../parts/components/project-card.html' %}
+							</article>
+							<!-- //catalog item -->
+
+
+						</div>
+					</div>
+
+				</div>
+				<!-- //container -->
+			</section>
+
+
+			{% include '../parts/sections/sect-consultation.html' %}
+			<!-- //sect work consultation -->
+
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>

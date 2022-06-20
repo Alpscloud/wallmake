@@ -18,6 +18,13 @@
 		img
 			filter brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)
 				
+		.chapter-card__img-double
+			img
+				&:nth-child(1)
+					opacity 0
+				&:nth-child(2)
+					opacity 1
+				
 	&__category
 		text-transform uppercase
 		font 12px $Med
@@ -44,10 +51,17 @@
 		height 350px
 		flex-col-center()
 		margin-bottom 20px
+		position relative
 		img
 			@extends .content-img
 			transition filter .17s ease-in-out
-			
+			transition opacity .17s ease-in-out
+			&:nth-child(2)
+				position absolute
+				position-center()
+				opacity 0
+				filter none !important
+					
 	&__footer
 		.btn:hover
 			color $basic-white-color
@@ -57,9 +71,8 @@
 .story
 	
 	&-content
-		max-width 380px
-		width 100%
-		flex 1
+		width 380px
+		flex none
 		&__text
 			margin-bottom 40px
 			h2, h3

@@ -37,6 +37,9 @@
 		.logo
 			img
 				filter brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(18%) hue-rotate(336deg) brightness(102%) contrast(86%)
+					
+		a:before
+			background-color $gold-color
 	a
 		color inherit
 		
@@ -84,3 +87,27 @@
 	border-left 1px solid $basic-white-color
 	margin-left 12px
 	transition border-color .17s ease-in-out
+
+
+.page-with-light-header
+	.header
+		color $dark-text-color
+		
+		&:after
+			opacity 1
+		&:before
+			opacity 0
+		
+		.header-border-block
+			border-color #C4C4C4
+			
+		.callback
+			border-color $dark-text-color
+			
+		.logo
+			img
+				filter brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(18%) hue-rotate(336deg) brightness(102%) contrast(86%)
+					
+		a:before,
+		.link:before
+			background-color $gold-color

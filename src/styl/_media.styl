@@ -8,4 +8,167 @@
 +max-screen-height(maxHeight)
 +min-screen-height(minHeight)
 */
++max-screen(1200px)
+	.gutter-right
+		padding-right 0
+	// Catalog
+	.project-card__wrapper
+		padding-left 15px
+		padding-right 15px
+		margin-bottom 30px
+		
+	.projects-cards
+		margin-left -15px
+		margin-right -15px
+		margin-bottom -30px
+		
+	// Promo
+	.promo-slider__controls
+		bottom 20px
+		right 20px
+		
++max-screen(1050px)
+	.header
+		display none
+		
++max-screen(992px)
+	// Footer
+	.footer-bottom
+		.row
+			flex-wrap wrap
+			flex-direction column
+		
+			align-items center
+			
+		&-nav
+			margin-bottom 16px
+			ul
+				text-align center
+			
+		.socials
+			margin-bottom 16px
+			
+	.copyright
+		transform none
+		top auto
+		left auto
+		position relative
+		width 100%
+		text-align center
+		
 
+	.footer
+		&__row
+			flex-wrap wrap
+			
+		&-center
+			margin-bottom 40px
+			
+		&-nav
+			width 100%
+			column-count 4
+			
+	.subscribe-form
+		flex none
+		max-width 100%
+		margin-top 60px
+		&__title
+			margin-bottom 20px
+			
+	// Catalog
+	.project-card__wrapper
+		width 50%
+		
+		
+		
+
++max-screen(700px)
+	// Consultation
+	.form-groups
+		flex-wrap wrap
+		.form-group
+			width 100%
+			
+	.form-notice
+		margin-top 20px
+		
+
++max-screen(620px)
+	.sect-title
+		font-size 26px
+		line-height 32px
+		
+	.gutter-top
+		padding-top 60px
+	.gutter-bottom
+		padding-bottom 60px
+	// Footer
+	.footer-bottom-nav
+		li
+			width 100%
+			display block
+			margin-right 0
+			margin-bottom 8px
+			&:last-child
+				margin-bottom 0
+				
+	.footer-nav
+		column-count 2
+		column-gap 10px
+		
+	// Consultation
+	.form
+		&-notice
+			font-size 12px
+			line-height 15px
+			
+	.catalog 
+		.project-card
+			padding-top 125%
+			&__title
+				padding 10px
+				font-size 12px
+				line-height 15px
+				
+		.project-labels
+			top 10px
+			left 10px
+			right 10px
+			
+		.project-label
+			font-size 8px
+			margin-bottom 4px
+			
+	.projects-cards
+		margin-left -5px
+		margin-right -5px
+		margin-bottom -10px
+		
+	.project-card
+		&__wrapper
+			padding-left 5px
+			padding-right 5px
+			margin-bottom 10px
+			
+	.catalog-filter
+		margin-left -5px
+		margin-right -5px
+		margin-bottom 20px
+		&__category
+			padding-left 5px
+			padding-right 5px
+			span
+				font-size 12px
+				&:before
+					top 5px
+				&:after
+					top 0
+					
++max-screen(374px)
+	.catalog 
+		.project-card__title
+			padding 5px
+		.project-labels
+			top 5px
+			left 5px
+			right 5px

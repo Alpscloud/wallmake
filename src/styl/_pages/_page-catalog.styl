@@ -1,0 +1,136 @@
+.sect__catalog
+	padding-bottom 60px
+	padding-top 60px
+	
+
+.catalog-filter
+	margin-bottom 38px
+	margin-left -16px
+	margin-right -16px
+	&__category
+		display block
+		padding-left 16px
+		padding-right 16px
+		margin-bottom 16px
+		text-align left
+		input
+			display none
+			&:checked
+				+ span:after
+					opacity 0
+		
+		span
+			display block
+			position relative
+			padding-left 20px
+			font 15px $Reg
+			color $dark-text-color
+			line-height 1
+			cursor pointer
+			&:before,
+			&:after
+				pseudo()
+				position absolute
+				background-color currentColor
+				transition opacity .17s ease-in-out
+			&:before
+				width 12px
+				height 2px
+				left 0
+				top 7px
+			&:after
+				height 12px
+				width 2px
+				left 5px
+				top 2px
+		
+
+.projects
+	&-cards
+		margin-left -30px
+		margin-right -30px
+		margin-bottom -60px
+
+.project
+	&-card
+		padding-top 129.5%
+		color $basic-white-color
+		display block
+		&:before
+			pseudo()
+			position absolute
+			fullSize()
+			background-color rgba($overlay-bg, .3)
+			z-index 1
+			transition background-color .17s ease-in-out
+		&:hover
+			&:before
+				background-color rgba($overlay-bg, .6) !important
+			img
+				transform translate(-50%, -50%) scale(1.1, 1.1)
+		&__wrapper
+			padding-left 30px
+			padding-right 30px
+			margin-bottom 60px	
+	
+		&__title
+			position absolute
+			bottom 30px
+			left 20px
+			text-transform uppercase
+			font 24px $Med
+			line-height 33px
+			color $basic-white-color
+			z-index 2
+
+.project-labels
+	display inline-flex
+	flex-wrap wrap
+	justify-content flex-start
+	position absolute
+	top 30px
+	left 20px
+	right 20px
+			
+.project-label
+	display inline-block
+	z-index 2
+	text-align center
+	color rgba($basic-white-color, .9)
+	padding 4px 8px
+	background-color rgba(255, 255, 255, 0.3)
+	border-radius 2px
+	text-transform uppercase
+	margin 0 8px 8px 0
+		
+		
+
+.catalog
+	.project
+		&-card
+			padding-top 100%
+			&:before
+				background-color rgba($overlay-bg, .2)
+				
+			&__title
+				left 0
+				bottom 0
+				right 0
+				padding 20px
+				background-color rgba(#F7F4F2, .9)
+				color $dark-text-color
+				font 16px $Med
+				text-transform none
+				@extends .l-spacing
+		&-label
+			background-color rgba(81, 74, 67, 0.9)
+			color rgba($basic-white-color, .9)
+			font-size 12px
+			padding 4px 8px
+			line-height 1.15
+			
+		&-labels
+			top 24px
+			left 16px
+			right 16px
+			

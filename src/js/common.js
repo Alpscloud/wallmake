@@ -133,6 +133,9 @@ $(document).ready(function() {
 	}
 
 
+	$("input[type=tel]").inputmask({"mask": "+7 (999) 999-9999","clearIncomplete": false});
+
+
 	setTimeout(function(){
 		$('body').addClass('is-loaded');
 	}, 1500);

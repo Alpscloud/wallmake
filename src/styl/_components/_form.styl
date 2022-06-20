@@ -12,6 +12,13 @@ input[type="search"]::-webkit-search-results-decoration
 	transform translate3d(0,0,0)
 
 
+.form-groups
+	margin-left -10px
+	margin-right -10px
+	
+	.form-group
+		padding-left 10px
+		padding-right 10px
 
 
 .form
@@ -42,6 +49,33 @@ input[type="search"]::-webkit-search-results-decoration
 		&.is-error
 			border-color red
 			
+		&-rounded
+			border 1px solid $basic-white-color
+			color $basic-white-color
+			padding 17px 24px
+			display block
+			width 100%
+			border-radius 100px
+			font 14px $Med
+			&:hover,
+			&:focus
+				border-color $accent-color
+			&::-webkit-input-placeholder
+				font 14px $Med
+				color $basic-white-color
+			&::-moz-placeholder
+				font 14px $Med
+				color $basic-white-color
+			&:-moz-placeholder
+				font 14px $Med
+				color $basic-white-color
+			&:-ms-input-placeholder
+				font 14px $Med
+				color $basic-white-color
+			
+		&.is-error
+			border-color red
+			
 	&-group
 		position relative
 		margin-bottom 25px
@@ -55,7 +89,10 @@ input[type="search"]::-webkit-search-results-decoration
 	&-textarea
 		min-height 200px
 	
-
+	&-notice
+		color #F3F3F3
+		font-size 14px
+		
 
 
 .form
