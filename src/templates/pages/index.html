@@ -145,37 +145,7 @@
 			</section>
 			<!-- //sect story -->
 
-			<section class="sect__portfolio gutter-bottom">
-				<div class="container">
-					<h2 class="sect-title">Реализованные<br><i>объекты</i></h2>
-					<a href="#" class="link-arrow">Посмотреть все</a>
-
-					<div class="portfolio-slider__wrapper">
-						<div class="portfolio-slider js-portfolio-slider">
-							{% include '../parts/components/project-card.html' %}
-							<!-- //slide -->
-
-							{% include '../parts/components/project-card.html' %}
-							<!-- //slide -->
-
-							{% include '../parts/components/project-card.html' %}
-							<!-- //slide -->
-
-							{% include '../parts/components/project-card.html' %}
-							<!-- //slide -->
-
-							{% include '../parts/components/project-card.html' %}
-							<!-- //slide -->
-
-							{% include '../parts/components/project-card.html' %}
-							<!-- //slide -->
-						</div>
-
-						<div class="slider-pagination rectangles-view js-portfolio-slider-pagination"></div>
-					</div>
-				</div>
-				<!-- //container -->
-			</section>
+			{% include '../parts/sections/sect-portfolio.html' %}
 			<!-- //sect portfolio -->
 
 			<button class="video bg" style="background-image: url('img/backgrounds/video.jpg');" type="button">

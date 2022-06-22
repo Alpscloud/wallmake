@@ -82,6 +82,19 @@ $(document).ready(function() {
 		});
 	}
 
+	if ($('.js-advantages-slider').length > 0) {
+		$('.js-advantages-slider').slick({
+			infinite: true,
+			centerMode: true,
+			slidesToShow: 3,
+			speed: 600,
+			arrows: false,
+			dots: true,
+			appendDots: $('.js-advantages-slider-pagination')
+
+		});
+	}
+
 
 
 
