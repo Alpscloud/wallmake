@@ -18,26 +18,26 @@
 		height 8px
 		display flex !important
 		justify-content flex-start
-		li
-			width 8px
-			height 8px
-			margin 0
-			margin-right 12px
-			&:last-child
-				margin-right 0
+	li
+		width 8px
+		height 8px
+		margin 0
+		margin-right 12px
+		&:last-child
+			margin-right 0
+		button
+			width 100%
+			height 100%
+			padding 0
+			border-radius 50%
+			background-color #c4c4c4
+			&:before,
+			&:after
+				display none
+				
+		&.slick-active
 			button
-				width 100%
-				height 100%
-				padding 0
-				border-radius 50%
-				background-color #c4c4c4
-				&:before,
-				&:after
-					display none
-					
-			&.slick-active
-				button
-					background-color $dark-text-color
+				background-color $dark-text-color
 		
 	&.rectangles-view
 		li
@@ -45,15 +45,26 @@
 			height 4px
 			button
 				border-radius 0
+				
+	&-light
+		li
+			button
+				background-color rgba($basic-white-color, .4)
+			&.slick-active
+				button
+					background-color $basic-white-color
+
+			
 
 // Promo
 
+
+
 .promo-slide
-	min-height 100vh
+	height 100%
 	position relative
 	overflow hidden
 	flex-col-center()
-	padding 100px 0
 	background-size 0
 	.container
 		position relative
@@ -74,9 +85,23 @@
 		z-index 1
 		
 .promo-slider
-	
-	&-wrapper
-		position relative
+	height 100%
+	*
+		height 100%
+	&__wrapper
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+
+		
+		.slider-pagination
+			position absolute
+			horisontal-center()
+			bottom 40px
+			z-index 3
+			
 		
 	.slick-current
 		.promo-slide:after
@@ -154,3 +179,75 @@
 	&__wrapper
 		.slider-pagination
 			margin-top 40px
+			
+// Presentations
+.presentation-slider
+	.slick-slide
+		height auto
+		> div
+			height 100%
+			
+	&__wrapper
+		.slider-pagination
+			position absolute
+			horisontal-center()
+			bottom 30px
+			z-index 1
+			
+
+.presentation-slide
+	padding 100px 40px 60px
+	display flex !important
+	justify-content flex-end
+	position relative
+	height 100%
+	&:before
+		pseudo()
+		position absolute
+		fullSize()
+		transition background-color .17s ease-in-out
+		background-color rgba($overlay-bg, .2)
+		z-index 1
+		
+	&__content
+		position relative
+		z-index 2
+		transition all .17s ease-in-out
+		background-color rgba(#F2F5F8, .9)
+		width 480px
+		padding 60px
+		&:hover
+			background-color rgba($accent-color, .9)
+			color $basic-white-color
+			
+			.sect-title
+				color inherit
+			
+			.btn-stroke
+				border-color $basic-white-color
+				background-color $basic-white-color
+				&:hover
+					background-color transparent
+	
+	&__params
+		margin-bottom 20px
+	&__description
+		margin-bottom 40px
+		font-size 16px
+		li
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0			
+	&__param
+		font-size 16px
+		margin-bottom 20px
+		sup
+			font-size 20px
+			vertical-align middle
+		span
+			display block
+			font-size 40px
+			margin-bottom 8px
+			line-height 1
+			white-space nowrap
+		

@@ -11,6 +11,25 @@
 +max-screen(1200px)
 	.gutter-right
 		padding-right 0
+		
+	// Header
+	.header
+		font-size 14px
+		&-container
+			padding-left 20px
+			padding-right 20px
+			
+		&-center
+			height 50px
+			
+		&-bottom
+			padding 5px 0
+			
+	.page-inner .main
+		padding-top 121px
+		
+	
+	
 	// Catalog
 	.project-card__wrapper
 		padding-left 15px
@@ -30,6 +49,26 @@
 +max-screen(1050px)
 	.header
 		display none
+		
+	//page about
+	.sect__slogan
+		padding 80px 0
+		
+	// Advantages
+	.advantages-slider
+		padding-left 20px
+		.slick-slide
+			width 350px
+			
+	// Team
+	.team-member
+		width 100%
+		&:nth-child(4n+4), 
+		&:nth-child(4n+5)
+			flex-direction row
+		&:nth-child(even)
+			flex-direction row-reverse
+		
 		
 +max-screen(992px)
 	// Footer
@@ -79,10 +118,66 @@
 	.project-card__wrapper
 		width 50%
 		
+	// Work steps
+	.work-step__wrapper
+		width 50%
+		
+	// Story
+	.story
+		flex-wrap wrap
+		&-content
+			width 100%
+			max-width 560px
+			
+	.simple-slider__wrapper
+		margin-top 40px
+		flex none
+		max-width 100%
+			
+	.calculator
+		&-row
+			flex-wrap wrap
+			
+
 		
 		
++max-screen(767px)
+	//Portfolio slider
+	.sect__portfolio
+		.container
+			padding-left 0
+			padding-right 0
+		.sect-title
+			padding-left 20px
+			padding-right 20px
+		.link-arrow
+			margin-left 20px
+			
+	.portfolio-slider__wrapper
+		width 100%
+		padding-left 20px
+		.slick-slide
+			width 280px 
+			
+		.project-card
+			&__title
+				bottom 10px
+				left 15px
+				right 15px
+				font-size 18px
+				
+		.project-labels
+			top 10px
+			left 10px
+			right 10px
+			
+		.project-label
+			font-size 10px
+			padding 4px 8px
 
 +max-screen(700px)
+	.promo-content
+		padding 70px 0
 	// Consultation
 	.form-groups
 		flex-wrap wrap
@@ -92,17 +187,80 @@
 	.form-notice
 		margin-top 20px
 		
+	// presentation
+	.presentation-slide
+		padding 40px 20px 60px 20px
+		&__content
+			width 100%
+		
+
+	.visible-mobile
+		display block
+		
+	.hidden-mobile
+		display none
+		
 
 +max-screen(620px)
+	body
+		font-size 14px
+		line-height 19px
+		
 	.sect-title
 		font-size 26px
 		line-height 32px
 		
 	.gutter-top
-		padding-top 60px
+		padding-top 80px
 	.gutter-bottom
-		padding-bottom 60px
+		padding-bottom 80px
+	// PRomo
+	.promo-content__text,
+	.sect__slogan .content 
+		font-size 14px
+		line-height 19px
+		h1, h2, h3
+			font-size 30px
+			line-height 35px
+			
+	// ADvantages
+	.sect__advantages
+		padding 80px 0
+	.advantages-slider
+		.slick-slide
+			width 250px
+			min-height 430px
+			
+		.slick-current 
+			.advantage
+				height 430px
+				
+	.advantage
+		height 370px
+		padding 20px
+		font-size 14px
+		line-height 19px
+		&-title
+			font-size 18px
+			line-height 22px
+			
+	// Team
+	.team-member
+		flex-wrap wrap
+		&__photo
+			width 100%
+			padding-top 100%
+		&__content
+			width 100%
+			padding 40px 20px
+			
+		.document
+			margin-top 40px
+	
+
 	// Footer
+	.footer-bottom
+		border-top none
 	.footer-bottom-nav
 		li
 			width 100%
@@ -163,6 +321,81 @@
 					top 5px
 				&:after
 					top 0
+					
+
+	// Calcul
+	.calculator
+		.links
+			flex-wrap wrap
+			justify-content center
+			.btn
+				width 100%
+				
+			.link
+				margin-left 0
+				margin-top 15px
+
+		&-notice
+			max-width 100%
+		&-range
+			max-width 100%
+		&-total
+			span
+				display block
+				margin-left 0
+				margin-top 6px
+				
+
+	// Presentation
+	.presentation-slide
+		padding-left 0
+		padding-right 0
+		.btn
+			width 100%
+		&__content
+			padding 40px 20px
+			
+			.sect-title
+				margin-bottom 30px
+				
+		&__description
+			font-size 16px
+			
+		&__param
+			font-size 14px
+			width 33.3333%
+			span
+				font-size 26px
+				
+				sup
+					font-size 15px
+					
++max-screen(480px)
+	// Work steps
+	.work-step__wrapper
+		width 100%
+		
+	// Story
+	.links
+		.btn
+			padding-left 17px
+			padding-right 17px
+		.link
+			margin-left 20px
+	
+
++max-screen(420px)
+	// Calculator
+	.calculator
+		&-radios
+			flex-wrap wrap
+		&-radio
+			width 100%
+			margin-bottom 16px
+			span
+				padding-bottom 8px
+			&:last-child
+				margin-bottom 0
 					
 +max-screen(374px)
 	.catalog 

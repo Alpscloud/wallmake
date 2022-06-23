@@ -46,7 +46,9 @@ $(document).ready(function() {
 			autoplay: true,
 			autoplaySpeed: 5000,
 			prevArrow: $('.js-promo-slider-btn-prev'),
-			nextArrow: $('.js-promo-slider-btn-next')
+			nextArrow: $('.js-promo-slider-btn-next'),
+			dots: true,
+			appendDots: $('.js-promo-slider-pagination')
 
 		});
 	}
@@ -77,7 +79,18 @@ $(document).ready(function() {
 			speed: 600,
 			arrows: false,
 			dots: true,
-			appendDots: $('.js-portfolio-slider-pagination')
+			appendDots: $('.js-portfolio-slider-pagination'),
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 'auto',
+						variableWidth: true,
+						centerMode: false,
+						slidesToScroll: 1
+					}
+				}
+			]
 
 		});
 	}
@@ -90,10 +103,38 @@ $(document).ready(function() {
 			speed: 600,
 			arrows: false,
 			dots: true,
-			appendDots: $('.js-advantages-slider-pagination')
+			appendDots: $('.js-advantages-slider-pagination'),
+			responsive: [
+				{
+					breakpoint: 1050,
+					settings: {
+						slidesToShow: 'auto',
+						variableWidth: true,
+						centerMode: false
+					}
+				}
+			]
 
 		});
 	}
+
+	if ($('.js-presentation-slider').length > 0) {
+		$('.js-presentation-slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			speed: 600,
+			arrows: false,
+			dots: true,
+			appendDots: $('.js-presentation-slider-pagination')
+
+		});
+	}
+
+	$('.js-open-presentation-slider-btn').on('click', function(e) {
+		e.preventDefault();
+		$(this).addClass('is-hidden');
+	});
 
 
 
