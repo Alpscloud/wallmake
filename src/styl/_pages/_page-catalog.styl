@@ -11,7 +11,7 @@
 		display block
 		padding-left 16px
 		padding-right 16px
-		margin-bottom 16px
+		margin-bottom 8px
 		text-align left
 		input
 			display none
@@ -84,7 +84,7 @@
 			color $basic-white-color
 			z-index 2
 
-.project-labels
+.tags
 	display inline-flex
 	flex-wrap wrap
 	justify-content flex-start
@@ -93,7 +93,7 @@
 	left 20px
 	right 20px
 			
-.project-label
+.tag
 	display inline-block
 	z-index 2
 	text-align center
@@ -123,14 +123,14 @@
 				font 16px $Med
 				text-transform none
 				@extends .l-spacing
-		&-label
+		.tag
 			background-color rgba(81, 74, 67, 0.9)
 			color rgba($basic-white-color, .9)
 			font-size 12px
 			padding 4px 8px
 			line-height 1.15
 			
-		&-labels
+		.tags
 			top 24px
 			left 16px
 			right 16px

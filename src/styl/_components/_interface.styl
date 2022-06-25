@@ -47,6 +47,26 @@
 		&:hover
 			&:before
 				transform translate(5px, -50%)
+				
+	&-back
+		display inline-block
+		position relative
+		font 15px $Med
+		line-height 1
+		color $dark-text-color
+		padding-left 55px
+		&:before
+			pseudo()
+			position absolute
+			vertical-center()
+			left 0
+			width 39px
+			height 15px
+			transition transform .17s ease-in-out
+			background url('../img/icons/svg/arrow-lg.svg') 50% no-repeat / contain
+		&:hover
+			&:before
+				transform translate(-5px, -50%)
 		
 
 .links

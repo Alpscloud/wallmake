@@ -30,6 +30,12 @@
 	i, em
 		font-family $LItalic
 		text-transform uppercase
+		
+.page-title
+	font 48px $Bold
+	line-height 65px
+	margin-bottom 30px
+	color $dark-text-color
 	
 .dark-text-color
 	color $dark-text-color
@@ -113,36 +119,66 @@
 		transition transform .17s ease-in-out
 
 .content
+	color $dark-text-color
+	font-size 20px
+	line-height 29px
 	*
 		&:last-child
 			margin-bottom 0
 			
-	h2,h3,h3,h4,h5,h6
-		line-height 1
-		font-family $Bold
+	.wp-caption
+		width 100%
+		margin-bottom 40px
+		
+	.wp-caption-text
+		text-align center
+		margin-top -24px
+		color $text-color
+		
+	img
+		display block
+		float none !important
+		width calc(100% + 100px)
+		height auto
+		margin-bottom 40px
+		margin-left -50px
+		margin-right -50px
+			
+	h2,h3
+		font 24px $Bold
+		margin-bottom 24px
 		
 	strong, b
 		font-family $Bold
 		
 
-	ul, ol
+	ul, ol, p
+		margin-bottom 40px
 		li
 			display block
 			position relative
-			margin-bottom 10px
+			margin-bottom 24px
 			
 			&:last-child
 				margin-bottom 0
 				
+	a
+		color inherit
+		border-bottom 2px solid
+		&:hover
+			border-color $gold-color
+				
 	ul
 		li
+			
 			&:before
 				pseudo()
-				width 4px
-				height 4px
+				width 6px
+				height 6px
 				border-radius 50%
-				margin-right 4px
-				background-color $text-color
+				margin-right 8px
+				background-color $gold-color
+				vertical-align middle
 				
 	ol
 		counter-reset list
@@ -152,6 +188,28 @@
 				content counter(list) ". "
 				display inline-block
 				margin-right 4px
+				
+	blockquote
+		text-align center
+		margin-bottom 40px
+		font 40px $Bold
+		line-height 48px
+		position relative
+		margin-left -50px
+		margin-right -50px
+		&:before
+			pseudo()
+			position absolute
+			right 100%
+			width 32px
+			height 32px
+			margin-right 85px
+			top 11px
+			background url('../img/icons/svg/quote.svg') 50% no-repeat / contain
+		p
+			margin-bottom 24px
+			&:last-child
+				margin-bottom 0
 
 
 .l-spacing

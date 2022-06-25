@@ -34,6 +34,27 @@
 		&:hover
 			background-color $accent-color
 			color $basic-white-color
+			
+	&-clear
+		display inline-block
+		width 40px
+		height 40px
+		position relative
+		color inherit
+		svg
+			svg()
+			position absolute
+			position-center()
+			width 20px
+			height 20px
+			fill none
+			stroke currentColor
+			stroke-width 1.5px
+			stroke-linecap round
+			stroke-linejoin round
+		&:hover
+			svg
+				stroke $gold-color
 	
 	
 		
@@ -92,27 +113,54 @@
 			&:after
 				border-top 1px solid $accent-color
 				border-right 1px solid $accent-color
+				
+	&-toggle
+		display inline-block
+		width 32px
+		height 32px
+		position absolute
+		top 0
+		right -8px
+		z-index 1
+		&:before,
+		&:after
+			pseudo()
+			position absolute
+			background-color $dark-text-color
+			border-radius 20px
+			position-center()
+			transition opacity .17s ease-in-out
+		&:before
+			width 16px
+			height 2px
+		&:after
+			height 16px
+			width 2px
+			
+		&.is-active
+			&:after
+				opacity 0
+			
 		
 
 	&-hamburger
-		display inline-block
+		display none
 		flex none
-		width 50px
-		height 50px
-		border-radius 50%
-		background-color $accent-color
+		width 40px
+		height 40px
 		position relative
-		transition background-color .17s ease-in-out
-		margin-left 15px
-		&__line
+		margin-right 15px
+		z-index 1
+		span
 			width 27px
 			height 2px
-			background-color $basic-black-color
+			background-color $basic-white-color
 			display block
 			margin 6px auto
-			transition all 0.3s ease-in-out	
+			transition all 0.17s ease-in-out	
+			border-radius 20px
 		&.is-active
-			.btn__hamburger--line
+			span
 				&:nth-child(1)
 					transform translateY(8px) rotate(45deg)
 				&:nth-child(2)

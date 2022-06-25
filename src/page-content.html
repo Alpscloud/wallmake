@@ -60,11 +60,11 @@
 
 					<div class="header-tools__links">
 						<a href="#calculator" class="link js-smooth-scroll-link">Калькулятор</a>
-						<button type="button" class="link">Поиск по сайту</button>
+						<button type="button" class="link js-open-search-form-btn">Поиск по сайту</button>
 					</div>
 
 					<div class="callback">
-						<a href="#" class="link">Контакты</a>
+						<a href="page-contacts.html" class="link">Контакты</a>
 					</div>
 				</div>
 			</div>
@@ -73,18 +73,51 @@
 	<!-- //top panel -->
 
 	<div class="header-center header-border-block">
-		<div class="header-container">
-			<nav class="nav">
-				<ul>
-					<li><a href="page-catalog.html">Каталог</a></li>
-					<li><a href="page-about.html">О КОМПАНИИ</a></li>
-					<li><a href="page-blog.html">БЛОГ</a></li>
-				</ul>
-			</nav>
+		<div class="header-container header-center__content">
+			<!-- Mobile menu btn -->
+			<button type="button" class="btn-hamburger js-open-mobile-menu-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<!-- //Mobile menu btn -->
 
 			<a href="index.html" class="logo">
 				<img src="img/logo.svg" alt="Wallmake">
 			</a>
+
+			<div class="nav-wrapper js-menu">
+				<nav class="nav">
+					<ul>
+						<li><a href="page-catalog.html">Каталог</a></li>
+
+						<li class="menu-item-hidden menu-item-has-children">
+							<a href="page-catalog.html">Услуги</a>
+
+							<ul class="sub-menu">
+								<li><a href="#">Интерьеры</a></li>
+								<li><a href="#">Строительство</a></li>
+								<li><a href="#">Проекты домов</a></li>
+								<li><a href="#">Крупные объекты</a></li>
+							</ul>
+						</li>
+
+						<li><a href="page-about.html">О КОМПАНИИ</a></li>
+						<li><a href="page-blog.html">БЛОГ</a></li>
+					</ul>
+				</nav>
+
+				<nav class="nav-bottom nav-mobile">
+					<ul>
+						<li><a href="#" class="link">Калькулятор</a></li>
+						<li><button type="button" class="link js-open-mobile-search-form-btn">Поиск по сайту</button></li>
+						<li><a href="page-contacts.html" class="link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+
+
+			
 		</div>
 	</div>
 	<!-- //top center -->
@@ -103,6 +136,50 @@
 </nav>		</div>
 	</div>
 	<!-- //top bottom -->
+
+
+	<div class="search-wrapper js-search">
+		<div class="header-container">
+			<div class="search-form__wrapper">
+				
+
+				<form class="search-form"> 
+
+					<div class="search-input__group">
+						<svg class="search-input__ic" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.7142 16.7142L12.9856 12.9856M14.9999 8.14279C14.9999 11.9299 11.9299 14.9999 8.14279 14.9999C4.35569 14.9999 1.28564 11.9299 1.28564 8.14279C1.28564 4.35569 4.35569 1.28564 8.14279 1.28564C11.9299 1.28564 14.9999 4.35569 14.9999 8.14279Z" />
+						</svg>
+						<input type="text" placeholder="ПОИСК ПО САЙТУ" name="s" class="search-input">
+					</div>
+
+
+					<button class="btn-clear" type="reset">
+						<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.5716 1.42871L1.42871 18.5716M1.42871 1.42871L18.5716 18.5716" />
+						</svg>
+
+					</button>
+				</form>
+
+				<button class="link search-form-close js-close-mobile-search-form-btn" type="button" class="js-close-search-form-btn">Отменить</button>
+
+			</div>
+			
+
+			
+		</div>
+
+		<div class="search-results">
+			<div class="header-container">
+				<p class="search-results__label">Популярные варианты поиска:</p>
+				<ul>
+					<li><a href="#">Стоимость дома под ключ</a></li>
+					<li><a href="#">Этапы строительства</a></li>
+					<li><a href="#">Прайс</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 
 </header>

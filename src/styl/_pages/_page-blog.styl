@@ -1,0 +1,181 @@
+.sect__blog
+	padding-bottom 104px
+	
+.page-gutter-top
+	padding-top 40px
+
+.articles-cards
+	margin-bottom -104px
+	
+.article-card
+	width 33.3333%
+	margin-bottom 104px
+	position relative
+	color $dark-text-color
+	&__content
+		position relative
+		z-index 1
+	&__thumbnail
+		padding-top 70%
+		display block
+		margin-bottom 24px
+		position relative
+		z-index 1
+		&:before
+			pseudo()
+			position absolute
+			fullSize()
+			background-color rgba($overlay-bg, .3)
+			z-index 1
+			transition opacity .17s ease-in-out
+			opacity 0
+		&:hover
+			img
+				transform translate(-50%, -50%) scale(1.1, 1.1)
+			&:before
+				opacity 1
+				
+	&__title
+		font-size 24px
+		margin-bottom 16px
+		a
+			color inherit
+			&:hover
+				color $gold-color
+	
+		
+	.link
+		margin-top 40px
+		
+	.article-date,
+	.link,
+	.tags
+		display none
+		
+	.tags
+		position relative
+		left auto
+		right auto
+		top auto
+		margin-bottom 40px
+		
+	.tag
+		font-size 18px
+
+.blog	
+	.article-card
+		&:nth-child(4n+1)
+			width 100vw
+			max-width 1920px
+			flex none
+			display flex
+			flex-wrap nowrap
+			align-items center
+			
+			padding-left 0
+			padding-right 0
+			
+			horisontal-center()
+			
+			.article-card
+				&__thumbnail
+					width 47%
+					padding-top 41%
+					margin-bottom 0
+					min-height 480px
+				&__content
+					padding 40px 60px 40px 60px
+					width 53%
+				&__title
+					font-size 34px
+					line-height 1
+					margin-bottom 24px
+					
+				&__preview
+					max-width 440px
+					font-size 24px
+					line-height 34px
+					
+			.article-date
+				display block
+			.link
+				display inline-block
+			.tags
+				display flex
+				
+		&:nth-child(1)
+			.tag
+				background-color $dark-text-color
+				color $basic-white-color
+				
+		&:nth-child(8n+5)
+			background-color $dark-text-color
+			padding 112px 0
+			color $basic-white-color
+			
+			.article-date
+				color $text-color
+				
+			&:before,
+			&:after
+				pseudo()
+				position absolute
+				height 100%
+				width 600%
+				background-color inherit
+				top 0
+			&:before
+				right 0
+			&:after
+				left 0
+		
+.article-date
+	font-size 18px
+	margin-top 40px
+	
+
+// Article
+.sect__article
+	padding-bottom 80px
+	
+.article
+	max-width 750px
+	margin 0 auto
+	color $dark-text-color
+	.tags
+		position relative
+		top auto
+		left auto
+		right auto
+		margin-bottom 40px
+	.tag
+		background-color $dark-text-color
+		
+	&-title
+		font 40px $Med
+		line-height 48px
+		margin-bottom 40px
+		
+	&-entering
+		position relative
+		.page-title
+			padding-left 150px
+			padding-right 150px
+		.link-back
+			position absolute
+			vertical-center()
+			left 20px
+		
+	&-img
+		padding-top 39.5%
+		margin-bottom 60px
+		background-attachment fixed
+	.article-date
+		margin-top 24px
+	
+.sect__another-articles
+	padding-bottom 104px
+	
+	.container
+		padding-top 104px
+		border-top 1px solid $border-color

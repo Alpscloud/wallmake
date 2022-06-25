@@ -1,23 +1,33 @@
 .nav
 	line-height 1
 	margin-bottom -2px
+	&-mobile
+		display none
 	ul
 		display flex
 		flex-wrap nowrap
 		align-items flex-start
 		li
 			margin-right 30px
+			position relative
 			&:last-child
 				margin-right 0
+				
+			&.menu-item-hidden
+				display none
 				
 			&.current-menu-item
 				a
 					&:before
 						transform translateX(0)
+						
+	
 		a
 			text-transform uppercase
 			font 15px $Bold
 			@extends .link
+			&:before
+				background-color $gold-color
 			
 	&-categories
 		ul

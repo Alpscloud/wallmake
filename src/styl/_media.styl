@@ -46,9 +46,31 @@
 		bottom 20px
 		right 20px
 		
+	.content
+		font-size 18px
+		line-height 24px
+		
+		blockquote
+			margin-left 0
+			margin-right 0
+			padding-top 40px
+			&:before
+				top 0
+				left 0
+				right auto
+				margin-right 0
+				
+		img
+			margin-left 0
+			margin-right 0
+			width 100%
+			
+	.article
+		&-img
+			padding-top 56.25%
+		
 +max-screen(1050px)
-	.header
-		display none
+	
 		
 	//page about
 	.sect__slogan
@@ -68,9 +90,295 @@
 			flex-direction row
 		&:nth-child(even)
 			flex-direction row-reverse
+			
+	// Blog
+	.article-card
+		font-size 14px
+		line-height 19px
+		margin-bottom 60px
+		&__title
+			font-size 18px
+			line-height 22px
+	.blog
+		.article-card
+			&:nth-child(8n+5)
+				padding-top 60px
+				padding-bottom 60px
+			&:nth-child(4n+1)
+				flex-wrap wrap
+				
+				.article-card
+					&__thumbnail
+						width 100%
+						padding-top 70%
+						min-height auto
+					&__content
+						width 100%
+						padding-bottom 0
+						padding 40px 20px 0 20px
+						
+					&__title
+						font-size 28px
+						line-height 32px
+					&__preview
+						font-size 18px
+						line-height 22px
+						
+				.tag
+					font-size 14px
+					
+				.tags
+					margin-bottom 25px
+					
+				.article-date
+					font-size 16px
+					margin-top 25px
+					
+				.link
+					font-size 16px
+					margin-top 25px
+				
+	
 		
 		
 +max-screen(992px)
+	.page-inner 
+		.main
+			padding-top 63px
+	// Header
+	.header
+		&:before
+			border-bottom 1px solid $basic-white-color
+		&-border-block
+			position static
+			border none
+		&.is-menu-opened
+			color $dark-text-color
+			&:before
+				background-color $basic-white-color
+				filter none
+			.btn-hamburger
+				span
+					background-color $dark-text-color
+			.logo
+				img
+					filter brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(18%) hue-rotate(336deg) brightness(102%) contrast(86%)
+						
+			
+		&-top,
+		&-bottom
+			display none
+			
+		&-center
+			height 64px
+			.logo
+				position relative
+				transform none
+				top auto
+				left auto
+				z-index 1
+				
+			&__content
+				display flex
+				flex-wrap nowrap
+				align-items center
+				justify-content flex-start
+				
+	
+	.page-with-light-header
+		.header
+			border-bottom rgba(255,255,255,.6)		
+	.btn-hamburger
+		display inline-block
+		margin-left -5px
+		
+	.nav-wrapper
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100vh
+		overflow-y auto
+		background-color $basic-white-color
+		z-index -6
+		padding 80px 20px
+		color $dark-text-color
+		transition all .17s ease-in-out
+		opacity 0
+		visibility hidden
+		pointer-events none
+		&.is-opened
+			opacity 1
+			visibility visible
+			pointer-events auto
+		
+	.nav 
+		ul 
+			display block
+			li
+				display block
+				margin-right 0
+				margin-bottom 8px
+				&:last-child
+					margin-bottom 0
+				&.menu-item-hidden
+					display block
+					
+			a
+				font-size 15px
+				padding 6px 0
+				display block
+	
+		.sub-menu
+			margin-left -20px
+			margin-right -20px
+			display none
+			li
+				margin-bottom 0 !important
+				a
+					display block
+					padding 10px 20px 10px 28px
+					text-transform none
+					font 15px $Med
+					color $dark-text-color
+					&:before
+						display none
+				&.current-menu-item
+					a
+						background-color $color-bg
+						
+	.nav-mobile
+		display block
+		padding-top 20px
+		margin-top 20px
+		border-top 1px solid $border-color
+		ul
+			li
+				margin-bottom 8px
+				&:first-child
+					a
+						padding-top 0
+				&:last-child
+					margin-bottom 0
+			a, button
+				display block
+				padding 6px 0
+				&:before
+					background-color $gold-color
+	
+	.search
+		&-wrapper
+			display block
+			position fixed
+			top 0
+			left 0
+			z-index -5
+			width 100%
+			background-color $basic-white-color
+			overflow-y auto
+			height 100vh
+			padding 80px 20px
+			transition all .17s ease-in-out
+			opacity 0
+			visibility hidden
+			pointer-events none
+			&.is-opened
+				opacity 1
+				visibility visible
+				pointer-events auto
+				
+			.header-container
+				padding-left 0
+				padding-right 0
+				
+		&-form
+			padding 0
+			
+		&-results
+			background-color $basic-white-color !important
+			margin-left -20px
+			margin-right -20px
+			padding 26px 20px
+			&__label
+				font-size 12px
+				padding-bottom 0
+				border-bottom none
+				color $text-color !important
+				margin-bottom 16px
+				
+			a
+				border none
+				font-size 15px
+				margin-left -20px
+				margin-right -20px
+				padding 8px 20px
+				&:hover
+					background-color $color-bg
+					color $dark-text-color !important
+				&:before
+					display none
+			
+	.search-form
+		flex 1
+		position relative
+		.btn-clear
+			position absolute
+		&__wrapper
+			align-items center
+			display flex
+			flex-wrap nowrap
+			.link
+				margin-top -9px
+		&-close
+			display inline-block
+			white-space nowrap	
+			margin-left 8px
+			flex none
+			
+	.search-input
+		flex none
+		width 100%
+		padding 0 40px 11px 30px
+		border-bottom 1px solid $border-color
+		&:hover,
+		&:focus
+			border-color $gold-color
+		&__ic
+			margin-right 0
+			position absolute
+			top 3px
+			left 0
+			width 15.5px
+			height 15.5px
+		&__group
+			margin-right 0
+			flex none
+			width 100%
+			position relative
+	.btn-clear
+		width 24px
+		height 24px
+		right 0
+		top -2px
+		opacity 0
+		visibility hidden
+		pointer-events none
+		&.is-visible
+			opacity 1
+			visibility visible
+			pointer-events auto
+		&:before
+			pseudo()
+			position absolute
+			position-center()
+			width 17px
+			height 17px
+			border 1px solid $dark-text-color
+			border-radius 50%
+		svg
+			width 6px
+			height 6px
+			stroke-width 3px
 	// Footer
 	.footer-bottom
 		.row
@@ -115,6 +423,8 @@
 			margin-bottom 20px
 			
 	// Catalog
+	.sect__catalog
+		padding-top 40px
 	.project-card__wrapper
 		width 50%
 		
@@ -137,10 +447,7 @@
 	.calculator
 		&-row
 			flex-wrap wrap
-			
-
-		
-		
+					
 +max-screen(767px)
 	//Portfolio slider
 	.sect__portfolio
@@ -166,12 +473,12 @@
 				right 15px
 				font-size 18px
 				
-		.project-labels
+		.tags
 			top 10px
 			left 10px
 			right 10px
 			
-		.project-label
+		.tag
 			font-size 10px
 			padding 4px 8px
 
@@ -209,6 +516,10 @@
 	.sect-title
 		font-size 26px
 		line-height 32px
+		
+	.page-title
+		font-size 36px
+		line-height 40px
 		
 	.gutter-top
 		padding-top 80px
@@ -288,14 +599,15 @@
 				font-size 12px
 				line-height 15px
 				
-		.project-labels
+		.tags
 			top 10px
 			left 10px
 			right 10px
 			
-		.project-label
+		.tag
 			font-size 8px
 			margin-bottom 4px
+			line-height 1
 			
 	.projects-cards
 		margin-left -5px
@@ -370,6 +682,120 @@
 				sup
 					font-size 15px
 					
+	// Blog
+	.articles-cards
+		margin-left -7.5px
+		margin-right -7.5px
+	.article-card
+		width 50%
+		padding-left 7.5px
+		padding-right 7.5px
+		&__preview
+			font-size 12px
+			line-height 16px
+		&__title
+			font-size 16px
+			line-height 19px
+			margin-bottom 12px
+	.blog
+		.article-card
+			&:nth-child(8n+5)
+				background-color transparent
+				padding 0 7.5px
+				color $dark-text-color
+				&:before,
+				&:after
+					display none
+			&:nth-child(4n+1)
+				width 50%
+				transform none
+				left auto
+				padding-left 7.5px
+				padding-right 7.5px
+				
+				
+				.article-card
+					&__thumbnail
+						margin-bottom 24px
+					&__content
+						padding 0
+						
+					&__title
+						font-size 16px
+						line-height 19px
+					&__preview
+						font-size 12px
+						line-height 16px
+						
+				.tags,
+				.article-date,
+				.link
+					display none
+					
+	.article
+		&-entering
+			margin-bottom 40px
+			.page-title
+				padding-left 0
+				padding-right 0
+				
+			
+		&-img
+			margin-bottom 24px
+			background-attachment scroll
+		&-title
+			margin-bottom 24px
+			font-size 30px
+			line-height 1.25
+			
+		.tags
+			margin-bottom 24px
+			
+		.tag
+			font-size 12px
+			
+		.article-date
+			margin-top 24px
+			font-size 16px
+			
+	.link-back
+		width 39px
+		height 15px
+		padding-left 0
+		span
+			display none
+			
+	.content
+		font-size 16px
+		line-height 1.5
+		
+		h2,h3
+			font-size 20px
+			
+		.wp-caption-text
+			font-size 14px
+		
+		blockquote
+			font-size 26px
+			line-height 1.25
+			&:before
+				width 22px
+				height 22px
+				
+
+	.sect__another-articles 
+		padding-bottom 80px
+		.container
+			padding-top 80px
+			
+		.article-card:nth-child(3)
+			width 100%
+
+			
+
+			
+
+					
 +max-screen(480px)
 	// Work steps
 	.work-step__wrapper
@@ -401,7 +827,7 @@
 	.catalog 
 		.project-card__title
 			padding 5px
-		.project-labels
+		.tags
 			top 5px
 			left 5px
 			right 5px

@@ -35,6 +35,71 @@ $(document).ready(function() {
 	});
 
 
+	$('.menu-item-has-children').each(function() {
+		var btn = '<button class="btn-toggle js-toggle-submenu-btn" type="button"></button>';
+		var link = $(this).find('> a');
+		$(btn).insertAfter(link);
+
+	});
+
+	$('.js-toggle-submenu-btn').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('is-active');
+		$(this).parents('.menu-item-has-children').find('.sub-menu').stop().slideToggle(170);
+	});
+
+	$('.js-open-mobile-menu-btn').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('is-active');
+		$('html').toggleClass('is-fixed');
+		$('.js-menu').toggleClass('is-opened');
+		$('.header').toggleClass('is-menu-opened');
+
+		if ($('.js-search').hasClass('is-opened')) {
+			$('.js-search').removeClass('is-opened');
+		}
+	});
+
+	$('.js-open-search-form-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+
+		$('.js-search').stop().slideToggle(200);
+	});
+
+	$('.js-open-mobile-search-form-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$('.js-search').addClass('is-opened');
+	});
+
+	$('.js-close-mobile-search-form-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$('.js-search').removeClass('is-opened');
+
+		$('.search-input').val('');
+		$('.btn-clear').removeClass('is-visible');
+	});
+
+	
+
+	
+
+	$('.search-input').on('keyup', function() {
+		if ($(this).val().length >= 1) {
+			$('.btn-clear').addClass('is-visible');
+		}
+	});
+
+	$('.btn-clear').on('click', function() {
+		if ($(this).hasClass('is-visible')) {
+			$(this).removeClass('is-visible');
+		}
+	});
+
+
 
 	// Sliders
 	if ($('.js-promo-slider').length > 0) {
@@ -80,6 +145,7 @@ $(document).ready(function() {
 			arrows: false,
 			dots: true,
 			appendDots: $('.js-portfolio-slider-pagination'),
+			accessibility: false,
 			responsive: [
 				{
 					breakpoint: 767,
@@ -104,12 +170,15 @@ $(document).ready(function() {
 			arrows: false,
 			dots: true,
 			appendDots: $('.js-advantages-slider-pagination'),
+			accessibility: false,
 			responsive: [
 				{
 					breakpoint: 1050,
 					settings: {
+						dots: true,
 						slidesToShow: 'auto',
 						variableWidth: true,
+						slidesToScroll: 1,
 						centerMode: false
 					}
 				}

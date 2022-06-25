@@ -20,6 +20,8 @@
 		background-color $header-bg
 		opacity 0
 		
+	
+		
 	&.is-fixed
 		color $dark-text-color
 		
@@ -27,6 +29,10 @@
 			opacity 1
 		&:before
 			opacity 0
+			
+		.btn-hamburger
+			span
+				background-color $dark-text-color
 		
 		.header-border-block
 			border-color #C4C4C4
@@ -41,6 +47,20 @@
 		a:before,
 		.link:before
 			background-color $gold-color
+			
+		.search-results
+			background-color $color-bg 
+			&__label
+				color $text-color
+				border-color $border-color
+				
+			a
+				border-color $border-color
+				&:before
+					background-color #898074
+				&:hover
+					border-color #898074
+					color $basic-white-color
 	a
 		color inherit
 		
@@ -52,15 +72,22 @@
 			margin-right 12px
 			line-height 1
 			vertical-align middle
+			&:before
+				background-color $gold-color
 			&:last-child
 				margin-right 0
 		
 	&-container
+		width 100%
 		padding-left 60px
 		padding-right 60px
 		
 	&-top
-		padding 7px 0
+	
+		
+		.link
+			padding 7px 0
+			
 		
 	&-center
 		position relative
@@ -91,11 +118,32 @@
 
 
 .page-with-light-header
+	.search-results
+		background-color $color-bg 
+		&__label
+			color $text-color
+			border-color $border-color
+			
+		a
+			border-color $border-color
+			&:before
+				background-color #898074
+			&:hover
+				border-color #898074
+				color $basic-white-color
 	.header
 		color $dark-text-color
 		
+		&.is-menu-opened
+			&:after
+				border-color transparent
+		
+	
+		
 		&:after
 			opacity 1
+			background-color $basic-white-color
+			border-bottom 1px solid $border-color
 		&:before
 			opacity 0
 		
@@ -112,3 +160,15 @@
 		a:before,
 		.link:before
 			background-color $gold-color
+			
+	.btn-hamburger
+		span
+			background-color $dark-text-color
+			
+
+
+			
+		
+
+
+		
