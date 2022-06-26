@@ -81,6 +81,11 @@ $(document).ready(function() {
 
 		$('.search-input').val('');
 		$('.btn-clear').removeClass('is-visible');
+
+		if (html > 992) {
+			$('.js-search').stop().slideUp(200);
+			$('.js-open-search-form-btn').removeClass('is-active');
+		}
 	});
 
 	
@@ -90,6 +95,8 @@ $(document).ready(function() {
 	$('.search-input').on('keyup', function() {
 		if ($(this).val().length >= 1) {
 			$('.btn-clear').addClass('is-visible');
+		} else {
+			$('.btn-clear').removeClass('is-visible');
 		}
 	});
 
@@ -145,14 +152,12 @@ $(document).ready(function() {
 			arrows: false,
 			dots: true,
 			appendDots: $('.js-portfolio-slider-pagination'),
-			accessibility: false,
 			responsive: [
 				{
 					breakpoint: 767,
 					settings: {
-						slidesToShow: 'auto',
+						slidesToShow: 1,
 						variableWidth: true,
-						centerMode: false,
 						slidesToScroll: 1
 					}
 				}
@@ -176,7 +181,7 @@ $(document).ready(function() {
 					breakpoint: 1050,
 					settings: {
 						dots: true,
-						slidesToShow: 'auto',
+						slidesToShow: 1,
 						variableWidth: true,
 						slidesToScroll: 1,
 						centerMode: false

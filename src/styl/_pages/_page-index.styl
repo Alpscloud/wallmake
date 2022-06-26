@@ -109,6 +109,7 @@
 			@extends .content-img
 			transition filter .17s ease-in-out
 			transition opacity .17s ease-in-out
+			max-width 550px
 			&:nth-child(2)
 				position absolute
 				position-center()
@@ -182,6 +183,8 @@
 		z-index 1
 		
 	&:hover
+		svg
+			fill $gold-color
 		&:before
 			background-color rgba($overlay-bg, .6)
 		
@@ -266,7 +269,7 @@
 		display flex
 		flex-wrap nowrap
 		margin-bottom 40px
-		
+		border-bottom 1px solid $border-color
 	&-radio
 		display block
 		input
@@ -282,7 +285,7 @@
 			letter-spacing 0.02em
 			display block
 			padding-bottom 16px
-			border-bottom 1px solid $border-color
+			
 			padding-right 15px
 			position relative
 			overflow hidden

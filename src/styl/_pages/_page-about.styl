@@ -23,7 +23,11 @@
 	justify-content flex-end
 	height 500px
 	transition height .23s ease-in-out
-
+	z-index 1
+	&-bg
+		position absolute
+		fullSize()
+		z-index -1
 	&-title
 		text-transform uppercase
 		font-size 24px

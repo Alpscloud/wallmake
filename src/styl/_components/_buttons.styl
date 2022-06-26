@@ -34,13 +34,15 @@
 		&:hover
 			background-color $accent-color
 			color $basic-white-color
-			
-	&-clear
+	
+	&-search-form-close
 		display inline-block
 		width 40px
 		height 40px
 		position relative
 		color inherit
+		span
+			display none		
 		svg
 			svg()
 			position absolute
@@ -55,7 +57,46 @@
 		&:hover
 			svg
 				stroke $gold-color
-	
+				
+	&-clear
+		display inline-block
+		width 24px
+		height 24px
+		right 0
+		color inherit
+		vertical-center()
+		opacity 0
+		visibility hidden
+		pointer-events none
+		position absolute
+		&.is-visible
+			opacity 1
+			visibility visible
+			pointer-events auto
+		&:before
+			pseudo()
+			position absolute
+			position-center()
+			width 17px
+			height 17px
+			border 1px solid currentColor
+			border-radius 50%
+			transition border-color .17s ease-in-out
+		svg
+			svg()
+			width 6px
+			height 6px
+			stroke-width 3px
+			fill none
+			stroke currentColor
+			stroke-width 1.5px
+			stroke-linecap round
+			stroke-linejoin round
+			position absolute
+			position-center()
+		&:hover
+			&:before
+				border-color $gold-color
 	
 		
 	&-close

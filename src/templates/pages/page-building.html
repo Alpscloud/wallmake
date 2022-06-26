@@ -11,12 +11,26 @@
 		<!-- //Header -->
 
 		<!-- Main -->
-		<main class="main">
+		<main class="main page-service">
 			<section class="sect__promo">
+
+				<div class="promo-content text-center">
+					<div class="container">
+						<div class="promo-content__text">
+							<p>КВАРТИРЫ / ДОМА</p>
+							<h1>Строительство</h1>
+							<p>Дизайн интерьера — это нечто больше, чем простое планирование функциональности вашего пространства.</p>
+						</div>
+
+						<button type="button" class="btn btn-light">Записаться на консультацию</button>
+					</div>
+					<!-- //container -->
+				</div>
+
 				<div class="promo-slider__wrapper">
 					<div class="promo-slider js-promo-slider">
-						<div class="promo-slide" style="background-image: url('img/promo/1.jpg');"></div>
-						<div class="promo-slide" style="background-image: url('img/promo/2.jpg');"></div>
+						<div class="promo-slide" style="background-image: url('img/promo/3.jpg');"></div>
+						<div class="promo-slide" style="background-image: url('img/promo/4.jpg');"></div>
 					</div>
 
 					<div class="promo-slider__controls hidden-mobile">
@@ -43,13 +57,12 @@
 				<div class="chapter-cards row align-horisontal-start">
 					<article class="chapter-card text-center">
 						<header class="chapter-card__header">
-							<p class="chapter-card__category">квартиры / ДОМА</p>
-							<h2 class="chapter-card__title">Интерьеры</h2>
+							<p class="chapter-card__category">СХЕМЫ / 2D / 3D</p>
+							<h2 class="chapter-card__title">Проектирование</h2>
 						</header>
 
-						<div class="chapter-card__img chapter-card__img-double">
-							<img src="img/chapters/1.png" alt="">
-							<img src="img/chapters/1-dark.png" alt="">
+						<div class="chapter-card__img">
+							<img src="img/chapters/4.png" alt="">
 						</div>
 
 						<div class="chapter-card__information">
@@ -60,15 +73,15 @@
 						</div>
 
 						<footer class="chapter-card__footer">
-							<a href="#" class="btn">Подробнее</a>
+							<a href="#" class="btn">Все этапы</a>
 						</footer>
 					</article>
 					<!-- //card -->
 
 					<article class="chapter-card text-center">
 						<header class="chapter-card__header">
-							<p class="chapter-card__category">ДОМА / КОТТЕДЖИ</p>
-							<h2 class="chapter-card__title">Строительство</h2>
+							<p class="chapter-card__category">внешняя / внутренняя</p>
+							<h2 class="chapter-card__title">Стоительство</h2>
 						</header>
 
 						<div class="chapter-card__img">
@@ -90,12 +103,13 @@
 
 					<article class="chapter-card text-center">
 						<header class="chapter-card__header">
-							<p class="chapter-card__category">ТЦ / Комплексы</p>
-							<h2 class="chapter-card__title">Крупные объекты</h2>
+							<p class="chapter-card__category">Скидка на наполнение</p>
+							<h2 class="chapter-card__title">Готовые проекты</h2>
 						</header>
 
 						<div class="chapter-card__img">
-							<img src="img/chapters/3.svg" alt="">
+							<img src="img/chapters/5.png" alt="">
+							
 						</div>
 
 						<div class="chapter-card__information">
@@ -106,7 +120,7 @@
 						</div>
 
 						<footer class="chapter-card__footer">
-							<a href="#" class="btn">Подробнее</a>
+							<a href="#" class="btn">Каталог проектов</a>
 						</footer>
 					</article>
 					<!-- //card -->
@@ -116,36 +130,7 @@
 			</section>
 			<!-- //sect chapters -->
 
-			<section class="sect__story gutters">
-				<div class="container">
-
-					<div class="story row align-vertical-center align-horisontal-between row-nowrap row-gutters gutter-right">
-						<div class="story-content col-gutters">
-							<div class="story-content__text">
-								<h2>История<br><em>WALLMAKE</em></h2>
-								<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-							</div>
-
-							<div class="links row align-vertical-center align-horisontal-start row-nowrap">
-								<button type="button" class="btn">Заказать услугу</button>
-
-								<a href="#" class="link">Читать далее</a>
-							</div>
-						</div>
-						<div class="simple-slider__wrapper col-gutters">
-							<div class="simple-slider js-simple-slider">
-								<div class="simple-slide thumbnail"><img src="img/img.jpg" alt=""></div>
-								<div class="simple-slide thumbnail"><img src="img/img.jpg" alt=""></div>
-								<div class="simple-slide thumbnail"><img src="img/img.jpg" alt=""></div>
-							</div>
-
-							<div class="slider-pagination js-simple-slider-pagination"></div>
-						</div>
-					</div>
-				</div>
-				<!-- //container -->
-			</section>
-			<!-- //sect story -->
+		
 
 			{% include '../parts/sections/sect-portfolio.html' %}
 			<!-- //sect portfolio -->
@@ -247,13 +232,13 @@
 					<div class="calculator-row row row-nowrap row-gutters align-vertical-center align-horisontal-between gutter-right">
 						
 						<div class="calculator-content col-gutters">
-							<h2 class="sect-title">Стоимость объекта<br><i>“под ключ”</i></h2>
+							<h2 class="sect-title">Стоимость объекта<br><i>Строительство</i></h2>
 
 							<div class="calculator">
 								<div class="calculator-radios">
 									<label class="calculator-radio">
 										<input type="radio" name="type" value="5000" checked>
-										<span>Интерьер</span>
+										<span>Проектирование</span>
 									</label>
 
 									<label class="calculator-radio">
@@ -263,12 +248,12 @@
 
 									<label class="calculator-radio">
 										<input type="radio" name="type" value="50000">
-										<span>Крупные объекты</span>
+										<span>Готовые проекты</span>
 									</label>
 								</div>
 
 								<div class="calculator-notice text-center">
-									<p>Проектирование + ремонт + мебелирование и декор </p>
+									<p>Проектирование 2D + 3D + Схемы</p>
 								</div>
 
 								<div class="calculator-range">
@@ -290,7 +275,7 @@
 								<div class="links row align-vertical-center align-horisontal-between row-nowrap">
 									<button class="btn" type="button">Записаться на консультацию</button>
 
-									<a href="#" class="link">Интерьер поэтапно</a>
+									<a href="#" class="link">Строительство под ключ</a>
 								</div>
 							</div>
 						</div>

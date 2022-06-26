@@ -104,7 +104,14 @@ input[type="search"]::-webkit-search-results-decoration
 		display flex
 		align-items center
 		justify-content space-between
-		padding 11px 0
+		position relative
+		width 50%
+		&__wrapper
+			display flex
+			flex-wrap nowrap
+			align-items center
+			justify-content space-between
+			padding 11px 0
 		
 	&-input
 		display block
@@ -112,6 +119,7 @@ input[type="search"]::-webkit-search-results-decoration
 		text-transform uppercase
 		color inherit
 		font 15px $Bold
+		padding-right 10px
 		&::-webkit-input-placeholder
 			font 15px $Bold
 			color inherit
