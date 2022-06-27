@@ -151,7 +151,12 @@
 					margin-top 25px
 				
 	
-		
+	.project-description
+		flex-wrap wrap
+		.project-params__wrapper
+			width 100%
+			margin-right 0
+			margin-bottom 40px
 		
 +max-screen(992px)
 	.page-inner 
@@ -525,6 +530,9 @@
 		padding-top 80px
 	.gutter-bottom
 		padding-bottom 80px
+		
+	.gutters
+		padding 80px 0
 	// PRomo
 	.promo-content__text,
 	.sect__slogan .content 
@@ -533,6 +541,14 @@
 		h1, h2, h3
 			font-size 30px
 			line-height 35px
+			
+		ul
+			li
+				font-size 16px
+				
+	.sect__another-projects
+		padding-top 0
+		padding-bottom 0
 			
 	// ADvantages
 	.sect__advantages
@@ -682,14 +698,14 @@
 		&__description
 			font-size 16px
 			
-		&__param
-			font-size 14px
-			width 33.3333%
-			span
-				font-size 26px
-				
-				sup
-					font-size 15px
+	.project-param
+		font-size 14px
+		width auto
+		span
+			font-size 26px
+			
+			sup
+				font-size 15px
 					
 	// Blog
 	.articles-cards
@@ -802,7 +818,23 @@
 
 			
 
+	.project-description 
+		.content
+			font-size 14px
+		
+		.project-params
+			margin-bottom 0
 			
+
+	.slider-pagination.rectangles-view 
+		li 
+			margin 0 12px 0 0
+			width auto
+			height auto
+			button
+				border-radius 50%
+				width 8px
+				height 8px
 
 					
 +max-screen(480px)
