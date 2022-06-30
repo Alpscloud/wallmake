@@ -4,7 +4,7 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
-		{% include '../parts/components/preloader.html' %}
+		
 
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
@@ -13,29 +13,21 @@
 		<!-- Main -->
 		<main class="main">
 			<section class="sect__promo">
-				<div class="promo-slider__wrapper">
-					<div class="promo-slider js-promo-slider">
-						<div class="promo-slide" style="background-image: url('img/promo/1.jpg');"></div>
-						<div class="promo-slide" style="background-image: url('img/promo/2.jpg');"></div>
+
+				<div class="promo-content text-center">
+					<div class="container">
+						<div class="promo-content__text">
+							<h1>Строительство дома</h1>
+							<p>От проекта до заселения за 10-12 месяцев</p>
+						</div>
+
+						<button type="button" class="btn btn-light js-open-popup-form-btn">Записаться на консультацию</button>
 					</div>
-
-					<div class="promo-slider__controls hidden-mobile">
-						<button class="promo-slider__btn promo-slider__btn-prev js-promo-slider-btn-prev" type="button">
-							<svg viewBox="0 0 14 24"  xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.1429 22.2857L1.85717 11.9999L12.1429 1.71423" />
-							</svg>
-
-						</button>
-						<button class="promo-slider__btn promo-slider__btn-next js-promo-slider-btn-next" type="button">
-							<svg viewBox="0 0 14 24"  xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.85712 22.2857L12.1428 11.9999L1.85712 1.71423" />
-							</svg>
-
-						</button>
-					</div>
-
-					<div class="slider-pagination slider-pagination-light js-promo-slider-pagination hidden-desktop visible-mobile"></div>
+					<!-- //container -->
 				</div>
+
+
+				{% include '../parts/components/promo-slider.html' %}
 			</section>
 			<!-- //sect promo -->
 
@@ -127,20 +119,15 @@
 							</div>
 
 							<div class="links row align-vertical-center align-horisontal-start row-nowrap">
-								<button type="button" class="btn">Заказать услугу</button>
+								<button type="button" class="btn js-open-popup-form-btn">Заказать услугу</button>
 
 								<a href="#" class="link">Читать далее</a>
 							</div>
 						</div>
-						<div class="simple-slider__wrapper col-gutters">
-							<div class="simple-slider js-simple-slider">
-								<div class="simple-slide thumbnail"><img src="img/img.jpg" alt=""></div>
-								<div class="simple-slide thumbnail"><img src="img/img.jpg" alt=""></div>
-								<div class="simple-slide thumbnail"><img src="img/img.jpg" alt=""></div>
-							</div>
 
-							<div class="slider-pagination js-simple-slider-pagination"></div>
-						</div>
+						{% include '../parts/components/content-img.html' %}
+						{% include '../parts/components/simple-slider.html' %}
+						
 					</div>
 				</div>
 				<!-- //container -->
@@ -153,7 +140,7 @@
 			{% include '../parts/sections/sect-presentation.html' %}
 			<!-- //presentation -->
 
-			
+
 
 			<section class="sect__calculator gutters" id="calculator">
 				<div class="container">
@@ -201,14 +188,15 @@
 
 
 								<div class="links row align-vertical-center align-horisontal-between row-nowrap">
-									<button class="btn" type="button">Записаться на консультацию</button>
+									<button class="btn js-open-popup-form-btn" type="button">Записаться на консультацию</button>
 
 									<a href="#" class="link">Интерьер поэтапно</a>
 								</div>
 							</div>
 						</div>
 
-						{% include '../parts/components/calculator-slider.html' %}
+						{% include '../parts/components/content-img.html' %}
+						{% include '../parts/components/simple-slider.html' %}
 					</div>
 				</div>
 				<!-- //container -->
@@ -217,6 +205,9 @@
 
 			{% include '../parts/sections/sect-work-steps.html' %}
 			<!-- //sect work steps -->
+
+			{% include '../parts/sections/sect-consultation.html' %}
+			<!-- //sect work consultation -->
 
 		</main>
 		<!-- //Main -->

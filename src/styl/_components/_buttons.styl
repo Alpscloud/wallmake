@@ -101,10 +101,25 @@
 		
 	&-close
 		display inline-block
-		width 20px
-		height 20px
-		background url('../img/icons/svg/close-ic.svg') center center no-repeat
-		background-size 20px 20px
+		width 40px
+		height 40px
+		position absolute
+		top 16px
+		right 16px
+		svg
+			svg()
+			position absolute
+			position-center()
+			width 20px
+			height 20px
+			stroke $dark-text-color
+			stroke-width 1.5px
+			stroke-linecap round
+			stroke-linejoin round
+			fill none
+		&:hover
+			svg
+				stroke $gold-color
 		
 	&-search
 		&::-ms-clear

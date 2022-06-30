@@ -18,7 +18,7 @@
 		-webkit-overflow-scrolling touch
 		z-index 105
 		background-color rgba($popup-overlay-bg, $popup-overlay-opacity)
-		padding 10px
+		padding 30px 15px
 		text-align center
 		white-space nowrap
 		&:before
@@ -28,16 +28,43 @@
 			height 100%
 	&__body
 		width 100%
-		max-width 400px
+		max-width 440px
 		background-color $popup-body-bg
-		padding 20px
+		padding 50px 60px
 		display inline-block
 		vertical-align middle
 		position relative
+		color $dark-text-color
 		white-space normal
 		
-	.btn-close
-		position absolute
-		top 10px
-		right 10px
+	&__title
+		font-size 24px
+		margin-bottom 12px
+	&__text
+		margin-bottom 32px
+		font-size 12px
+		
+	.form-notice
+		color inherit
+		font-size 12px
+		line-height 15px
+		margin-top 20px
+		
+	.form-group
+		margin-bottom 8px
+		
+		.btn
 
+			margin 24px auto 0
+			max-width 250px
+	
+
+.popup-thanks
+	.popup__body
+		padding-left 20px
+		padding-right 20px
+	.popup__title
+		margin-bottom 32px
+	.popup__text
+		font-size 16px
+		

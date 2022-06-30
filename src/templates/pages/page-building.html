@@ -22,34 +22,12 @@
 							<p>Дизайн интерьера — это нечто больше, чем простое планирование функциональности вашего пространства.</p>
 						</div>
 
-						<button type="button" class="btn btn-light">Записаться на консультацию</button>
+						<button type="button" class="btn btn-light js-open-popup-form-btn">Записаться на консультацию</button>
 					</div>
 					<!-- //container -->
 				</div>
 
-				<div class="promo-slider__wrapper">
-					<div class="promo-slider js-promo-slider">
-						<div class="promo-slide" style="background-image: url('img/promo/3.jpg');"></div>
-						<div class="promo-slide" style="background-image: url('img/promo/4.jpg');"></div>
-					</div>
-
-					<div class="promo-slider__controls hidden-mobile">
-						<button class="promo-slider__btn promo-slider__btn-prev js-promo-slider-btn-prev" type="button">
-							<svg viewBox="0 0 14 24"  xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.1429 22.2857L1.85717 11.9999L12.1429 1.71423" />
-							</svg>
-
-						</button>
-						<button class="promo-slider__btn promo-slider__btn-next js-promo-slider-btn-next" type="button">
-							<svg viewBox="0 0 14 24"  xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.85712 22.2857L12.1428 11.9999L1.85712 1.71423" />
-							</svg>
-
-						</button>
-					</div>
-
-					<div class="slider-pagination slider-pagination-light js-promo-slider-pagination hidden-desktop visible-mobile"></div>
-				</div>
+				{% include '../parts/components/promo-slider.html' %}
 			</section>
 			<!-- //sect promo -->
 
@@ -273,14 +251,15 @@
 
 
 								<div class="links row align-vertical-center align-horisontal-between row-nowrap">
-									<button class="btn" type="button">Записаться на консультацию</button>
+									<button class="btn" type="button js-open-popup-form-btn">Записаться на консультацию</button>
 
 									<a href="#" class="link">Строительство под ключ</a>
 								</div>
 							</div>
 						</div>
 
-						{% include '../parts/components/calculator-slider.html' %}
+						{% include '../parts/components/content-img.html' %}
+						{% include '../parts/components/simple-slider.html' %}
 					</div>
 				</div>
 				<!-- //container -->
@@ -289,6 +268,9 @@
 
 			{% include '../parts/sections/sect-work-steps.html' %}
 			<!-- //sect work steps -->
+
+			{% include '../parts/sections/sect-consultation.html' %}
+			<!-- //sect work consultation -->
 
 		</main>
 		<!-- //Main -->

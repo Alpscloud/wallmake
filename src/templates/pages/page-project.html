@@ -25,34 +25,12 @@
 							</ul>
 						</div>
 
-						<button type="button" class="btn btn-light">Записаться на консультацию</button>
+						<button type="button" class="btn btn-light js-open-popup-form-btn">Записаться на консультацию</button>
 					</div>
 					<!-- //container -->
 				</div>
 
-				<div class="promo-slider__wrapper">
-					<div class="promo-slider js-promo-slider">
-						<div class="promo-slide" style="background-image: url('img/promo/3.jpg');"></div>
-						<div class="promo-slide" style="background-image: url('img/promo/4.jpg');"></div>
-					</div>
-
-					<div class="promo-slider__controls hidden-mobile">
-						<button class="promo-slider__btn promo-slider__btn-prev js-promo-slider-btn-prev" type="button">
-							<svg viewBox="0 0 14 24"  xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.1429 22.2857L1.85717 11.9999L12.1429 1.71423" />
-							</svg>
-
-						</button>
-						<button class="promo-slider__btn promo-slider__btn-next js-promo-slider-btn-next" type="button">
-							<svg viewBox="0 0 14 24"  xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.85712 22.2857L12.1428 11.9999L1.85712 1.71423" />
-							</svg>
-
-						</button>
-					</div>
-
-					<div class="slider-pagination slider-pagination-light js-promo-slider-pagination hidden-desktop visible-mobile"></div>
-				</div>
+				{% include '../parts/components/promo-slider.html' %}
 			</section>
 			<!-- //sect promo -->
 
@@ -76,9 +54,6 @@
 								</div>
 							</div>
 
-							<div class="project-params__notices">
-								<p>+Цокольный этаж</p>
-							</div>
 
 						</div>
 
@@ -166,6 +141,11 @@
 								</article>
 								<!-- //catalog item -->
 
+								<article class="project-card__wrapper col-w-33">
+									{% include '../parts/components/project-card.html' %}
+								</article>
+								<!-- //catalog item -->
+
 							</div>
 						</div>
 					</div>
@@ -219,77 +199,26 @@
 
 
 								<div class="links row align-vertical-center align-horisontal-between row-nowrap">
-									<button class="btn" type="button">Записаться на консультацию</button>
+									<button class="btn js-open-popup-form-btn" type="button">Записаться на консультацию</button>
 
 									<a href="#" class="link">Строительство под ключ</a>
 								</div>
 							</div>
 						</div>
 
-						{% include '../parts/components/calculator-slider.html' %}
+						{% include '../parts/components/content-img.html' %}
+						{% include '../parts/components/simple-slider.html' %}
 					</div>
 				</div>
 				<!-- //container -->
 			</section>
 			<!-- //sect calculator -->
 
-			<section class="sect__work-steps gutter-bottom">
-				<div class="container">
-					<h2 class="sect-title">Этапы работы<br><i>СДАЧА ПРОЕКТА</i></h2>
-
-					<div class="work-steps row align-horisontal-start">
-						<div class="work-step__wrapper col-w-25">
-							<div class="work-step">
-								<h3 class="work-step__title"><i>01</i> ТОЧНЫЙ РАССЧЕТ</h3>
-								<div class="work-step__img">
-									<img src="img/steps/1.png" alt="">
-								</div>
-								<p>Разработанная нами программа, рассчитывает абсолютно любой дом с точностью до 98%. Выезд прораба и менеджера проекта</p>
-							</div>
-						</div>
-						<!-- //step -->
-
-						<div class="work-step__wrapper col-w-25">
-							<div class="work-step">
-								<h3 class="work-step__title"><i>02</i> ПОДПИСАНИЕ ДОГОВОРА</h3>
-								<div class="work-step__img">
-									<img src="img/steps/2.png" alt="">
-								</div>
-								<p>5 лет гарантии и постгарантийное облуживание</p>
-							</div>
-						</div>
-						<!-- //step -->
-
-						<div class="work-step__wrapper col-w-25">
-							<div class="work-step">
-								<h3 class="work-step__title"><i>03</i> СТРОИТЕЛЬСТВО, РЕМОНТные работы, МЕБЕЛИРОВКА, декор</h3>
-								<div class="work-step__img">
-									<img src="img/steps/3.png" alt="">
-								</div>
-								<p>Видео отчет на каждом этапе. Фиксированные сроки. Мебель и декор с дополнительной скидкой</p>
-							</div>
-						</div>
-						<!-- //step -->
-
-						<div class="work-step__wrapper col-w-25">
-							<div class="work-step">
-								<h3 class="work-step__title"><i>04</i> ПЕРЕЕЗД  в  готовое пространство</h3>
-								<div class="work-step__img">
-									<img src="img/steps/4.png" alt="">
-								</div>
-								<p>Помощь в переезде</p>
-							</div>
-						</div>
-						<!-- //step -->
-					</div>
-
-					<div class="btn-wrapper text-center">
-						<a href="#" class="btn">Рассчитать стоимость прямо сейчас</a>
-					</div>
-				</div>
-				<!-- //container -->
-			</section>
+			{% include '../parts/sections/sect-work-steps.html' %}
 			<!-- //sect work steps -->
+
+			{% include '../parts/sections/sect-consultation.html' %}
+			<!-- //sect work consultation -->
 
 		</main>
 		<!-- //Main -->

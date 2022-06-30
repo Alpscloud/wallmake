@@ -5,6 +5,33 @@ $(document).ready(function() {
 			timer; // for disable scroll
 	// ========= =========== =========== ===========
 
+	// Popup
+	$('.js-open-popup-form-btn').on('click',function(e) {
+		e.preventDefault();
+		$('.js-popup-form').fadeIn(300);
+		$('html').addClass('is-fixed');
+	});
+
+
+	$('.js-close-popup-btn').on('click',function(e) {
+		e.preventDefault();
+		$(this).parents('.js-popup').fadeOut(300);
+		$('html').removeClass('is-fixed');
+	});
+
+	$('.popup__overflow').on('click', function(e) {
+		e.stopPropagation();
+
+		var content = $(this).find('.popup__body');
+
+		if(!content.is(e.target) && content.has(e.target).length === 0) {
+			$('html').removeClass('is-fixed');
+			$('.js-popup').fadeOut(300);
+		}
+
+	});
+	// ========= =========== =========== ===========
+
 	var headerHeight = $('.header').innerHeight();
 
 	$('.js-smooth-scroll-link').on('click', function (e) {
@@ -175,6 +202,8 @@ $(document).ready(function() {
 			arrows: false,
 			dots: true,
 			appendDots: $('.js-advantages-slider-pagination'),
+			autoplay: true,
+			autoplaySpeed: 3000,
 			accessibility: false,
 			responsive: [
 				{

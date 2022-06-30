@@ -11,18 +11,13 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Serhii 'winde' Kuptsov">
 	
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="img/favicon/site.webmanifest">
-	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
-	<!-- //Favicons -->
-	<meta name="msapplication-TileColor" content="#000000">
-	<meta name="theme-color" content="#000000">
-	<meta name="msapplication-navbutton-color" content="#000000">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 
 	<!-- All libs styles -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
@@ -43,7 +38,21 @@
 
 		
 		<!-- Header -->
-		<header class="header">
+		<!-- Preloader -->
+<!-- <div class="preloader__wrapper">
+	
+	<div class="preloader">
+		<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM3 30C3 44.9117 15.0883 57 30 57C44.9117 57 57 44.9117 57 30C57 15.0883 44.9117 3 30 3C15.0883 3 3 15.0883 3 30Z" fill="#E4E4E4"/>
+			<path d="M58.5 30C59.3284 30 60.0039 29.328 59.9625 28.5006C59.791 25.0732 59.0325 21.6968 57.7164 18.5195C56.2087 14.8797 53.999 11.5726 51.2132 8.7868C48.4274 6.00104 45.1203 3.79125 41.4805 2.28361C38.3032 0.967533 34.9268 0.209002 31.4994 0.0374914C30.672 -0.00391226 30 0.671573 30 1.5V1.5C30 2.32843 30.6721 2.99566 31.4993 3.04166C34.5325 3.21034 37.5192 3.88996 40.3325 5.05525C43.6082 6.41213 46.5847 8.40093 49.0919 10.9081C51.5991 13.4153 53.5879 16.3918 54.9447 19.6675C56.11 22.4808 56.7897 25.4675 56.9583 28.5007C57.0043 29.3279 57.6716 30 58.5 30V30Z" fill="#333333"/>
+		</svg>
+	</div>
+
+	<div class="preloader__section preloader__section--left"></div> 
+	<div class="preloader__section preloader__section--right"></div>
+</div> -->
+<!--// Preloader -->
+<header class="header">
 	<div class="header-top header-border-block">
 		<div class="header-container">
 			<div class="row align-horisontal-end">
@@ -483,6 +492,69 @@
 	<!-- //container -->
 </footer>
 
+
+<!-- Popup -->
+<div class="popup js-popup js-popup-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<button class="btn-close js-close-popup-btn" type="button">
+				<svg  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.5716 1.42857L1.42871 18.5714M1.42871 1.42857L18.5716 18.5714"/>
+				</svg>
+
+			</button>
+			<!-- Popup content-->
+			<div class="popup__content">
+				<p class="popup__title">Заполните форму</p>
+				<p class="popup__text">Обработка займет не более 10 минут!</p>
+				
+				<form>
+
+					<div class="form-group ">
+						<input type="text" class="form-input-rounded form-input-dark js-required-input" placeholder="Имя*" name="name">
+					</div>
+
+					<div class="form-group ">
+						<input type="tel" class="form-input-rounded form-input-dark js-required-input" placeholder="Телефон*" name="phone">
+						<p class="form-input__notice">Телефон должен начинаться на +7</p>
+					</div>
+
+					<div class="form-group ">
+						<button class="btn btn-wide l-spacing" type="button">Получить консультацию</button>
+					</div>
+
+
+					<p class="form-notice l-spacing">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.</p>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup -->
+
+<!-- Thanks -->
+<div class="popup popup-thanks js-popup js-popup-thanks">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<button class="btn-close js-close-popup-btn" type="button">
+				<svg  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.5716 1.42857L1.42871 18.5714M1.42871 1.42857L18.5716 18.5714"/>
+				</svg>
+
+			</button>
+			<!-- Popup content-->
+			<div class="popup__content">
+				<p class="popup__title">Спасибо!</p>
+				<p class="popup__text">Ваша заявка отправлена,<br> в течении 10 минут вам поступит звонок.</p>
+				
+				<a href="index.html" class="btn">Перейти на Главную</a>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Thanks -->
 		<!-- //Footer -->
 
 	</div>

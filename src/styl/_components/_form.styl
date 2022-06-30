@@ -72,6 +72,26 @@ input[type="search"]::-webkit-search-results-decoration
 			&:-ms-input-placeholder
 				font 14px $Med
 				color $basic-white-color
+				
+		&-dark
+			border-color $dark-text-color
+			color $dark-text-color
+			&::-webkit-input-placeholder
+				color $text-color
+			&::-moz-placeholder
+				color $text-color
+			&:-moz-placeholder
+				color $text-color
+			&:-ms-input-placeholder
+				color $dark-text-color
+				
+			&:hover,
+			&:focus
+				border-color $gold-color
+				
+		&__notice
+			font-size 12px
+			margin-top 8px
 			
 		&.is-error
 			border-color red

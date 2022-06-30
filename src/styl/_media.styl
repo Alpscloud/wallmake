@@ -445,9 +445,20 @@
 			max-width 560px
 			
 	.simple-slider__wrapper
-		margin-top 40px
+		margin-top 56px
 		flex none
 		max-width 100%
+		
+	.content-img
+		&__wrapper
+			margin-top 56px
+			flex none
+			max-width none
+			width calc(100% + 40px)
+			margin-left -20px
+			margin-right -20px
+			padding-left 0
+			padding-right 0
 			
 	.calculator
 		&-row
@@ -514,26 +525,40 @@
 		
 
 +max-screen(620px)
+	.sect__chapters
+		display none
+		
 	body
 		font-size 14px
 		line-height 19px
 		
 	.sect-title
-		font-size 26px
-		line-height 32px
+		font-size 30px
+		line-height 36px
 		
 	.page-title
 		font-size 36px
 		line-height 40px
 		
 	.gutter-top
-		padding-top 80px
+		padding-top 75px
 	.gutter-bottom
-		padding-bottom 80px
+		padding-bottom 75px
 		
 	.gutters
-		padding 80px 0
+		padding 75px 0
 	// PRomo
+	.promo-slider
+		&__controls
+			bottom 20px
+			right 20px
+		&__btn
+			width 40px
+			height 40px
+			margin-right 10px 
+			svg
+				width 10px
+				
 	.promo-content__text,
 	.sect__slogan .content 
 		font-size 14px
@@ -573,16 +598,52 @@
 			
 	// Team
 	.team-member
-		flex-wrap wrap
-		&__photo
-			width 100%
-			padding-top 100%
+		padding-left 20px
+		padding-right 20px
+		margin-bottom 40px
+		&__name
+			font-size 20px
+			margin-bottom 8px
+			line-height 24px
+		&__position
+			font-size 12px
 		&__content
-			width 100%
-			padding 40px 20px
+			padding 12px 0 12px 12px
+			width 58%
+		&__photo
+			width 42%
+			padding-top 42%
 			
+		&:last-child
+			margin-bottom 0
+			
+		&:first-child
+			flex-wrap wrap
+			padding-left 0
+			padding-right 0
+			
+			
+			.team-member
+			
+				&__photo
+					width 100%
+					padding-top 100%
+				&__content
+					width 100%
+					padding 40px 20px
+				
+		&:nth-child(even)
+			flex-direction row
+				
 		.document
-			margin-top 40px
+			margin-top 20px
+			
+	.document-name
+		padding-left 0
+		height auto
+		&:before
+			display none
+			
 	
 
 	// Footer
@@ -626,15 +687,15 @@
 			line-height 1
 			
 	.projects-cards
-		margin-left -5px
-		margin-right -5px
-		margin-bottom -10px
+		margin-left -8px
+		margin-right -8px
+		margin-bottom -16px
 		
 	.project-card
 		&__wrapper
-			padding-left 5px
-			padding-right 5px
-			margin-bottom 10px
+			padding-left 8px
+			padding-right 8px
+			margin-bottom 16px
 			
 	.catalog
 		.project-card
@@ -644,14 +705,21 @@
 				right 5px
 			.tag
 				font-size 10px
+	
+	.another-projects			
+		.project-card__wrapper
+			&:nth-child(4)
+				display block
+		
 			
 	.catalog-filter
-		margin-left -5px
-		margin-right -5px
-		margin-bottom 20px
+		margin-left -12px
+		margin-right -12px
+		margin-bottom 0
 		&__category
-			padding-left 5px
-			padding-right 5px
+			padding-left 12px
+			padding-right 12px
+			margin-bottom 16px
 			span
 				font-size 12px
 				&:before
@@ -667,6 +735,7 @@
 			justify-content center
 			.btn
 				width 100%
+				max-width 100%
 				
 			.link
 				margin-left 0
@@ -756,18 +825,32 @@
 				.article-date,
 				.link
 					display none
-					
+	
+	.sect__article
+		padding-top 0
+		position relative
 	.article
 		&-entering
-			margin-bottom 40px
+			margin-bottom 0
+			position absolute
+			z-index 2
+			top 25px
+			left 0
 			.page-title
-				padding-left 0
-				padding-right 0
+				display none
 				
 			
 		&-img
 			margin-bottom 24px
 			background-attachment scroll
+			position relative
+			overflow hidden
+			&:before
+				pseudo()
+				position absolute
+				fullSize()
+				background-color rgba(38, 30, 16, 0.5)
+				z-index 1
 		&-title
 			margin-bottom 24px
 			font-size 30px
@@ -784,12 +867,14 @@
 			font-size 16px
 			
 	.link-back
-		width 39px
-		height 15px
-		padding-left 0
-		span
-			display none
-			
+		color $basic-white-color
+		&:before
+			pseudo()
+			background-image url('../img/icons/svg/arrow-lg-light.svg')
+	
+	.main
+		section:last-child
+			padding-bottom 56px		
 	.content
 		font-size 16px
 		line-height 1.5
@@ -828,27 +913,96 @@
 
 	.slider-pagination.rectangles-view 
 		li 
-			margin 0 12px 0 0
-			width auto
-			height auto
-			button
-				border-radius 50%
-				width 8px
-				height 8px
+			width 26px
+			// margin 0 12px 0 0
+			// width auto
+			// height auto
+			// button
+			// 	border-radius 50%
+			// 	width 8px
+			// 	height 8px
+				
+	.story-content__text h2, 
+	.story-content__text h3
+		line-height 34px
+		margin-bottom 20px
+		
+	.links .link
+		margin-left 24px
+		
+	.simple-slider__wrapper
+		padding-left 0
+		padding-right 0
+		width calc(100% + 40px)
+		max-width none
+		margin-left -20px
+		margin-right -20px
 
+		.slider-pagination
+			padding-left 35px
+			padding-right 35px
+			
+	.calculator-row
+		.simple-slider__wrapper,
+		.content-img__wrapper
+			display none
+			
+		
+	.sect__another-articles
+		.articles-cards
+			margin-bottom -60px
+			
+	// Popp
+	.popup
+		&__body
+			padding 50px 20px
+		&__title
+			font-size 20px
+			margin-bottom 14px
+			line-height 27px
+	
+	.btn-close
+		top 10px
+		right 10px
+		
+	.popup-thanks
+		.popup__title
+			margin-bottom 32px
+			font-size 20px
+		.popup__text
+			font-size 16px
+			
+		.btn
+			max-width 100%
+			width 100%
+		
 					
 +max-screen(480px)
 	// Work steps
-	.work-step__wrapper
-		width 100%
+	.work-step
+		display block
+		padding 40px 20px 40px 135px
+		position relative
+		min-height 145px
+		&__img
+			width 100px
+			position absolute
+			vertical-center()
+			left 20px
+		&__title
+			min-height auto
+			font-size 12px
+			display block
+			margin-bottom 15px
+		&__wrapper
+			width 100%
 		
 	// Story
 	.links
 		.btn
-			padding-left 17px
-			padding-right 17px
-		.link
-			margin-left 20px
+			padding-left 24px
+			padding-right 24px
+		
 	
 
 +max-screen(420px)
@@ -874,3 +1028,11 @@
 			top 5px
 			left 5px
 			right 5px
+			
+	.links
+		.link
+			margin-left 16px
+			
+		.btn
+			padding-left 16px
+			padding-right 16px
