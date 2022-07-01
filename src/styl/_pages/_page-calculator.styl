@@ -1,0 +1,74 @@
+.quiz
+	
+	
+	&-body
+		display flex
+		flex-direction column
+		padding 60px 0
+		min-height 100vh
+	&-progress
+		position relative
+		padding-left 55px
+		padding-right 55px
+		margin-bottom 60px
+		.btn-close
+			position absolute
+			right 0
+			vertical-center()
+			
+		&-counter
+			color $text-color
+			font 16px $Med
+			text-align center
+			&-current
+				color $dark-text-color
+				font-size 24px
+				
+		&-dots
+			display flex
+			justify-content center
+			flex-wrap nowrap
+			
+			
+		&-dot
+			display inline-block
+			width 55px
+			height 4px
+			background-color rgba(#c4c4c4, .5)
+			transition background-color .17s ease-in-out
+			margin-right 10px
+			&:last-child
+				margin-right 0
+			&.is-active
+				background-color $text-color
+
+.quiz-steps
+	flex 1
+	flex-col-center()				
+
+.quiz-step
+	&__question
+		margin-bottom 40px
+		&-title
+			font-size 24px
+			line-height 33px
+		p
+			margin-top 8px
+			color $text-color
+	&__controls
+		text-align center
+		white-space nowrap
+		margin-top 75px
+		.btn
+			margin-right 12px
+			width 100%
+			max-width 120px
+			&:last-child
+				margin-right 0
+				
+
+.quiz-step
+	&__answers
+		display flex
+		justify-content center
+		flex-wrap wrap

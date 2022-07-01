@@ -297,6 +297,115 @@ $(document).ready(function() {
 	$("input[type=tel]").inputmask({"mask": "+7 (999) 999-9999","clearIncomplete": false});
 
 
+	// Quiz
+	if ($('.js-quiz-step').length > 0) {
+		var quizSteps = $('.js-quiz-step').length;
+
+		function generateQuizProgressDots() {
+			var dotTmpl = '';
+
+			for (var i = 0; i <= quizSteps - 1; i++) {
+				dotTmpl += '<span class="quiz-progress-dot"></span>';
+			}
+
+			$('.quiz-progress-dots').html(dotTmpl);
+			$('.quiz-progress-counter-total').text('/'+quizSteps);
+		}
+
+		generateQuizProgressDots();
+
+		$('.quiz-progress-dot:first-child').addClass('is-active');
+
+
+		var quizStep = $('.js-quiz-step'),
+				quizControls = quizStep.find('.js-quiz-step-controls');
+
+
+
+		quizStep.not(":nth-child(1)").hide();
+		quizStep.first().addClass('is-active');
+
+		quizControls.each(function() {
+		var self = $(this);
+
+		self.on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+
+			var top = $('.js-quiz').offset().top;
+
+			var quizBtn = $(e.target),
+					quizDirection = quizBtn.attr('data-quiz-direction');
+
+			if(quizBtn.prop('tagName') !== 'BUTTON') {return};
+
+
+
+			
+			// Quiz steps
+			var currentQuizStep = self.parents('.js-quiz-step'),
+					nextQuizStep = currentQuizStep.next('.js-quiz-step'),
+					prevQuizStep = currentQuizStep.prev('.js-quiz-step');
+
+			// Validation
+			var radios = currentQuizStep.find('input[type=radio]:checked').length;
+			var checkboxes = currentQuizStep.find('input[type=checkbox]:checked').length;
+			var inputs = currentQuizStep.find('input[type=text]');
+			var flag;
+
+
+			if(quizDirection === 'next') {
+				
+				if (nextQuizStep.length) {
+
+					if(radios > 0 || inputs.val() || checkboxes > 0) {
+						flag = true;
+					} else {
+						flag = false;
+					}
+
+					if(!flag) {return};
+
+					// Steps
+					currentQuizStep.removeClass('is-active').hide();
+					nextQuizStep.addClass('is-active').fadeIn();
+
+				}
+
+
+			} else if(quizDirection === 'prev') {
+
+				if (prevQuizStep.length) {
+					flag = true;
+
+					// Steps
+					currentQuizStep.removeClass('is-active').hide();
+					
+					prevQuizStep.addClass('is-active').fadeIn();
+				}
+
+			}
+
+			if(html < 767) {
+		 		$('html, body').animate({scrollTop: top}, 170);
+		 	}
+
+		});
+	});
+
+
+
+	}
+
+
+	$('.js-prev-page-link').on('click', function(e) {
+		e.preventDefault();
+
+		window.history.go(-1);
+	});
+
+
 	setTimeout(function(){
 		$('body').addClass('is-loaded');
 	}, 1500);

@@ -12,6 +12,7 @@
 	.chapter-card__img
 		img
 			max-width 350px
+			
 +max-screen(1200px)
 	.gutter-right
 		padding-right 0
@@ -72,6 +73,12 @@
 	.article
 		&-img
 			padding-top 56.25%
+			
+	.sect__technical
+		min-height calc(100vh - 121px)
+		.link-back
+			left 20px
+			top 35px
 		
 +max-screen(1050px)
 	
@@ -162,6 +169,9 @@
 	.page-inner 
 		.main
 			padding-top 63px
+			
+	.sect__technical
+		min-height calc(100vh - 63px)
 	// Header
 	.header
 		&:before
@@ -865,12 +875,13 @@
 		.article-date
 			margin-top 24px
 			font-size 16px
-			
-	.link-back
-		color $basic-white-color
-		&:before
-			pseudo()
-			background-image url('../img/icons/svg/arrow-lg-light.svg')
+	
+	.article-entering		
+		.link-back
+			color $basic-white-color
+			&:before
+				pseudo()
+				background-image url('../img/icons/svg/arrow-lg-light.svg')
 	
 	.main
 		section:last-child
@@ -1002,6 +1013,14 @@
 		.btn
 			padding-left 24px
 			padding-right 24px
+			
+	.block-404
+		font-size 16px
+		line-height 24px
+
+		&__title
+			font-size 100px
+			margin-bottom 32px
 		
 	
 

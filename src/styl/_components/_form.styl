@@ -20,7 +20,10 @@ input[type="search"]::-webkit-search-results-decoration
 		padding-left 10px
 		padding-right 10px
 
-
+form.wpcf7-form
+	br,
+	.wpcf7-response-output
+		display none !important
 .form
 	&-input
 		display block
@@ -32,7 +35,7 @@ input[type="search"]::-webkit-search-results-decoration
 		color $dark-text-color
 		&:hover,
 		&:focus
-			border-color $accent-color
+			border-color $gold-color
 		&::-webkit-input-placeholder
 			font 12px $SemiBold
 			color $dark-text-color
@@ -59,7 +62,7 @@ input[type="search"]::-webkit-search-results-decoration
 			font 14px $Med
 			&:hover,
 			&:focus
-				border-color $accent-color
+				border-color $gold-color
 			&::-webkit-input-placeholder
 				font 14px $Med
 				color $basic-white-color

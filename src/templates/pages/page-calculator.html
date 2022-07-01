@@ -1,0 +1,120 @@
+{% include '../parts/head.html' %}
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Main -->
+		<main class="main">
+
+			<section class="sect__quiz">
+
+				<h2 class="w3c">Опросник</h2>
+
+				<div class="quiz dark-text-color color-bg js-quiz">
+					<div class="quiz-body container">
+
+						<!-- Progress -->
+						<div class="quiz-progress">
+
+							<div class="quiz-progress-dots">
+
+							</div>
+
+							<div class="quiz-progress-counter hidden-desktop">
+								<span class="quiz-progress-counter-current">1</span><span class="quiz-progress-counter-total">/14</span>
+							</div>
+
+							<a href="index.html" class="btn-close js-prev-page-link">
+								<svg  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.5716 1.42857L1.42871 18.5714M1.42871 1.42857L18.5716 18.5714"/>
+								</svg>
+							</a>
+
+						</div>
+
+						<!-- //Progress -->
+
+						<!-- Steps -->
+						<form class="quiz-steps">
+
+							<!-- Step -->
+							<div class="quiz-step js-quiz-step">
+
+								<input type="hidden" name="Вопрос 1" value="Есть ли у Вас участок для строительства?">
+
+								<div class="quiz-step__question text-center">
+									<h3 class="quiz-step__question-title">Есть ли у Вас участок<br> для строительства?</h3>
+									<p>Описание шага</p>
+								</div>
+
+								<div class="quiz-step__answers">
+									<div class="quiz-step__answer">
+										<label>
+											<input type="radio" name="Наличие участка" value="Да">
+											<span>Да</span>
+										</label>
+									</div>
+
+									<div class="quiz-step__answer">
+										<label>
+											<input type="radio" name="Наличие участка" value="Нет">
+											<span>Нет</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="quiz-step__controls js-quiz-step-controls">
+									<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step -->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step__question text-center">
+									<h3 class="quiz-step__question-title">Есть ли у Вас участок<br> для строительства?</h3>
+									<p>Описание шага</p>
+								</div>
+
+								<div class="quiz-step__answers">
+
+								</div>
+
+								<div class="quiz-step__controls js-quiz-step-controls">
+									<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+									<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step -->
+							<div class="quiz-step js-quiz-step">
+								3
+							</div>
+							<!-- //Step -->
+						</form>
+						<!-- //Steps -->
+
+
+
+
+					</div>
+					<!-- //container -->
+				</div>
+			</section>
+
+
+
+		</main>
+		<!-- //Main -->
+
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>
