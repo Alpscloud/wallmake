@@ -4,7 +4,7 @@
 	&-body
 		display flex
 		flex-direction column
-		padding 60px 0
+		padding-top 60px
 		min-height 100vh
 	&-progress
 		position relative
@@ -43,10 +43,28 @@
 				background-color $text-color
 
 .quiz-steps
+	position relative
 	flex 1
-	flex-col-center()				
+	flex-col-center()			
+	padding-bottom 60px
 
 .quiz-step
+	flex 1
+	display flex
+	&.is-error
+		.quiz-step__error
+			opacity 1
+			visibility visible
+	&-content
+		width 100%
+		flex 1
+		display flex
+		flex-direction column
+		align-items center
+	&__body
+		flex 1
+		width 100%
+		flex-col-center()
 	&__question
 		margin-bottom 40px
 		&-title
@@ -59,16 +77,193 @@
 		text-align center
 		white-space nowrap
 		margin-top 75px
+		width 100%
+		z-index 1
 		.btn
 			margin-right 12px
 			width 100%
 			max-width 120px
 			&:last-child
 				margin-right 0
-				
+	
+	&__error
+		font-size 12px
+		color $error-color
+		margin-top 8px
+		position absolute
+		horisontal-center()
+		bottom 0
+		opacity 0
+		visibility hidden
+		pointer-events none
+		transition all .17s ease-in-out
+		width 100%
+		line-height 1
 
+
+	
 .quiz-step
+	width 100%
 	&__answers
 		display flex
 		justify-content center
 		flex-wrap wrap
+		margin-left -12px
+		margin-right -12px
+		position relative
+		width 100%
+		&.row-gutters-lg
+			margin-left -30px
+			margin-right -30px
+			
+			.quiz-step__answer
+				padding-left 30px
+				padding-right 30px
+		
+	&__answer
+		padding-left 12px
+		padding-right 12px
+		margin-bottom 20px
+		display flex
+		flex-direction column
+		justify-content space-between
+		.quiz-step__answer-radio_rectangle
+			span
+				height 135px
+		&.col-w-25
+			label
+				height 240px
+		label
+			display block
+			bg(50%, 50%)
+			cursor pointer
+			&.no-overlay
+				&:before
+					display none
+			&.height-sm
+				height 200px
+			
+			input
+				display none
+			span
+				display block
+				
+				
+		&-radio
+			display block
+			input
+				&:checked + span
+					background-color $gold-color
+			span
+				width 100px
+				height 50px
+				border-radius 50px
+				background-color #898074
+				@extends .l-spacing
+				color $basic-white-color
+				font-size 14px
+				text-align center
+				transition background-color .17s ease-in-out
+				line-height 50px
+				position relative
+				&:hover
+					cursor pointer
+					
+			&_img
+				position relative
+				height 330px
+				overflow hidden
+				padding-top 0
+			
+				
+				input:checked + span
+					&:before
+						background-color #514A43
+					&:after
+						opacity 1	
+						
+				&:before
+					pseudo()
+					position absolute
+					fullSize()
+					background-color rgba($overlay-bg, .2)
+					z-index 1
+					
+				span
+					position absolute
+					bottom 0
+					left 0
+					right 0
+					z-index 2
+					padding 20px 20px 20px 50px
+					background-color rgba(#F7F4F2, .9)
+					@extends .l-spacing
+					&:before,
+					&:after
+						pseudo()
+						position absolute
+						vertical-center()
+						border-radius 50%
+						transition all .17s ease-in-out
+					&:before
+						width 20px
+						height 20px
+						border 1px solid #514A43
+						left 20px
+						
+					&:after
+						width 12px
+						height 12px
+						border 2px solid rgba(#F7F4F2, .9)
+						background-color #514A43
+						left 24px
+						opacity 0
+						
+			&_rectangle
+				input:checked + span
+					&:before
+						background-color #514A43
+					&:after
+						opacity 1	
+				
+				span
+					display flex !important
+					align-items center
+					height 102px
+					background-color $basic-white-color
+					padding 20px 20px 20px 50px
+					@extends .l-spacing
+					position relative
+					&:before,
+					&:after
+						pseudo()
+						position absolute
+						vertical-center()
+						border-radius 50%
+						transition all .17s ease-in-out
+					&:before
+						width 20px
+						height 20px
+						border 1px solid #514A43
+						left 20px
+						
+					&:after
+						width 12px
+						height 12px
+						border 2px solid rgba(#F7F4F2, .9)
+						background-color #514A43
+						left 24px
+						opacity 0
+						
+			
+				
+					
+
+.quiz
+	.form-input-dark
+		border-color $border-color
+		max-width 300px
+		margin 0 auto
+		&:hover,
+		&:focus
+			border-color $gold-color

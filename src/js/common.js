@@ -296,6 +296,8 @@ $(document).ready(function() {
 
 	$("input[type=tel]").inputmask({"mask": "+7 (999) 999-9999","clearIncomplete": false});
 
+	
+
 
 	// Quiz
 	if ($('.js-quiz-step').length > 0) {
@@ -320,81 +322,105 @@ $(document).ready(function() {
 		var quizStep = $('.js-quiz-step'),
 				quizControls = quizStep.find('.js-quiz-step-controls');
 
-
-
 		quizStep.not(":nth-child(1)").hide();
 		quizStep.first().addClass('is-active');
 
 		quizControls.each(function() {
-		var self = $(this);
+			var self = $(this);
 
-		self.on('click', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
+			self.on('click', function(e) {
+				e.preventDefault();
+				//e.stopPropagation();
 
+				var top = $('.js-quiz').offset().top;
 
-			var top = $('.js-quiz').offset().top;
+				var quizBtn = $(e.target),
+						quizDirection = quizBtn.attr('data-quiz-direction');
 
-			var quizBtn = $(e.target),
-					quizDirection = quizBtn.attr('data-quiz-direction');
+				if(quizBtn.prop('tagName') !== 'BUTTON') {return};
 
-			if(quizBtn.prop('tagName') !== 'BUTTON') {return};
+				// Quiz steps
+				var currentQuizStep = self.parents('.js-quiz-step'),
+						nextQuizStep = currentQuizStep.next('.js-quiz-step'),
+						prevQuizStep = currentQuizStep.prev('.js-quiz-step');
 
+				var nextQuizStepInd = nextQuizStep.index();
+				var prevQuizStepInd = prevQuizStep.index();
+	
 
+				// Validation
+				var radios = currentQuizStep.find('input[type=radio]:checked').length;
+				var checkboxes = currentQuizStep.find('input[type=checkbox]:checked').length;
+				var inputs = currentQuizStep.find('input[type=text]');
+				// var flag;
 
-			
-			// Quiz steps
-			var currentQuizStep = self.parents('.js-quiz-step'),
-					nextQuizStep = currentQuizStep.next('.js-quiz-step'),
-					prevQuizStep = currentQuizStep.prev('.js-quiz-step');
+				if(quizDirection === 'next') {
+					
+					if (nextQuizStep.length) {
 
-			// Validation
-			var radios = currentQuizStep.find('input[type=radio]:checked').length;
-			var checkboxes = currentQuizStep.find('input[type=checkbox]:checked').length;
-			var inputs = currentQuizStep.find('input[type=text]');
-			var flag;
+						// if(radios > 0 || inputs.val() || checkboxes > 0) {
+						// 	flag = true;
+						// } else {
+						// 	flag = false;
+						// 	currentQuizStep.addClass('is-error');
 
+						// }
 
-			if(quizDirection === 'next') {
-				
-				if (nextQuizStep.length) {
+						// if(!flag) {return};
 
-					if(radios > 0 || inputs.val() || checkboxes > 0) {
-						flag = true;
+						// Progress
+						$('.quiz-progress-dot').removeClass('is-active');
+						$('.quiz-progress-dot').eq(nextQuizStepInd).addClass('is-active');
+						$('.quiz-progress-counter-current').text(nextQuizStepInd + 1);
+
+						// Steps
+						currentQuizStep.removeClass('is-active').css("display", "flex").hide();
+						nextQuizStep.addClass('is-active').css("display", "flex").hide().fadeIn();
+
 					} else {
-						flag = false;
+						return;
 					}
 
-					if(!flag) {return};
 
-					// Steps
-					currentQuizStep.removeClass('is-active').hide();
-					nextQuizStep.addClass('is-active').fadeIn();
+				} else if(quizDirection === 'prev') {
+
+					if (prevQuizStep.length) {
+
+						// flag = true;
+
+						currentQuizStep.removeClass('is-error');
+
+						// Progress
+						$('.quiz-progress-dot').removeClass('is-active');
+						$('.quiz-progress-dot').eq(prevQuizStepInd).addClass('is-active');
+						$('.quiz-progress-counter-current').text(prevQuizStepInd + 1);
+
+						// Steps
+						currentQuizStep.removeClass('is-active').css("display", "flex").hide();
+						prevQuizStep.addClass('is-active').css("display", "flex").hide().fadeIn();
+					} else {
+						return;
+					}
 
 				}
 
-
-			} else if(quizDirection === 'prev') {
-
-				if (prevQuizStep.length) {
-					flag = true;
-
-					// Steps
-					currentQuizStep.removeClass('is-active').hide();
-					
-					prevQuizStep.addClass('is-active').fadeIn();
+				if (quizBtn.attr('type') == 'submit') {
+					quizFormSubmit(e, $('.js-quiz-form'));
 				}
 
-			}
+				if(html < 767) {
+			 		$('html, body').animate({scrollTop: top}, 170);
+			 	}
 
-			if(html < 767) {
-		 		$('html, body').animate({scrollTop: top}, 170);
-		 	}
-
+			});
 		});
-	});
 
 
+		quizStep.find('input[type=radio]').on('change', function() {
+			if ($(this).parents('.js-quiz-step').hasClass('is-error')) {
+				$(this).parents('.js-quiz-step').removeClass('is-error')
+			}
+		});
 
 	}
 
@@ -404,6 +430,55 @@ $(document).ready(function() {
 
 		window.history.go(-1);
 	});
+
+	$('.js-required-quiz-field').on('focus',function() {
+		if($(this).parents('.js-quiz-step').hasClass('is-error')) {
+			$(this).parents('.js-quiz-step').removeClass('is-error');
+		}
+	});
+
+
+	function quizFormSubmit(e, form) {
+		e.preventDefault();
+
+		var that = form;
+			inputs = that.find('.js-required-quiz-field'),
+			flag = true;
+
+		// Validate
+		$(inputs).each(function() {
+			if(!$(this).val() || $(this).val() == "") {
+				$(this).parents('.js-quiz-step').addClass('is-error');
+				flag = false;
+			}
+		});
+
+		if(!flag) {return false;}
+
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: that.serialize()
+		}).done(function() {
+			$('html').addClass('is-fixed');
+			$('.js-popup-thanks').fadeIn(300);
+			setTimeout(function() {
+				$('html').removeClass('is-fixed');
+				$('.js-popup-thanks').fadeOut(300);
+
+				$('.js-quiz-step').removeClass('is-active').css("display", "flex").hide();
+				$('.js-quiz-step:first-child').addClass('is-active').css("display", "flex").hide().fadeIn();
+				$('.quiz-progress-dot').removeClass('is-active');
+				$('.quiz-progress-dot:first-child').addClass('is-active');
+				$('.quiz-progress-counter-current').text('1');
+
+				that.trigger("reset");
+			}, 2000);
+		});
+
+	}
+
+	
 
 
 	setTimeout(function(){

@@ -3,7 +3,7 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 // Выносим переменную на все случаи жизни вне проверки на POST/GET
-$admin_email = array('admin@email'); // первым поставь почту, на которую будет указывать ответ и т.п.
+$admin_email = array('winde100kg@gmail.com'); // первым поставь почту, на которую будет указывать ответ и т.п.
 
 //Script Foreach
 $c = true;

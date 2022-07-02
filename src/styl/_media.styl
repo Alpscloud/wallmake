@@ -80,6 +80,13 @@
 			left 20px
 			top 35px
 		
+	.quiz-step__answers
+		&.row-gutters-lg 
+			margin-left -10px
+			margin-right -10px
+			.quiz-step__answer
+				padding-left 10px
+				padding-right 10px
 +max-screen(1050px)
 	
 		
@@ -473,6 +480,24 @@
 	.calculator
 		&-row
 			flex-wrap wrap
+			
+	// Quiz
+	.quiz-step__answer-radio_img
+		height 230px
+		span
+			padding 10px 10px 10px 40px
+			&:before
+				left 10px
+			&:after
+				left 14px
+				
+	.quiz-step__answer
+		&.col-w-25
+			width 50%
+			
+		.quiz-step__answer-radio_rectangle 
+			span
+				height 105px
 					
 +max-screen(767px)
 	//Portfolio slider
@@ -507,6 +532,23 @@
 		.tag
 			font-size 10px
 			padding 4px 8px
+			
+	.quiz-step__answer
+		&.col-w-33,
+		&.col-w-25
+			width 100%
+		
+		.quiz-step__answer-radio_rectangle
+			margin-bottom 20px
+			&:last-child
+				margin-bottom 0
+				
+	.quiz-step__controls
+		margin-top 40px
+		
+	.quiz-step__question
+		br
+			display none
 
 +max-screen(700px)
 	.promo-content
@@ -525,6 +567,22 @@
 		padding 40px 20px 60px 20px
 		&__content
 			width 100%
+			
+	// Quiz
+	.quiz
+		&-body
+			padding-top 44px
+			position relative
+		&-progress
+			position static
+			.btn-close
+				top 12px
+				right 12px
+				transform none
+		&-steps
+			padding-bottom 44px
+			
+
 		
 
 	.visible-mobile
@@ -986,6 +1044,29 @@
 		.btn
 			max-width 100%
 			width 100%
+			
+	// Quiz
+	.sect__quiz
+		padding-bottom 0 !important
+	.quiz
+		&-progress
+			margin-bottom 30px
+			
+		&-step
+			&:first-child
+				.quiz-step__controls
+					justify-content center
+			&__question
+				margin-bottom 32px
+				&-title
+					font-size 24px
+					line-height 33px
+				p
+					font-size 16px
+			
+			&__controls
+				display flex
+				justify-content space-between
 		
 					
 +max-screen(480px)

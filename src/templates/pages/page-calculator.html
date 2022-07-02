@@ -4,6 +4,8 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		{% include '../parts/components/preloader.html' %}
+
 		<!-- Main -->
 		<main class="main">
 
@@ -12,16 +14,21 @@
 				<h2 class="w3c">Опросник</h2>
 
 				<div class="quiz dark-text-color color-bg js-quiz">
-					<div class="quiz-body container">
+					<form class="quiz-body container js-quiz-form">
+
+						<!-- Hidden inputs -->
+						<input type="hidden" name="project_name" value="Wallmake">
+						<input type="hidden" name="form_subject" value="Квиз">
+						<!-- // Hidden inputs -->
 
 						<!-- Progress -->
 						<div class="quiz-progress">
 
-							<div class="quiz-progress-dots">
+							<div class="quiz-progress-dots hidden-mobile">
 
 							</div>
 
-							<div class="quiz-progress-counter hidden-desktop">
+							<div class="quiz-progress-counter hidden-desktop visible-mobile">
 								<span class="quiz-progress-counter-current">1</span><span class="quiz-progress-counter-total">/14</span>
 							</div>
 
@@ -36,70 +43,641 @@
 						<!-- //Progress -->
 
 						<!-- Steps -->
-						<form class="quiz-steps">
+						<div class="quiz-steps ">
 
-							<!-- Step -->
+
+							<!-- Step 1-->
 							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 1" value="Есть ли у Вас участок для строительства?">
 
-								<input type="hidden" name="Вопрос 1" value="Есть ли у Вас участок для строительства?">
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Есть ли у Вас участок<br> для строительства?</h3>
+											<p>Описание шага</p>
+										</div>
 
-								<div class="quiz-step__question text-center">
-									<h3 class="quiz-step__question-title">Есть ли у Вас участок<br> для строительства?</h3>
-									<p>Описание шага</p>
-								</div>
+										<div class="quiz-step__answers">
+											<div class="quiz-step__answer">
+												<label class="quiz-step__answer-radio">
+													<input type="radio" name="Наличие участка" value="Да">
+													<span>Да</span>
+												</label>
+											</div>
 
-								<div class="quiz-step__answers">
-									<div class="quiz-step__answer">
-										<label>
-											<input type="radio" name="Наличие участка" value="Да">
-											<span>Да</span>
-										</label>
+											<div class="quiz-step__answer">
+												<label class="quiz-step__answer-radio">
+													<input type="radio" name="Наличие участка" value="Нет">
+													<span>Нет</span>
+												</label>
+											</div>
+
+											
+										</div>
+
+										
+
 									</div>
 
-									<div class="quiz-step__answer">
-										<label>
-											<input type="radio" name="Наличие участка" value="Нет">
-											<span>Нет</span>
-										</label>
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
 									</div>
 								</div>
-
-								<div class="quiz-step__controls js-quiz-step-controls">
-									<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
-								</div>
 							</div>
 							<!-- //Step -->
 
-							<!-- Step -->
+							<!-- Step 2-->
 							<div class="quiz-step js-quiz-step">
-								<div class="quiz-step__question text-center">
-									<h3 class="quiz-step__question-title">Есть ли у Вас участок<br> для строительства?</h3>
-									<p>Описание шага</p>
-								</div>
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 2" value="Есть ли у Вас проект дома?">
 
-								<div class="quiz-step__answers">
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Есть ли у Вас проект дома?</h3>
+											<p>Описание шага</p>
+										</div>
 
-								</div>
+										<div class="quiz-step__answers">
+											<div class="quiz-step__answer">
+												<label class="quiz-step__answer-radio">
+													<input type="radio" name="Проект дома" value="Да">
+													<span>Да</span>
+												</label>
+											</div>
 
-								<div class="quiz-step__controls js-quiz-step-controls">
-									<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
-									<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+											<div class="quiz-step__answer">
+												<label class="quiz-step__answer-radio">
+													<input type="radio" name="Проект дома" value="Нет">
+													<span>Нет</span>
+												</label>
+											</div>
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
 								</div>
 							</div>
 							<!-- //Step -->
 
-							<!-- Step -->
+							<!-- Step 3-->
 							<div class="quiz-step js-quiz-step">
-								3
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 3" value="Какой дом Вы планируете построить?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Какой дом Вы планируете построить?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/1.jpg');">
+													<input type="radio" name="Тип дома" value="Одноэтажный">
+													<span>Одноэтажный</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/2.jpg');">
+													<input type="radio" name="Тип дома" value="Мансардный">
+													<span>Мансардный</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/3.jpg');">
+													<input type="radio" name="Тип дома" value="Двухэтажный">
+													<span>Двухэтажный</span>
+												</label>
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
 							</div>
 							<!-- //Step -->
-						</form>
+
+							<!-- Step 4-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 4" value="Выберите комплектацию дома">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Выберите комплектацию дома</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/4.jpg');">
+													<input type="radio" name="Комплектацию дома" value="Холодный контур ( Коробка)">
+													<span>Холодный контур ( Коробка)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/5.jpg');">
+													<input type="radio" name="Комплектацию дома" value="Теплый контур ( Коробка, фасад, остекление)">
+													<span>Теплый контур ( Коробка, фасад, остекление)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/6.jpg');">
+													<input type="radio" name="Комплектацию дома" value="Дом с ремонтом “под ключ”">
+													<span>Дом с ремонтом “под ключ”</span>
+												</label>
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 5-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 5" value="Какого размера будет Ваш будущий дом?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Какого размера будет Ваш<br> будущий дом?</h3>
+											<p>Длинна х Ширина (10х10)</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-100">
+												<input type="text" class="form-input-rounded form-input-dark" name="Размер дома">
+											</div>
+
+											
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 6-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 6" value="Какой фундамент Вы бы хотели смонтировать?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Какой фундамент Вы бы хотели смонтировать?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img height-sm no-overlay bg" style="background-image: url('img/quiz/7.jpg');">
+													<input type="radio" name="Тип фундамента" value="Мелкогозаглубленный ростверк (ленточный)">
+													<span>Мелкогозаглубленный ростверк (ленточный)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img height-sm no-overlay bg" style="background-image: url('img/quiz/8.jpg');">
+													<input type="radio" name="Тип фундамента" value="Заглубленный ростверк (ленточный)">
+													<span>Заглубленный ростверк (ленточный)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img height-sm no-overlay bg" style="background-image: url('img/quiz/9.jpg');">
+													<input type="radio" name="Тип фундамента" value="Свайно-ростверковый">
+													<span>Свайно-ростверковый</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img height-sm no-overlay bg" style="background-image: url('img/quiz/10.jpg');">
+													<input type="radio" name="Тип фундамента" value="УШП (Утепленная Шведская плита)">
+													<span>УШП (Утепленная Шведская плита)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img height-sm no-overlay bg" style="background-image: url('img/quiz/11.jpg');">
+													<input type="radio" name="Тип фундамента" value="Монолитная плита">
+													<span>Монолитная плита</span>
+												</label>
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 7-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 7" value="Из какого материала Вы хотите построить дом?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Из какого материала Вы хотите<br> построить дом?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers">
+
+											<div class="quiz-step__answer col-w-25">
+												<label class="quiz-step__answer-radio_img no-overlay bg" style="background-image: url('img/quiz/12.jpg');">
+													<input type="radio" name="Материал дома" value="Керамзитобетон">
+													<span>Керамзитобетон</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-25">
+												<label class="quiz-step__answer-radio_img no-overlay bg" style="background-image: url('img/quiz/13.jpg');">
+													<input type="radio" name="Материал дома" value="Газобетон">
+													<span>Газобетон</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-25">
+												<label class="quiz-step__answer-radio_img no-overlay bg" style="background-image: url('img/quiz/14.jpg');">
+													<input type="radio" name="Материал дома" value="Керамоблоки">
+													<span>Керамоблоки</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-25">
+												<label class="quiz-step__answer-radio_img no-overlay bg" style="background-image: url('img/quiz/15.jpg');">
+													<input type="radio" name="Материал дома" value="Кирпич">
+													<span>Кирпич</span>
+												</label>
+											</div>
+
+											
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 8-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 8" value="Из какого материала Вы хотите смонтировать кровлю?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Из какого материала Вы хотите<br> смонтировать кровлю?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/16.jpg');">
+													<input type="radio" name="Материал кровли" value="Металлочерепица">
+													<span>Металлочерепица</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/17.jpg');">
+													<input type="radio" name="Материал кровли" value="Гибкая черепица">
+													<span>Гибкая черепица</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/18.jpg');">
+													<input type="radio" name="Материал кровли" value="Фальц">
+													<span>Фальц</span>
+												</label>
+											</div>
+
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 9-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 9" value="Какая требуется ли отделка фасада?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Какая требуется ли отделка фасада?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/19.jpg');">
+													<input type="radio" name="Отделка фасада" value="Холодный контур ( Коробка)">
+													<span>Холодный контур ( Коробка)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/20.jpg');">
+													<input type="radio" name="Отделка фасада" value="Теплый контур ( Коробка, фасад, остекление)">
+													<span>Теплый контур ( Коробка, фасад, остекление)</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Отделка фасада" value="Без фасада">
+													<span>Без фасада</span>
+												</label>
+
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Отделка фасада" value="Иной фасад">
+													<span>Иной фасад</span>
+												</label>
+											</div>
+
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 10-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 10" value="Требуется ли внутренняя отделка дома?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Требуется ли внутренняя отделка дома?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/21.jpg');">
+													<input type="radio" name="Внутренняя отделка дома" value="Обычный вариант ремонта">
+													<span>Обычный вариант ремонта</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/22.jpg');">
+													<input type="radio" name="Внутренняя отделка дома" value="Дорогой ремонт">
+													<span>Дорогой ремонт</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Внутренняя отделка дома" value="Без ремонта">
+													<span>Без ремонта</span>
+												</label>
+
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Внутренняя отделка дома" value="Что-то интересное индивидуальное">
+													<span>Что-то интересное индивидуальное</span>
+												</label>
+											</div>
+
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step 11-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 11" value="Когда Вы планируете строить дом?">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Когда Вы планируете строить дом?</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers">
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Срок строительства" value="Хотели начать вчера">
+													<span>Хотели начать вчера</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Срок строительства" value="Планируем на этой неделе">
+													<span>Планируем на этой неделе</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Срок строительства" value="Планируем в этом месяце">
+													<span>Планируем в этом месяце</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Срок строительства" value="Планируем через 2-3 месяца">
+													<span>Планируем через 2-3 месяца</span>
+												</label>
+											</div>
+
+											<div class="quiz-step__answer col-w-33">
+												<label class="quiz-step__answer-radio_rectangle">
+													<input type="radio" name="Срок строительства" value="Планируем в следующем году">
+													<span>Планируем в следующем году</span>
+												</label>
+											</div>
+
+											
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+
+							<!-- Step 12-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Вопрос 12" value="Бюджет">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Напишите примерный бюджет дома</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-100">
+												<input type="text" class="form-input-rounded form-input-dark" name="Бюджет">
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step NAME-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Предпоследний вопрос" value="Ваше имя">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Введите Ваше имя</h3>
+											<p>Описание шага</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-100">
+												<input type="text" class="form-input-rounded form-input-dark" name="Имя">
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="button" data-quiz-direction="next">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+							<!-- Step TEL-->
+							<div class="quiz-step js-quiz-step">
+								<div class="quiz-step-content">
+									<input type="hidden" name="Последний вопрос" value="Телефон">
+
+									<div class="quiz-step__body">
+										<div class="quiz-step__question text-center">
+											<h3 class="quiz-step__question-title">Спасибо за прохождение теста!</h3>
+											<p>Осталось заполнить контактную информацию, <br>в ближайшее время менеджер свяжется с Вами!</p>
+										</div>
+
+										<div class="quiz-step__answers row-gutters-lg">
+											<div class="quiz-step__answer col-w-100">
+												<input type="tel" class="form-input-rounded form-input-dark js-required-quiz-field" name="Телефон">
+											</div>
+
+											<p class="quiz-step__error text-center">Это поле нужно заполнить</p>
+
+										</div>
+
+
+									</div>
+
+									<div class="quiz-step__controls js-quiz-step-controls">
+										<button class="btn btn-stroke" type="button" data-quiz-direction="prev">Назад</button>
+										<button class="btn" type="submit">Вперед</button>
+									</div>
+								</div>
+							</div>
+							<!-- //Step -->
+
+
+						</div>
 						<!-- //Steps -->
 
 
 
 
-					</div>
+					</form>
 					<!-- //container -->
 				</div>
 			</section>
@@ -109,6 +687,8 @@
 		</main>
 		<!-- //Main -->
 
+
+		{% include '../parts/components/popup.html' %}
 
 	</div>
 	<!-- //CONTENT WRAPPER -->
