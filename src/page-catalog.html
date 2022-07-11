@@ -39,7 +39,7 @@
 		
 		<!-- Header -->
 		<!-- Preloader -->
-<div class="preloader__wrapper">
+<!-- <div class="preloader__wrapper">
 	
 	<div class="preloader">
 		<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@
 
 	<div class="preloader__section preloader__section--left"></div> 
 	<div class="preloader__section preloader__section--right"></div>
-</div>
+</div> -->
 <!--// Preloader -->
 <header class="header">
 	<div class="header-top header-border-block">
@@ -60,11 +60,10 @@
 
 					<div class="header-tools__links">
 						<a href="page-calculator.html" class="link">Калькулятор</a>
-						<button type="button" class="link js-open-search-form-btn">Поиск по сайту</button>
 					</div>
 
 					<div class="callback">
-						<a href="page-contacts.html" class="link">Контакты</a>
+						<button type="button" class="link js-open-search-form-btn">Поиск по сайту</button>
 					</div>
 				</div>
 			</div>
@@ -89,27 +88,29 @@
 			<div class="nav-wrapper js-menu">
 				<nav class="nav">
 					<ul>
-						<li><a href="page-catalog.html">Каталог</a></li>
+						<li><a href="page-catalog.html">Портфолио</a></li>
 
 						<li class="menu-item-hidden menu-item-has-children">
-							<a href="page-catalog.html">Услуги</a>
+							<a href="page-catalog.html">Все услуги</a>
 
 							<ul class="sub-menu">
 								<li><a href="page-interiors.html">Интерьеры</a></li>
 								<li><a href="page-building.html">Строительство</a></li>
+								<li><a href="page-projects.html">Проекты домов</a></li>
 								<li><a href="page-objects.html">Крупные объекты</a></li>
 								<li><a href="page-foundations.html">Фундаменты</a></li>
 							</ul>
 						</li>
 
 						<li><a href="page-about.html">О КОМПАНИИ</a></li>
+						<li><a href="#">Контакты</a></li>
 						<li><a href="page-blog.html">БЛОГ</a></li>
 					</ul>
 				</nav>
 
 				<nav class="nav-bottom nav-mobile">
 					<ul>
-						<li><a href="#" class="link">Калькулятор</a></li>
+						<li><a href="page-calculator.html" class="link">Калькулятор</a></li>
 						<li><button type="button" class="link js-open-mobile-search-form-btn">Поиск по сайту</button></li>
 						<li><a href="page-contacts.html" class="link">Контакты</a></li>
 					</ul>
@@ -126,12 +127,12 @@
 		<div class="header-container">
 			<nav class="nav nav-categories">
 	<ul>
-		<li><a href="page-catalog.html">Каталог</a></li>
+		<li><a href="#">Все услуги</a></li>
 		<li><a href="page-interiors.html">Интерьеры</a></li>
 		<li><a href="page-building.html">Строительство</a></li>
+		<li><a href="page-projects.html">Строительство</a></li>
 		<li><a href="page-objects.html">Крупные объекты</a></li>
 		<li><a href="page-foundations.html">Фундаменты</a></li>
-		<li><a href="#">Все услуги</a></li>
 	</ul>
 </nav>		</div>
 	</div>
@@ -193,160 +194,260 @@
 
 		<!-- Main -->
 		<main class="main">
-			<section class="sect__catalog">
-				<h1 class="w3c">Каталог</h1>
+
+			<section class="page-heading " >
+				<div class="page-heading__content bg bg-with-overlay" style="background-image: url('img/promo/1.jpg');">
+					<div class="container">
+						<div class="promo-content text-center">
+							<div class="container">
+								<div class="promo-content__text">
+									<h1>Портфолио</h1>
+									<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+								</div>
+
+								<button type="button" class="btn btn-light js-open-popup-form-btn">Записаться на консультацию</button>
+							</div>
+							<!-- //container -->
+						</div>
+					</div>
+					<!-- //container -->
+				</div>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+
+						<nav  aria-label="Breadcrumbs" itemprop="breadcrumb">
+							<ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+								<li  itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="1" itemprop="position">
+									<a href="index.html" rel="home" aria-label="Главная" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">
+											<span>Главная</span>
+										</span>
+									</a>
+								</li>
+
+								<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="2" itemprop="position">
+									<span class="is-active" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">Портфолио</span>
+									</span>
+								</li>
+							</ul>
+						</nav>
+
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+			</section>
+
+			<section class="sect__catalog gutter-top-sm">
+
 
 				<div class="container">
 
 
 					<div class="catalog">
-						<form class="catalog-filter row align-horisontal-center">
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Все">
-								<span>Все</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Интерьеры">
-								<span>Интерьеры</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Строительство">
-								<span>Строительство</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Крупные объекты">
-								<span>Крупные объекты</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Готовые проекты">
-								<span>Готовые проекты</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Коммерческие объекты">
-								<span>Коммерческие объекты</span>
-							</label>
-
-						</form>
+						
+						<ul class="catalog-filter row align-horisontal-center">
+							<li><a href="#" class="catalog-filter__category is-active"><span>Все</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Интерьеры</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Строительство</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Крупные объекты</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Готовые проекты</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Коммерческие объекты</span></a></li>
+						</ul>
 
 						<div class="projects-cards row align-horisontal-start">
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
 								<a href="page-project.html" class="project-card thumbnail">
+
 	<span class="tags">
 		<span class="tag">ИНТЕРЬЕР</span>
 		<span class="tag">Строительство</span>
 	</span>
-
+	
 	<img src="img/img.jpg" alt="">
-	<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	<span class="project-card__information">
+		<span class="tags">
+			<span class="tag">ИНТЕРЬЕР</span>
+			<span class="tag">Строительство</span>
+		</span>
+		<h3 class="project-card__title"><i>ДОМ</i> 8 Просека, 700 м2</h3>
+	</span>
+
 </a>
 							</article>
 							<!-- //catalog item -->

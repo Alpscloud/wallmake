@@ -118,6 +118,23 @@ form.wpcf7-form
 		font-size 14px
 		
 
+.form-select
+	position relative
+	width 100%
+	select
+		width 100%
+		max-width 100% !important
+		background-color transparent
+	&:after
+		pseudo()
+		position absolute
+		vertical-center()
+		z-index 1
+		right 16px
+		pointer-events none
+		width 24px
+		height 24px
+		background url('../img/icons/svg/select.svg') 50% no-repeat / contain
 
 .search
 	&-wrapper

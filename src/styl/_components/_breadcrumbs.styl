@@ -1,12 +1,25 @@
 .breadcrumbs
-	&__item
+	margin-top 20px
+	li
 		display inline-block
-		margin-right 15px
 		position relative
+		margin-right 4px
 		&:last-child
 			margin-right 0
-	&__link
-		display block
+			
+				
+			
+	a
+		position relative
+		display inline-block
+		font 13px $Med
+		color #333
+		&:hover
+			color $gold-color
+		&:after
+			content '/'
+			color inherit
+			
+	.is-active
 		color $text-color
-		&.is-active
-			color $accent-color
+		font 13px $Med

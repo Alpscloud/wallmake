@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 		$('html, body').animate({scrollTop: top}, 400);
 	});	
-
+	
 	// Disable hover effect when client scrolles the page
 	$(window).on('scroll',function() {
 		clearTimeout(timer);

@@ -12,6 +12,9 @@
 		padding-bottom $gutter-bottom
 	&-right
 		padding-right 95px
+		
+.gutter-top-sm
+	padding-top 40px
 
 	
 .w3c
@@ -157,7 +160,7 @@
 		li
 			display block
 			position relative
-			margin-bottom 24px
+			
 			
 			&:last-child
 				margin-bottom 0
@@ -177,7 +180,7 @@
 				height 6px
 				border-radius 50%
 				margin-right 8px
-				background-color $gold-color
+				background-color currentColor
 				vertical-align middle
 				
 	ol
@@ -217,7 +220,7 @@
 	
 .page-inner
 	.main
-		padding-top 146px
+		padding-top 138px
 		
 .sect__consultation
 	background-color $consultation-section-bg
@@ -236,3 +239,15 @@
 
 .hidden-desktop
 	display none
+	
+
+.page-heading__content
+	min-height 360px
+	padding 40px 0
+	flex-col-center()
+	.container
+		width 100%
+	
+	.promo-content
+		padding 0
+		min-height auto

@@ -1,8 +1,6 @@
 .sect__catalog
 	padding-bottom 60px
-	padding-top 60px
 	
-
 .catalog-filter
 	margin-bottom 38px
 	margin-left -16px
@@ -13,6 +11,11 @@
 		padding-right 16px
 		margin-bottom 8px
 		text-align left
+		color $dark-text-color
+		&.is-active
+			span:after
+				opacity 0
+				
 		input
 			display none
 			&:checked
@@ -99,6 +102,7 @@
 	text-align center
 	color rgba($basic-white-color, .9)
 	padding 4px 8px
+	line-height 1
 	background-color rgba(255, 255, 255, 0.3)
 	border-radius 2px
 	text-transform uppercase
@@ -110,23 +114,53 @@
 	.project
 		&-card
 			padding-top 100%
+			&:hover
+				.tags
+					opacity 0
+				.project-card__information
+					opacity 1
+					transform translateY(0)
+					.tags
+						opacity 1
 			&:before
 				background-color rgba($overlay-bg, .2)
 				
-			&__title
-				left 0
-				bottom 0
-				right 0
+			&__information
 				padding 20px
+				transition all .17s ease-in-out
+				transform translateY(101%)
 				background-color rgba(#F7F4F2, .9)
+				position absolute
+				left 0
+				right 0
+				bottom 0
+				z-index 3
+				.tags
+					position relative
+					top auto
+					left auto
+					right auto
+					bottom auto
+				
+			&__title
 				color $dark-text-color
 				font 16px $Med
 				text-transform none
 				@extends .l-spacing
+				bottom auto
+				position relative
+				left auto
+				right auto
 			
 				
-			.tags
-				top 24px
-				left 16px
-				right 16px
+			> .tags
+				top auto
+				bottom 20px
+				left 20px
+				right 20px
+			
+				
+			.tag
+				font-size 12px
+				background-color $dark-text-color
 			

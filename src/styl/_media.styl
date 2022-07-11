@@ -10,8 +10,20 @@
 */
 +max-screen(1560px)
 	.chapter-card__img
+		height auto
+		flex 1
 		img
-			max-width 350px
+			max-width 100%
+			
+	.chapter-card__main
+		padding 40px 20px
+		
+		
+		.chapter-card__information
+			display none
+			
+	.chapter-card__title
+		font-size 26px
 			
 +max-screen(1200px)
 	.gutter-right
@@ -87,6 +99,8 @@
 			.quiz-step__answer
 				padding-left 10px
 				padding-right 10px
+				
+
 +max-screen(1050px)
 	
 		
@@ -107,6 +121,11 @@
 			margin-bottom -8px
 			li
 				margin-bottom 8px
+				
+
+	.chapter-card__title
+		font-size 22px
+		line-height 22px
 			
 	// Team
 	.team-member
@@ -116,7 +135,10 @@
 			flex-direction row
 		&:nth-child(even)
 			flex-direction row-reverse
-			
+	
+	.sect__team-documents
+		.team-member
+			width 50%		
 	// Blog
 	.article-card
 		font-size 14px
@@ -374,6 +396,7 @@
 		width 100%
 		padding 0 40px 11px 30px
 		border-bottom 1px solid $border-color
+		border-radius 0
 		&:hover,
 		&:focus
 			border-color $gold-color
@@ -445,8 +468,7 @@
 			margin-bottom 20px
 			
 	// Catalog
-	.sect__catalog
-		padding-top 40px
+
 	.project-card__wrapper
 		width 50%
 		
@@ -498,8 +520,24 @@
 		.quiz-step__answer-radio_rectangle 
 			span
 				height 105px
+				
+	.vacancy-card
+		&__link
+			font-size 20px
+			&-text
+				font-size 10px
+				span
+					margin-right 24px
 					
 +max-screen(767px)
+	.chapter-card
+		&__main
+			border-right none
+			border-bottom 1px solid $border-color
+			width 100%
+			flex none
+			&:last-child
+				border-bottom none
 	//Portfolio slider
 	.sect__portfolio
 		.container
@@ -583,8 +621,17 @@
 			padding-bottom 44px
 			
 
-		
+	.vacancy-card
+		&__link
+			padding-left 12px
+			padding-right 12px
+			&-text
+				span
+					display none
 
+	.sect__vacancies
+		padding-bottom 80px
+		
 	.visible-mobile
 		display block
 		
@@ -593,8 +640,7 @@
 		
 
 +max-screen(620px)
-	.sect__chapters
-		display none
+	
 		
 	body
 		font-size 14px
@@ -642,6 +688,20 @@
 	.sect__another-projects
 		padding-top 0
 		padding-bottom 0
+		
+	.chapter-card
+		&__title
+			font-size 20px
+			line-height 20px
+			margin-bottom 20px
+		&__category
+			margin-bottom 0
+			
+		&__img
+			img
+				max-width 200px
+			
+	
 			
 	// ADvantages
 	.sect__advantages
@@ -685,20 +745,7 @@
 		&:last-child
 			margin-bottom 0
 			
-		&:first-child
-			flex-wrap wrap
-			padding-left 0
-			padding-right 0
-			
-			
-			.team-member
-			
-				&__photo
-					width 100%
-					padding-top 100%
-				&__content
-					width 100%
-					padding 40px 20px
+		
 				
 		&:nth-child(even)
 			flex-direction row
@@ -712,7 +759,30 @@
 		&:before
 			display none
 			
-	
+	.sect__team-documents
+		.team-member
+			width 100%
+			margin-bottom 20px !important
+			background-color transparent
+			&:last-child
+				margin-bottom 0
+			
+	.team-members
+		.team-member
+			&:first-child
+				flex-wrap wrap
+				padding-left 0
+				padding-right 0
+				
+				
+				.team-member
+				
+					&__photo
+						width 100%
+						padding-top 100%
+					&__content
+						width 100%
+						padding 40px 20px
 
 	// Footer
 	.footer-bottom
@@ -767,12 +837,19 @@
 			
 	.catalog
 		.project-card
-			.tags
-				top 10px
-				left 5px
-				right 5px
+			> .tags
+				left 12px
+				bottom 12px
+				right 12px
 			.tag
-				font-size 10px
+				font-size 8px
+				
+			&__information
+				padding 12px
+				.tags
+					margin-bottom 8px
+			&__title
+				padding 0
 	
 	.another-projects			
 		.project-card__wrapper
@@ -982,7 +1059,9 @@
 
 	.slider-pagination.rectangles-view 
 		li 
-			width 26px
+			margin-right 4px
+			height 2px
+			width 40px
 			// margin 0 12px 0 0
 			// width auto
 			// height auto
@@ -1068,7 +1147,16 @@
 				display flex
 				justify-content space-between
 		
-					
+	.team-member
+		margin-bottom 20px
+		
+	.team
+		margin-bottom -20px	
+		
+	.vacancy-title
+		font-size 24px
+		line-height 30px
+				
 +max-screen(480px)
 	// Work steps
 	.work-step
@@ -1103,6 +1191,9 @@
 			font-size 100px
 			margin-bottom 32px
 		
+
+	.document
+		justify-content space-between
 	
 
 +max-screen(420px)
@@ -1119,7 +1210,14 @@
 				border-bottom 1px solid $border-color
 			&:last-child
 				margin-bottom 0
-					
+				
+	.chapter-card
+		.btn
+			width 100%
+	
+	.catalog
+		.project-card__information
+			display none
 +max-screen(374px)
 	.catalog 
 		.project-card__title

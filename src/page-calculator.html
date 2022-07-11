@@ -37,7 +37,7 @@
 	<div class="content__wrapper">
 
 		<!-- Preloader -->
-<div class="preloader__wrapper">
+<!-- <div class="preloader__wrapper">
 	
 	<div class="preloader">
 		<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@
 
 	<div class="preloader__section preloader__section--left"></div> 
 	<div class="preloader__section preloader__section--right"></div>
-</div>
+</div> -->
 <!--// Preloader -->
 
 		<!-- Main -->
@@ -102,7 +102,17 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Наличие участка" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Да">Да</option>
+												<option value="Нет">Нет</option>
+											</select>
+										</div>
+										
+
+										<div class="quiz-step__answers hidden-mobile">
+
 											<div class="quiz-step__answer">
 												<label class="quiz-step__answer-radio">
 													<input type="radio" name="Наличие участка" value="Да">
@@ -142,7 +152,15 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Проект дома" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Да">Да</option>
+												<option value="Нет">Нет</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile">
 											<div class="quiz-step__answer">
 												<label class="quiz-step__answer-radio">
 													<input type="radio" name="Проект дома" value="Да">
@@ -180,7 +198,16 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers row-gutters-lg">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Тип дома" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Одноэтажный">Одноэтажный</option>
+												<option value="Мансардный">Мансардный</option>
+												<option value="Двухэтажный">Двухэтажный</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile row-gutters-lg">
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/1.jpg');">
 													<input type="radio" name="Тип дома" value="Одноэтажный">
@@ -226,24 +253,33 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers row-gutters-lg">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Комплектация дома" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Холодный контур (Коробка)">Холодный контур (Коробка)</option>
+												<option value="Теплый контур (Коробка, фасад, остекление)">Теплый контур (Коробка, фасад, остекление)</option>
+												<option value="Дом с ремонтом “под ключ”">Дом с ремонтом “под ключ”</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile row-gutters-lg">
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/4.jpg');">
-													<input type="radio" name="Комплектацию дома" value="Холодный контур ( Коробка)">
-													<span>Холодный контур ( Коробка)</span>
+													<input type="radio" name="Комплектация дома" value="Холодный контур ( Коробка)">
+													<span>Холодный контур (Коробка)</span>
 												</label>
 											</div>
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/5.jpg');">
-													<input type="radio" name="Комплектацию дома" value="Теплый контур ( Коробка, фасад, остекление)">
+													<input type="radio" name="Комплектация дома" value="Теплый контур ( Коробка, фасад, остекление)">
 													<span>Теплый контур ( Коробка, фасад, остекление)</span>
 												</label>
 											</div>
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/6.jpg');">
-													<input type="radio" name="Комплектацию дома" value="Дом с ремонтом “под ключ”">
+													<input type="radio" name="Комплектация дома" value="Дом с ремонтом “под ключ”">
 													<span>Дом с ремонтом “под ключ”</span>
 												</label>
 											</div>
@@ -303,7 +339,18 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers row-gutters-lg">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Тип фундамента" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Мелкогозаглубленный ростверк (ленточный)">Мелкогозаглубленный ростверк (ленточный)</option>
+												<option value="Заглубленный ростверк (ленточный)">Заглубленный ростверк (ленточный)</option>
+												<option value="Свайно-ростверковый">Свайно-ростверковый</option>
+												<option value="УШП (Утепленная Шведская плита)">УШП (Утепленная Шведская плита)</option>
+												<option value="Монолитная плита">Монолитная плита</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile row-gutters-lg">
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img height-sm no-overlay bg" style="background-image: url('img/quiz/7.jpg');">
 													<input type="radio" name="Тип фундамента" value="Мелкогозаглубленный ростверк (ленточный)">
@@ -363,7 +410,18 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Материал дома" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Керамзитобетон">Керамзитобетон</option>
+												<option value="Газобетон">Газобетон</option>
+												<option value="Керамоблоки">Керамоблоки</option>
+												<option value="Кирпич">Кирпич</option>
+
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile">
 
 											<div class="quiz-step__answer col-w-25">
 												<label class="quiz-step__answer-radio_img no-overlay bg" style="background-image: url('img/quiz/12.jpg');">
@@ -419,7 +477,16 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers row-gutters-lg">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Материал кровли" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Металлочерепица">Металлочерепица</option>
+												<option value="Гибкая черепица">Гибкая черепица</option>
+												<option value="Фальц">Фальц</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile row-gutters-lg">
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/16.jpg');">
@@ -467,19 +534,29 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers row-gutters-lg">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Отделка фасада" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Холодный контур (Коробка)">Холодный контур (Коробка)</option>
+												<option value="Теплый контур (Коробка, фасад, остекление)">Теплый контур (Коробка, фасад, остекление)</option>
+												<option value="Без фасада">Без фасада</option>
+												<option value="Иной фасад">Иной фасад</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile row-gutters-lg">
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/19.jpg');">
 													<input type="radio" name="Отделка фасада" value="Холодный контур ( Коробка)">
-													<span>Холодный контур ( Коробка)</span>
+													<span>Холодный контур (Коробка)</span>
 												</label>
 											</div>
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img bg" style="background-image: url('img/quiz/20.jpg');">
 													<input type="radio" name="Отделка фасада" value="Теплый контур ( Коробка, фасад, остекление)">
-													<span>Теплый контур ( Коробка, фасад, остекление)</span>
+													<span>Теплый контур (Коробка, фасад, остекление)</span>
 												</label>
 											</div>
 
@@ -520,7 +597,17 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers row-gutters-lg">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Внутренняя отделка дома" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Обычный вариант ремонта">Обычный вариант ремонта</option>
+												<option value="Дорогой ремонт">Дорогой ремонт</option>
+												<option value="Без ремонта">Без ремонта</option>
+												<option value="Что-то интересное, индивидуальное">Что-то интересное, индивидуальное</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile row-gutters-lg">
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_img  no-overlay bg" style="background-image: url('img/quiz/21.jpg');">
@@ -543,8 +630,8 @@
 												</label>
 
 												<label class="quiz-step__answer-radio_rectangle">
-													<input type="radio" name="Внутренняя отделка дома" value="Что-то интересное индивидуальное">
-													<span>Что-то интересное индивидуальное</span>
+													<input type="radio" name="Внутренняя отделка дома" value="Что-то интересное, индивидуальное">
+													<span>Что-то интересное, индивидуальное</span>
 												</label>
 											</div>
 
@@ -573,7 +660,18 @@
 											<p>Описание шага</p>
 										</div>
 
-										<div class="quiz-step__answers">
+										<div class="form-select hidden-desktop visible-mobile">
+											<select name="Срок строительства" class="form-input-rounded form-input-dark">
+												<option value="" disabled selected>Не выбрано</option>
+												<option value="Хотели начать вчера">Хотели начать вчера</option>
+												<option value="Планируем на этой неделе">Планируем на этой неделе</option>
+												<option value="Планируем в этом месяце">Планируем в этом месяце</option>
+												<option value="Планируем через 2-3 месяца">Планируем через 2-3 месяца</option>
+												<option value="Планируем в следующем году">Планируем в следующем году</option>
+											</select>
+										</div>
+
+										<div class="quiz-step__answers hidden-mobile">
 
 											<div class="quiz-step__answer col-w-33">
 												<label class="quiz-step__answer-radio_rectangle">
@@ -636,6 +734,8 @@
 											<h3 class="quiz-step__question-title">Напишите примерный бюджет дома</h3>
 											<p>Описание шага</p>
 										</div>
+
+
 
 										<div class="quiz-step__answers row-gutters-lg">
 											<div class="quiz-step__answer col-w-100">

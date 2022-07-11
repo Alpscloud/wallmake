@@ -58,10 +58,26 @@
 .sect__team
 	max-width 1920px
 	margin 0 auto
+	.sect-title
+		margin-bottom 20px
+	.link-arrow
+		margin-bottom 20px
+
+.team
+	margin-bottom -40px
+
+.team-members
+	.team-member:first-child
+		width 100%
+		background-color $color-bg
+		.team-member__information
+			max-width 360px
+
 .team-member
 	width 50%
 	background-color $basic-white-color
 	color $dark-text-color
+	margin-bottom 40px
 	.document
 		width 100%
 		margin-top 100px
@@ -69,16 +85,11 @@
 			text-overflow ellipsis
 			//max-width 150px
 			overflow hidden
-	&:first-child
-		width 100%
-		background-color $color-bg
-		
-		.team-member__information
-			max-width 360px
+
 			
-	&:nth-child(4n+5),
-	&:nth-child(4n+4)
-		flex-direction row-reverse
+	// &:nth-child(4n+5),
+	// &:nth-child(4n+4)
+	// 	flex-direction row-reverse
 			
 	&__photo
 		width 50%
@@ -141,3 +152,13 @@
 	
 	.link
 		flex none
+		
+.sect__team-documents
+	
+	.team-member
+		background-color $color-bg
+		margin-bottom 0 !important
+	.sect-title
+		margin-bottom 40px
+		
+

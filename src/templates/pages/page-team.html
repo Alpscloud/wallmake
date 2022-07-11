@@ -1,99 +1,79 @@
 {% include '../parts/head.html' %}
-<body>
+<body class="page-inner page-with-light-header">
 	
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
 		
-
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
-			<section class="sect__promo">
 
-				<div class="promo-content text-center">
+			<section class="page-heading " >
+				<div class="page-heading__content bg bg-with-overlay" style="background-image: url('img/promo/1.jpg');">
 					<div class="container">
-						<div class="promo-content__text">
-							<h1>История компании</h1>
-							<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-						</div>
+						<div class="promo-content text-center">
+							<div class="container">
+								<div class="promo-content__text">
+									<h1>Наша команда</h1>
+									<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+								</div>
 
-						<button type="button" class="btn btn-light js-open-popup-form-btn">Записаться на консультацию</button>
+								<a href="page-vacancies.html" class="btn btn-light js-open-popup-form-btn">Посмотреть вакансии</a>
+							</div>
+							<!-- //container -->
+						</div>
 					</div>
 					<!-- //container -->
 				</div>
 
-				{% include '../parts/components/promo-slider.html' %}
-			</section>
-			<!-- //sect promo -->
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
 
-			<section class="sect__slogan  grey-bg">
-				<div class="container">
-					<div class="content dark-text-color">
-						<h2>Главная мысль компании</h2>
-						<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.llit.llit.<br>Amet minim mollit non deserunt ullamco est sit aliqua doloVelit officia consequat duis enim velit mollit.</p>
-					</div>
-				</div>
-				<!-- //container -->
-			</section>
-			<!-- //sect slogan -->
+						<nav  aria-label="Breadcrumbs" itemprop="breadcrumb">
+							<ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-			<section class="sect__advantages">
-				<h2 class="sect-title container">Преимущества</h2>
+								<li  itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="1" itemprop="position">
+									<a href="index.html" rel="home" aria-label="Главная" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">
+											<span>Главная</span>
+										</span>
+									</a>
+								</li>
 
-				<div class="advantages-slider__wrapper">
-					<div class="advantages-slider js-advantages-slider">
-						<div class="advantage" >
-							<div class="advantage-bg bg" style="background-image: url('img/advantages/1.jpg');"></div>
-							<div class="advantage-content">
-								<h3 class="advantage-title">СТРОИМ ДОМА НА 30% БЫСТРЕЕ</h3>
-								<p>Применяем экологически чистые материалы, опробованные нами и зарекомендовавшими себя на практике</p>
-							</div>
-						</div>
-						<!-- //slide -->
+								<li  itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="2" itemprop="position">
+									<a href="page-about.html" aria-label="О компании" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">
+											<span>О компании</span>
+										</span>
+									</a>
+								</li>
 
-						<div class="advantage" >
-							<div class="advantage-bg bg" style="background-image: url('img/advantages/2.jpg');"></div>
-							<div class="advantage-content">
-								<h3 class="advantage-title">ЭКОЛОГИЧЕСКИ ЧИСТЫЕ МАТЕРИАЛЫ</h3>
-								<p>Применяем экологически чистые материалы, опробованные нами и зарекомендовавшими себя на практике</p>
-							</div>
-						</div>
-						<!-- //slide -->
-
-						<div class="advantage" >
-							<div class="advantage-bg bg" style="background-image: url('img/advantages/3.jpg');"></div>
-							<div class="advantage-content">
-								<h3 class="advantage-title">ЕЖЕДНЕВНЫЙ ОТЧЕТ НА YOUTUBE</h3>
-								<p>Применяем экологически чистые материалы, опробованные нами и зарекомендовавшими себя на практике</p>
-							</div>
-						</div>
-						<!-- //slide -->
-
-						<div class="advantage" >
-							<div class="advantage-bg bg" style="background-image: url('img/advantages/2.jpg');"></div>
-							<div class="advantage-content">
-								<h3 class="advantage-title">ГАРАНТИЯ НЕ НА СЛОВАХ, А В ДОГОВОРЕ</h3>
-								<p>Применяем экологически чистые материалы, опробованные нами и зарекомендовавшими себя на практике</p>
-							</div>
-						</div>
-						<!-- //slide -->
-
+								<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="3" itemprop="position">
+									<span class="is-active" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">Наша команда</span>
+									</span>
+								</li>
+							</ul>
+						</nav>
 
 					</div>
-					<div class="slider-pagination rectangles-view js-advantages-slider-pagination container"></div>
+					<!-- //container -->
 				</div>
+				<!-- //Breadcrumbs -->
+				
 			</section>
-			<!-- //sect advantages -->
 
-			<section class="sect__team gutter-bottom">
-				<div class="container">
-					<h2 class="sect-title">Наша команда<br><i>WALLMAKE</i></h2>
-					<a href="page-team.html" class="link-arrow">Все сотрудники</a>
-				</div>
+		
+			<section class="sect__team gutter-bottom gutter-top-sm">
+				<h2 class="sect-title container">Все сотрудники<br><i>WALLMAKE</i></h2>
 
 				<div class="team team-members row align-horisontal-start">
 					<div class="team-member row row-nowrap">
@@ -242,54 +222,6 @@
 				<!-- //container -->
 			</section>
 
-			<section class="sect__team sect__team-documents">
-				<div class="container">
-					<h2 class="sect-title">Документация<br><i>WALLMAKE</i></h2>
-				</div>
-
-				<div class="team row align-horisontal-start">
-
-					<div class="team-member row row-nowrap">
-						<div class="team-member__photo thumbnail col-w-50">
-							<img src="img/team/4.jpg" alt="">
-						</div>
-						<div class="team-member__content col-w-50">
-							<div class="team-member__information">
-								<h3 class="team-member__name">Разрешение на строительство</h3>
-								<p class="team-member__position l-spacing">ГОСТ: 214-А123-Б2</p>
-							</div>
-
-							<div class="document">
-								<span class="document-name l-spacing" title="File_name_file.docx">File_name_file.docx</span>
-								<a href="#" target="_blank" class="link l-spacing is-active">Скачать</a>
-							</div>
-						</div>
-
-
-					</div>
-					<!-- //team member -->
-
-					<div class="team-member row row-nowrap">
-						<div class="team-member__photo thumbnail col-w-50">
-							<img src="img/team/4.jpg" alt="">
-						</div>
-						<div class="team-member__content col-w-50">
-							<div class="team-member__information">
-								<h3 class="team-member__name">Разрешение на строительство</h3>
-								<p class="team-member__position l-spacing">ГОСТ: 214-А123-Б2</p>
-							</div>
-
-							<div class="document">
-								<span class="document-name l-spacing" title="File.docx">File.pdf</span>
-								<a href="#" target="_blank" class="link l-spacing is-active">Скачать</a>
-							</div>
-						</div>
-
-					</div>
-					<!-- //team member -->
-				</div>
-			</section>
-			<!-- //sect team -->
 
 			{% include '../parts/sections/sect-consultation.html' %}
 			<!-- //sect work consultation -->

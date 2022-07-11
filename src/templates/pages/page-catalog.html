@@ -11,89 +11,117 @@
 
 		<!-- Main -->
 		<main class="main">
-			<section class="sect__catalog">
-				<h1 class="w3c">Каталог</h1>
+
+			<section class="page-heading " >
+				<div class="page-heading__content bg bg-with-overlay" style="background-image: url('img/promo/1.jpg');">
+					<div class="container">
+						<div class="promo-content text-center">
+							<div class="container">
+								<div class="promo-content__text">
+									<h1>Портфолио</h1>
+									<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+								</div>
+
+								<button type="button" class="btn btn-light js-open-popup-form-btn">Записаться на консультацию</button>
+							</div>
+							<!-- //container -->
+						</div>
+					</div>
+					<!-- //container -->
+				</div>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+
+						<nav  aria-label="Breadcrumbs" itemprop="breadcrumb">
+							<ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+								<li  itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="1" itemprop="position">
+									<a href="index.html" rel="home" aria-label="Главная" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">
+											<span>Главная</span>
+										</span>
+									</a>
+								</li>
+
+								<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="2" itemprop="position">
+									<span class="is-active" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">Портфолио</span>
+									</span>
+								</li>
+							</ul>
+						</nav>
+
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+			</section>
+
+			<section class="sect__catalog gutter-top-sm">
+
 
 				<div class="container">
 
 
 					<div class="catalog">
-						<form class="catalog-filter row align-horisontal-center">
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Все">
-								<span>Все</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Интерьеры">
-								<span>Интерьеры</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Строительство">
-								<span>Строительство</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Крупные объекты">
-								<span>Крупные объекты</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Готовые проекты">
-								<span>Готовые проекты</span>
-							</label>
-
-							<label class="catalog-filter__category">
-								<input type="checkbox" name="Коммерческие объекты">
-								<span>Коммерческие объекты</span>
-							</label>
-
-						</form>
+						
+						<ul class="catalog-filter row align-horisontal-center">
+							<li><a href="#" class="catalog-filter__category is-active"><span>Все</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Интерьеры</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Строительство</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Крупные объекты</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Готовые проекты</span></a></li>
+							<li><a href="#" class="catalog-filter__category"><span>Коммерческие объекты</span></a></li>
+						</ul>
 
 						<div class="projects-cards row align-horisontal-start">
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
 							<article class="project-card__wrapper col-w-33">
-								{% include '../parts/components/project-card.html' %}
+								{% include '../parts/components/project-card-portfolio.html' %}
 							</article>
 							<!-- //catalog item -->
 
