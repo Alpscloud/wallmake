@@ -207,7 +207,7 @@ $(document).ready(function() {
 			accessibility: false,
 			responsive: [
 				{
-					breakpoint: 1050,
+					breakpoint: 1100,
 					settings: {
 						dots: true,
 						slidesToShow: 1,
@@ -291,6 +291,15 @@ $(document).ready(function() {
 
 	$('[data-fancybox]').fancybox({
 		loop: true
+	});
+
+
+	$('.js-toggle-chapter-card-content-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+		$(this).parents('.chapter-card__wrapper').find('.chapter-card__content-blocks').stop().slideToggle(150);
+		$(this).parents('.chapter-card__wrapper').find('.chapter-card__content').toggleClass('is-active');
 	});
 
 

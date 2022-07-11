@@ -13,7 +13,7 @@
 		height auto
 		flex 1
 		img
-			max-width 100%
+			max-width 75%
 			
 	.chapter-card__main
 		padding 40px 20px
@@ -24,10 +24,27 @@
 			
 	.chapter-card__title
 		font-size 26px
+		
+	.chapter-card__wrapper
+		.chapter-card
+			padding 40px 20px
+			&__content
+				padding 40px 0 40px 40px
+				&-block
+					padding-right 20px
+		img
+			max-width 350px
+			
+	.chapter-card__content-block_title
+		margin-bottom 20px
 			
 +max-screen(1200px)
 	.gutter-right
 		padding-right 0
+		
+	.chapter-card__img
+		img
+			max-width 100%
 		
 	// Header
 	.header
@@ -101,100 +118,8 @@
 				padding-right 10px
 				
 
-+max-screen(1050px)
-	
-		
-	//page about
-	.sect__slogan
-		padding 80px 0
-		
-	// Advantages
-	.advantages-slider
-		padding-left 20px
-		.slick-slide
-			width 350px
-			
-	.portfolio-slider__wrapper,
-	.advantages-slider__wrapper
-		.slick-dots
-			flex-wrap wrap
-			margin-bottom -8px
-			li
-				margin-bottom 8px
-				
++max-screen(1100px)
 
-	.chapter-card__title
-		font-size 22px
-		line-height 22px
-			
-	// Team
-	.team-member
-		width 100%
-		&:nth-child(4n+4), 
-		&:nth-child(4n+5)
-			flex-direction row
-		&:nth-child(even)
-			flex-direction row-reverse
-	
-	.sect__team-documents
-		.team-member
-			width 50%		
-	// Blog
-	.article-card
-		font-size 14px
-		line-height 19px
-		margin-bottom 60px
-		&__title
-			font-size 18px
-			line-height 22px
-	.blog
-		.article-card
-			&:nth-child(8n+5)
-				padding-top 60px
-				padding-bottom 60px
-			&:nth-child(4n+1)
-				flex-wrap wrap
-				
-				.article-card
-					&__thumbnail
-						width 100%
-						padding-top 70%
-						min-height auto
-					&__content
-						width 100%
-						padding-bottom 0
-						padding 40px 20px 0 20px
-						
-					&__title
-						font-size 28px
-						line-height 32px
-					&__preview
-						font-size 18px
-						line-height 22px
-						
-				.tag
-					font-size 14px
-					
-				.tags
-					margin-bottom 25px
-					
-				.article-date
-					font-size 16px
-					margin-top 25px
-					
-				.link
-					font-size 16px
-					margin-top 25px
-				
-	
-	.project-description
-		flex-wrap wrap
-		.project-params__wrapper
-			width 100%
-			margin-right 0
-			margin-bottom 40px
-		
-+max-screen(992px)
 	.page-inner 
 		.main
 			padding-top 63px
@@ -424,6 +349,100 @@
 			display none
 		span
 			display block
+	
+		
+	//page about
+	.sect__slogan
+		padding 80px 0
+		
+	// Advantages
+	.advantages-slider
+		padding-left 20px
+		.slick-slide
+			width 350px
+			
+	.portfolio-slider__wrapper,
+	.advantages-slider__wrapper
+		.slick-dots
+			flex-wrap wrap
+			margin-bottom -8px
+			li
+				margin-bottom 8px
+				
+
+	.chapter-card__title
+		font-size 22px
+		line-height 22px
+			
+	// Team
+	.team-member
+		width 100%
+		&:nth-child(4n+4), 
+		&:nth-child(4n+5)
+			flex-direction row
+		&:nth-child(even)
+			flex-direction row-reverse
+	
+	.sect__team-documents
+		.team-member
+			width 50%		
+	// Blog
+	.article-card
+		font-size 14px
+		line-height 19px
+		margin-bottom 60px
+		&__title
+			font-size 18px
+			line-height 22px
+	.blog
+		.article-card
+			&:nth-child(8n+5)
+				padding-top 60px
+				padding-bottom 60px
+			&:nth-child(4n+1)
+				flex-wrap wrap
+				
+				.article-card
+					&__thumbnail
+						width 100%
+						padding-top 70%
+						min-height auto
+					&__content
+						width 100%
+						padding-bottom 0
+						padding 40px 20px 0 20px
+						
+					&__title
+						font-size 28px
+						line-height 32px
+					&__preview
+						font-size 18px
+						line-height 22px
+						
+				.tag
+					font-size 14px
+					
+				.tags
+					margin-bottom 25px
+					
+				.article-date
+					font-size 16px
+					margin-top 25px
+					
+				.link
+					font-size 16px
+					margin-top 25px
+				
+	
+	.project-description
+		flex-wrap wrap
+		.project-params__wrapper
+			width 100%
+			margin-right 0
+			margin-bottom 40px
+		
++max-screen(992px)
+	
 	// Footer
 	.footer-bottom
 		.row
@@ -538,6 +557,46 @@
 			flex none
 			&:last-child
 				border-bottom none
+				
+		&__wrapper
+			flex-wrap wrap
+			&:nth-child(even)
+				.chapter-card__content
+					background-color $color-bg
+					&.is-active
+						background-color $basic-white-color
+					
+				.chapter-card__btn-toggle
+					border-color $dark-text-color
+					color $dark-text-color
+					
+			.chapter-card
+				width 100%
+				padding-bottom 20px
+				pointer-events none
+				&__content
+					width 100%
+					padding 40px 20px
+					padding-top 0
+					margin-top -2px
+					position relative
+					z-index 1
+					&-block
+						padding-right 0
+				&__information
+					display none
+					
+	.chapter-card
+		&__btn-toggle
+			display block
+		&__content
+			background-color $card-bg
+			&-blocks
+				display none
+				padding-top 40px
+			
+			.btn
+				width 100%
 	//Portfolio slider
 	.sect__portfolio
 		.container
@@ -1156,6 +1215,12 @@
 	.vacancy-title
 		font-size 24px
 		line-height 30px
+		
+	.chapter-card
+		&__content
+			padding 60px 20px
+			font-size 16px
+			line-height 19px
 				
 +max-screen(480px)
 	// Work steps
