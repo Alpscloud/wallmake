@@ -234,3 +234,198 @@ form.wpcf7-form
 .search-form-close
 	margin-left 11px
 	display none
+	
+.form-groups
+	&__title
+		padding-left 8px
+		padding-right 8px
+		font 24px $Med
+		color $dark-text-color
+		margin-bottom 24px
+		
+	&__row
+		margin-bottom 16px
+		
+.form-label
+	padding-left 16px
+	@extends .l-spacing
+	font 12px $Med
+	color $text-color
+	margin-bottom 8px
+	&-hidden
+		visibility hidden
+		opacity 0
+		
+
+.form-radio__label-l-gutter
+	padding-left 16px
+	
+.form-input-rectangle
+	display block
+	width 100%
+	border 1px solid $border-color
+	padding 10.5px 16px
+	font 14px $Reg
+	@extends .l-spacing
+	&::-webkit-input-placeholder
+		font 14px $Reg
+		color $light-text-color
+	&::-moz-placeholder
+		font 14px $Reg
+		color $light-text-color
+	&:-moz-placeholder
+		font 14px $Reg
+		color $light-text-color
+	&:-ms-input-placeholder
+		font 14px $Reg
+		color $light-text-color
+	&:hover,
+	&:focus
+		border-color $gold-color
+		
+.form-select
+	height 42px
+	&__wrapper
+		position relative
+		&:before
+			pseudo()
+			position absolute
+			vertical-center()
+			right 8px
+			width 24px
+			height 24px
+			background url('../img/icons/svg/select.svg') 50% no-repeat / contain
+			z-index 1
+			pointer-events none
+			
+
+.form-radio
+	display inline-block
+	position relative
+	padding-left 28px
+	font 14px $Reg
+	&:before,
+	&:after
+		pseudo()
+		position absolute
+		top 0
+		border-radius 50%
+		transition all .17s ease-in-out
+	&:before
+		width 20px
+		height 20px
+		border 1px solid #514A43
+		left 0
+		
+	&:after
+		width 12px
+		height 12px
+		border 2px solid rgba(#F7F4F2, .9)
+		background-color #514A43
+		left 4px
+		opacity 0
+		top 4px
+	&__label
+		input
+			display none
+			&:checked + span
+				&:before
+					background-color #514A43
+				&:after
+					opacity 1	
+					
+
+.form-checkbox
+	font 14px $Reg
+	padding-left 36px
+	display inline-block
+	position relative
+	cursor pointer
+	&:before
+		pseudo()
+		position absolute
+		top 1px
+		left 0
+		width 20px
+		height 20px
+		border 1px solid #898074
+		border-radius 4px
+		background-size 14px 10px
+		background-repeat no-repeat
+		background-position 50% 50%
+	&__label
+		input
+			display none
+			&:checked + span
+				&:before
+					background-image url('../img/icons/svg/check.svg')
+	
+			
+
+.form-file
+	display block
+	input
+		display none
+	&__types
+		font 12px $Reg
+		margin-top 8px
+		line-height 1
+	&__result
+		font 14px $Med
+		color $text-color
+		line-height 1
+		
+	&__wrapper
+		display flex
+		flex-wrap nowrap
+		justify-content space-between
+		align-items center
+		padding 20px
+		border 1px solid $border-color
+		.form-file
+			flex none
+			width 168px
+		
+	&__information
+		flex 1
+		margin-left 25px
+		
+	
+		
+	.btn
+		width 100%
+		padding-left 5px
+		padding-right 5px
+		background-color #898074
+		cursor pointer
+		&:hover
+			color $basic-white-color
+			background-color $accent-color
+			
+
+.form-date__wrapper
+	position relative
+	&:before
+		pseudo()
+		position absolute
+		vertical-center()
+		right 8px
+		pointer-events none
+		z-index 1
+		width 20px
+		height 20px
+		background url('../img/icons/svg/date.svg') 50% no-repeat / contain
+		
+.form-input-date
+	font 14px $Reg
+	
+
+.form-group__submit
+	margin-top 16px
+	
+.form-group-toggle
+	display none
+
+
+.is-error
+	border-color red

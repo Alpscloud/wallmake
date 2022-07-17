@@ -117,6 +117,13 @@
 				padding-left 10px
 				padding-right 10px
 				
+	.contacts-block
+		padding-left 15px
+		padding-right 15px
+		
+	.contacts-col:first-child
+		margin-left -15px
+				
 
 +max-screen(1100px)
 
@@ -213,7 +220,7 @@
 		.sub-menu
 			margin-left -20px
 			margin-right -20px
-			display none
+			//display none
 			li
 				margin-bottom 0 !important
 				a
@@ -385,7 +392,8 @@
 	
 	.sect__team-documents
 		.team-member
-			width 50%		
+			
+			width 100%		
 	// Blog
 	.article-card
 		font-size 14px
@@ -548,6 +556,45 @@
 				span
 					margin-right 24px
 					
+	.contacts
+		flex-wrap wrap
+		&-col
+			width 100%
+			margin-bottom 32px
+			&:last-child
+				margin-bottom 0
+		&-form
+			margin-left 0
+			max-width 75%
+			
+
+			
+	.popup-vacancy
+		.popup__body
+			padding-left 24px
+			padding-right 24px
+			
+		.form-group
+			width 50%
+			
+	.form-group-empty
+		display none
+		
+	.form-radios
+		justify-content flex-start
+		
+		.form-radio__label
+			margin-right 16px
+			padding-left 0
+			display block
+			width auto
+			&:last-child
+				margin-right 0
+				
+	.col-w-tablet-100
+		width 100% !important
+	
+
 +max-screen(767px)
 	.chapter-card
 		&__main
@@ -655,9 +702,70 @@
 		flex-wrap wrap
 		.form-group
 			width 100%
+			&:last-child
+				margin-bottom 0
 			
 	.form-notice
 		margin-top 20px
+		
+	.form-radios
+		padding-left 0
+		
+	.popup
+		.sect-title
+			font-size 24px
+			line-height 28px
+			margin-bottom 24px
+			
+	.form-groups__title
+		font-size 18px
+		margin-bottom 18px
+		
+	.popup__content .form-group
+		margin-bottom 16px
+		
+	.form-group__submit
+		flex-wrap wrap
+		
+	.form-label
+		padding-left 8px
+		
+	.popup-vacancy 
+		.form-group 
+			.btn
+				max-width 100%
+				width 100%
+			.form-notice
+				width 100%
+				text-align center
+				margin-left 0
+				margin-top 14px
+				
+	.form-file
+		
+		&__wrapper
+			flex-wrap wrap
+			flex-direction column
+			text-align center
+			padding 12px
+			
+			.form-file
+				width 100%
+		
+				
+		&__information
+			flex none
+			margin-left 0
+			margin-top 18px
+			
+	.form-checkbox
+		font-size 14px
+		
+	.form-groups
+		margin-bottom 40px
+		&:last-child
+			margin-bottom 0
+		
 		
 	// presentation
 	.presentation-slide
@@ -677,7 +785,7 @@
 				right 12px
 				transform none
 		&-steps
-			padding-bottom 44px
+			padding-bottom 100px
 			
 
 	.vacancy-card
@@ -690,6 +798,74 @@
 
 	.sect__vacancies
 		padding-bottom 80px
+		
+	.catalog-filter
+		justify-content flex-start
+		margin-left 0
+		margin-right 0
+		margin-bottom 14px
+		&__category
+			margin 0 10px 10px 0
+			padding 0
+		
+	.catalog-filter__category
+		a
+			font 15px $SemiBold
+			color $basic-white-color
+			padding 8px 8px 8px 28px
+			background-color $brown-bg
+			border-radius 4px
+			&:before
+				left 8px
+				vertical-center()
+			&:after
+				vertical-center()
+				left 13px
+				
+		&.is-active
+			a
+				background-color $color-bg
+				color $dark-text-color
+				
+	.blog
+		.catalog-filter__category
+			&.is-active
+				a
+					background-color $color-bg
+					color $dark-text-color
+			a
+				padding 8px 8px 8px 28px
+				color $basic-white-color
+				&:hover
+					&:before
+						transform translate(0, -50%)
+				&:before
+					vertical-center()
+					left 8px
+					width 12px
+					background-color currentColor
+					
+				&:after
+					display block
+					left 13px
+		
+
+	.contacts-form
+		max-width 100%
+		
+	.contacts-block
+		width 100%
+		margin-bottom 24px
+		&:last-child
+			margin-bottom 0
+			
+		&__title
+			font-size 20px
+			margin-bottom 16px
+			
+	.page-heading__content
+		min-height 300px			
+		
 		
 	.visible-mobile
 		display block
@@ -743,6 +919,11 @@
 		ul
 			li
 				font-size 16px
+				
+	.promo-content__text
+		h1, h2, h3
+			font-size 34px
+			line-height 35px
 				
 	.sect__another-projects
 		padding-top 0
@@ -916,20 +1097,7 @@
 				display block
 		
 			
-	.catalog-filter
-		margin-left -12px
-		margin-right -12px
-		margin-bottom 0
-		&__category
-			padding-left 12px
-			padding-right 12px
-			margin-bottom 16px
-			span
-				font-size 12px
-				&:before
-					top 5px
-				&:after
-					top 0
+	
 					
 
 	// Calcul
@@ -1221,6 +1389,9 @@
 			padding 60px 20px
 			font-size 16px
 			line-height 19px
+			
+	.sect__team-documents
+		padding-bottom 80px
 				
 +max-screen(480px)
 	// Work steps
@@ -1283,6 +1454,12 @@
 	.catalog
 		.project-card__information
 			display none
+			
++max-screen(400px)
+	.catalog-filter__category a
+		font-size 12px
+		padding 4px 8px 4px 28px
+		
 +max-screen(374px)
 	.catalog 
 		.project-card__title

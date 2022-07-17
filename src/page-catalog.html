@@ -21,6 +21,7 @@
 
 	<!-- All libs styles -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+	
 	<!-- Main file with styles -->
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -103,7 +104,7 @@
 						</li>
 
 						<li><a href="page-about.html">О КОМПАНИИ</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="page-contacts.html">Контакты</a></li>
 						<li><a href="page-blog.html">БЛОГ</a></li>
 					</ul>
 				</nav>
@@ -253,14 +254,16 @@
 
 					<div class="catalog">
 						
-						<ul class="catalog-filter row align-horisontal-center">
-							<li><a href="#" class="catalog-filter__category is-active"><span>Все</span></a></li>
-							<li><a href="#" class="catalog-filter__category"><span>Интерьеры</span></a></li>
-							<li><a href="#" class="catalog-filter__category"><span>Строительство</span></a></li>
-							<li><a href="#" class="catalog-filter__category"><span>Крупные объекты</span></a></li>
-							<li><a href="#" class="catalog-filter__category"><span>Готовые проекты</span></a></li>
-							<li><a href="#" class="catalog-filter__category"><span>Коммерческие объекты</span></a></li>
-						</ul>
+						<nav>
+							<ul class="catalog-filter row align-horisontal-center">
+								<li class="catalog-filter__category is-active" ><a href="#">Все</a></li>
+								<li class="catalog-filter__category"><a href="#">Интерьеры</a></li>
+								<li class="catalog-filter__category"><a href="#">Строительство</a></li>
+								<li class="catalog-filter__category"><a href="#">Крупные объекты</a></li>
+								<li class="catalog-filter__category"><a href="#">Готовые проекты</a></li>
+								<li class="catalog-filter__category"><a href="#">Коммерческие объекты</a></li>
+							</ul>
+						</nav>
 
 						<div class="projects-cards row align-horisontal-start">
 							<article class="project-card__wrapper col-w-33">
@@ -467,7 +470,7 @@
 		<div class="consultation-form">
 			<h3 class="consultation-form__title l-spacing">Заполните форму и менеджер перезвонит вам</h3>
 
-			<form>
+			<form class="form">
 
 				<div class="form-groups row align-horisontal-start">
 					<div class="form-group col-w-33">
@@ -481,7 +484,7 @@
 						
 					</div>
 					<div class="form-group col-w-33">
-						<button class="btn btn-wide btn-light l-spacing" type="button">Получить консультацию</button>
+						<button class="btn btn-wide btn-light l-spacing" type="submit">Получить консультацию</button>
 					</div>
 				</div>
 				
@@ -641,7 +644,7 @@
 				<p class="popup__title">Заполните форму</p>
 				<p class="popup__text">Обработка займет не более 10 минут!</p>
 				
-				<form>
+				<form class="form">
 
 					<div class="form-group ">
 						<input type="text" class="form-input-rounded form-input-dark js-required-input" placeholder="Имя*" name="name">
@@ -653,7 +656,7 @@
 					</div>
 
 					<div class="form-group ">
-						<button class="btn btn-wide l-spacing" type="button">Получить консультацию</button>
+						<button class="btn btn-wide l-spacing" type="submit">Получить консультацию</button>
 					</div>
 
 

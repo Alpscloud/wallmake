@@ -13,6 +13,14 @@ $(document).ready(function() {
 	});
 
 
+	$('.js-open-vacancy-form-btn').on('click',function(e) {
+		e.preventDefault();
+		$('.js-popup-vacancy-form').fadeIn(300);
+		$('html').addClass('is-fixed');
+	});
+	
+
+
 	$('.js-close-popup-btn').on('click',function(e) {
 		e.preventDefault();
 		$(this).parents('.js-popup').fadeOut(300);
@@ -31,6 +39,8 @@ $(document).ready(function() {
 
 	});
 	// ========= =========== =========== ===========
+
+
 
 	var headerHeight = $('.header').innerHeight();
 
@@ -302,8 +312,55 @@ $(document).ready(function() {
 		$(this).parents('.chapter-card__wrapper').find('.chapter-card__content').toggleClass('is-active');
 	});
 
+	var fileInputs = $('input[type=file]');
+
+
+	if (fileInputs.length > 0) {
+
+		fileInputs.each(function() {
+
+			$(this).on('change', function(e) {
+				var self = $(this);
+				var fileName = '';
+
+				var filesLength = self[0].files.length;
+				var files = self[0].files;
+
+				if (files && filesLength > 1) {
+					fileName = ( self.attr( 'data-multiple-caption' ) || '' ).replace( '{count}', filesLength );
+				} else {
+					fileName = e.target.value.split( '\\' ).pop();
+				}
+
+				if( fileName ) {	
+					self.parents('.form-file__wrapper').find('.form-file__result').html(fileName);
+				} 
+
+				
+
+
+			});
+		});
+	
+	}
+
+	$('.js-toggle-hidden-input').on('change', function(e) {
+		$(this).parents('form').find('.form-group-toggle').stop().slideToggle(150);
+	});
+
 
 	$("input[type=tel]").inputmask({"mask": "+7 (999) 999-9999","clearIncomplete": false});
+
+
+	if ($('.js-input-date').length > 0) {
+		$('.js-input-date').datepicker({
+			monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+			dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+			minDate: 0,
+			format: 'dd.mm.yyyy',
+			setDate: new Date()
+		});
+	}
 
 	
 
@@ -333,6 +390,31 @@ $(document).ready(function() {
 
 		quizStep.not(":nth-child(1)").hide();
 		quizStep.first().addClass('is-active');
+
+		$('.quiz select, .quiz [type=radio]').on('change', function() {
+			var currentQuizStep = $(this).parents('.js-quiz-step');
+			var nextQuizStep = currentQuizStep.next();
+			var nextStepInd = nextQuizStep.index();
+
+			if (nextQuizStep.length > 0) {
+				quizProgressForward(nextStepInd);
+				currentQuizStep.removeClass('is-active').css("display", "flex").hide();
+				nextQuizStep.addClass('is-active').css("display", "flex").hide().fadeIn();
+			}
+		});
+
+
+		function quizProgressForward(nextQuizStepInd) {
+			$('.quiz-progress-dot').removeClass('is-active');
+			$('.quiz-progress-dot').eq(nextQuizStepInd).addClass('is-active');
+			$('.quiz-progress-counter-current').text(nextQuizStepInd + 1);
+		}
+
+		function quizProgressBack(prevQuizStepInd) {
+			$('.quiz-progress-dot').removeClass('is-active');
+			$('.quiz-progress-dot').eq(prevQuizStepInd).addClass('is-active');
+			$('.quiz-progress-counter-current').text(prevQuizStepInd + 1);
+		}
 
 		quizControls.each(function() {
 			var self = $(this);
@@ -367,20 +449,9 @@ $(document).ready(function() {
 					
 					if (nextQuizStep.length) {
 
-						// if(radios > 0 || inputs.val() || checkboxes > 0) {
-						// 	flag = true;
-						// } else {
-						// 	flag = false;
-						// 	currentQuizStep.addClass('is-error');
-
-						// }
-
-						// if(!flag) {return};
 
 						// Progress
-						$('.quiz-progress-dot').removeClass('is-active');
-						$('.quiz-progress-dot').eq(nextQuizStepInd).addClass('is-active');
-						$('.quiz-progress-counter-current').text(nextQuizStepInd + 1);
+						quizProgressForward(nextQuizStepInd);
 
 						// Steps
 						currentQuizStep.removeClass('is-active').css("display", "flex").hide();
@@ -400,9 +471,7 @@ $(document).ready(function() {
 						currentQuizStep.removeClass('is-error');
 
 						// Progress
-						$('.quiz-progress-dot').removeClass('is-active');
-						$('.quiz-progress-dot').eq(prevQuizStepInd).addClass('is-active');
-						$('.quiz-progress-counter-current').text(prevQuizStepInd + 1);
+						quizProgressBack(prevQuizStepInd);
 
 						// Steps
 						currentQuizStep.removeClass('is-active').css("display", "flex").hide();
@@ -486,6 +555,45 @@ $(document).ready(function() {
 		});
 
 	}
+
+	// ========= Ajax form ===========
+	$('.js-required-input').on('focus',function() {
+		if($(this).hasClass('is-error')) {
+			$(this).removeClass('is-error');
+		}
+	});
+
+	$('.form').submit(function(e) {
+		e.preventDefault();
+
+		var that = $(this);
+			inputs = that.find('.js-required-input'),
+			flag = true;
+
+		// Validate
+		$(inputs).each(function() {
+			if(!$(this).val() || $(this).val() == "") {
+				$(this).addClass('is-error');
+				flag = false;
+			}
+		});
+
+		if(!flag) {return false;}
+
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: that.serialize()
+		}).done(function() {
+			// add active clases
+			setTimeout(function() {
+				// remove active classes
+				that.trigger("reset");
+			}, 2000);
+		});
+
+	});
+	// ========= =========== =========== ===========
 
 	
 

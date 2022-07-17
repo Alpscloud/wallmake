@@ -1,0 +1,170 @@
+<!-- Popup -->
+<div class="popup popup-vacancy js-popup js-popup-vacancy-form popup-wide">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<button class="btn-close js-close-popup-btn" type="button">
+				<svg  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18.5716 1.42857L1.42871 18.5714M1.42871 1.42857L18.5716 18.5714"/>
+				</svg>
+
+			</button>
+			<!-- Popup content-->
+			<div class="popup__content">
+				<p class="sect-title">Анкета соискателя</p>
+				
+				<form class="form" enctype="multipart/form-data">
+
+					<div class="form-groups">
+						<p class="form-groups__title">Общие сведения</p>
+
+						<div class="form-groups__row row align-horisontal-start">
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Фамилия*</p>
+								<input type="text" class="form-input-rectangle js-required-input"  name="surname" >
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Имя*</p>
+								<input type="text" class="form-input-rectangle js-required-input"  name="name" >
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Отчество*</p>
+								<input type="text" class="form-input-rectangle js-required-input"  name="second-name" >
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Дата рождения</p>
+								<div class="form-date__wrapper">
+
+									<input type="text" class="form-input-rectangle js-input-date"  name="second-name" >
+								</div>
+								
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Пол</p>
+								<div class="form-radios row aling-vertical-center align-horisontal-between">
+									<label class="form-radio__label">
+										<input name="sex" type="radio" value="male">
+										<span class="form-radio">Мужской</span>
+									</label>
+									<label class="form-radio__label">
+										<input name="sex" type="radio" value="female">
+										<span class="form-radio">Женский</span>
+									</label>
+								</div>
+							</div>
+
+							<div class="form-group col-w-33 form-group-empty"></div>
+
+							<div class="form-group col-w-100">
+								<p class="form-label">Гражданство</p>
+								<div class="form-radios row row-nowrap align-horisontal-start">
+									<label class="form-radio__label col-w-33">
+										<input name="citizenship" type="radio" value="ru">
+										<span class="form-radio">Российская Федерация</span>
+									</label>
+
+									<label class="form-radio__label col-w-33 form-radio__label-l-gutter">
+										<input name="citizenship" type="radio" value="another">
+										<span class="form-radio">Другое</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-groups">
+						<p class="form-groups__title">Способ связи</p>
+
+						<div class="form-groups__row row align-horisontal-start">
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Телефон*</p>
+								<input type="tel" class="form-input-rectangle js-required-input"  name="phone">
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Телефон (дополнительный)</p>
+								<input type="tel" class="form-input-rectangle"  name="additional-phone">
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">E-mail</p>
+								<input type="email" class="form-input-rectangle"  name="email">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="form-groups">
+						<p class="form-groups__title">Дополнительно</p>
+
+						<div class="form-groups__row row align-horisontal-start">
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Желаемый график работы</p>
+								<div class="form-select__wrapper">
+									<select name="worktime"  class="form-select form-input-rectangle">
+										<option value="Гибкий">Гибкий</option>
+										<option value="Удаленная работа">Удаленная работа</option>
+										<option value="В офисе">В офисе</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group col-w-33">
+								<p class="form-label">Желаемый доход, ₽</p>
+								<input type="text" class="form-input-rectangle"  name="salary">
+							</div>
+
+							<div class="form-group col-w-100 col-w-tablet-100">
+								<label class="form-checkbox__label">
+									<input name="another-vacancies" type="checkbox" class="js-toggle-hidden-input">
+									<span class="form-checkbox">Заинтересуют ли вас другие вакансии нашей компании?</span>
+								</label>
+							</div>
+
+							<div class="form-group col-w-100 col-w-tablet-100 form-group-toggle">
+								<p class="form-label">Перечислите вакансии, которые могли бы вас заинтересовать:</p>
+								<input type="text" class="form-input-rectangle"  name="vacancies">
+							</div>
+
+							<div class="form-group col-w-66 col-w-tablet-100">
+								<p class="form-label">Прикрепить резюме</p>
+								<div class="form-file__wrapper">
+									<label class="form-file">
+										<input type="file" name="fileFF[]" multiple="" data-multiple-caption="Выбрано: {count} файла(ов)">
+
+										<span class="btn">
+											<span>Выбрать файл</span>
+										</span>
+									</label>
+
+									<div class="form-file__information">
+										<p class="form-file__result">Файл не выбран</p>
+										<p class="form-file__types">Формат файла - doc. pdf. Размер не более 5 мб</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="form-group col-w-66 col-w-tablet-100 row row-nowrap form-group__submit align-horisontal-between align-vertical-center">
+								<button class="btn btn-wide l-spacing" type="submit">Отправить анкету</button>
+								<p class="form-notice l-spacing">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup -->
+

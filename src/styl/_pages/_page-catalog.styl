@@ -12,17 +12,7 @@
 		margin-bottom 8px
 		text-align left
 		color $dark-text-color
-		&.is-active
-			span:after
-				opacity 0
-				
-		input
-			display none
-			&:checked
-				+ span:after
-					opacity 0
-		
-		span
+		a
 			display block
 			position relative
 			padding-left 20px
@@ -47,6 +37,10 @@
 				left 5px
 				top 2px
 		
+		&.is-active
+			a:after
+				opacity 0
+	
 
 .projects
 	&-cards

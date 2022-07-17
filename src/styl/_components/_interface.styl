@@ -106,12 +106,14 @@
 			display block
 			width 24px
 			height 24px
+			&:before
+				display none
 			svg
 				svg()
 				fill $basic-black-color
 			&:hover
 				svg
-					fill $dark-text-color
+					fill $gold-color
 	
 
 .subscribe-form
@@ -122,3 +124,34 @@
 		padding-left 16px
 		background url('../img/icons/svg/envelope.svg') left center no-repeat / 12px 12px
 		margin-bottom 40px
+		
+
+.ui-datepicker
+	border 1px solid $border-color
+	border-radius 0
+	
+	.ui-datepicker-header
+		background-color $brown-bg
+		color $basic-white-color
+		font-family $Reg
+		
+	.ui-state-default 
+		&.ui-state-highlight
+			background-color $gold-color
+		&.ui-state-active
+			background-color $dark-text-color
+			border-color $dark-text-color
+			
+	.ui-datepicker-prev,
+	.ui-datepicker-next
+		background-color $basic-white-color
+		border none !important
+		position absolute	
+		vertical-center()
+		&.ui-state-hover,
+		&:hover
+			margin 0
+	.ui-datepicker-prev
+		left 4px !important
+	.ui-datepicker-next
+		right 4px !important

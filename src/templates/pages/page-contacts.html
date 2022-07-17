@@ -1,0 +1,134 @@
+{% include '../parts/head.html' %}
+<body class="page-inner page-with-light-header">
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main">
+
+			<section class="page-heading " >
+				<div class="page-heading__content bg bg-with-overlay" style="background-image: url('img/promo/1.jpg');">
+					<div class="container">
+						<div class="promo-content text-center">
+							<div class="container">
+								<div class="promo-content__text">
+									<h1>Контакты</h1>
+									<p>Готовы создать проект в любой точке России и не только</p>
+								</div>
+							</div>
+							<!-- //container -->
+						</div>
+					</div>
+					<!-- //container -->
+				</div>
+
+				<!-- Breadcrumbs -->
+				<div class="breadcrumbs">
+					<div class="container">
+
+						<nav  aria-label="Breadcrumbs" itemprop="breadcrumb">
+							<ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+								<li  itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="1" itemprop="position">
+									<a href="index.html" rel="home" aria-label="Главная" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">
+											<span>Главная</span>
+										</span>
+									</a>
+								</li>
+
+								<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+									<meta content="2" itemprop="position">
+									<span class="is-active" itemtype="https://schema.org/Thing" itemprop="item">
+										<span itemprop="name">Контакты</span>
+									</span>
+								</li>
+							</ul>
+						</nav>
+
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //Breadcrumbs -->
+				
+			</section>
+
+
+
+			<section class="sect__contacts gutter-top-sm gutter-bottom">
+				<div class="container">
+
+					<div class="contacts row row-nowrap align-horisontal-between">
+
+						<div class="contacts-col row align-horisontal-start row-gutters">
+							<div class="contacts-block">
+								<p class="contacts-block__title">Звоните:</p>
+								<a href="tel:+7  (927) 699 69 98" class="link">+7  (927) 699 69 98</a>
+							</div>
+							<div class="contacts-block">
+								<p class="contacts-block__title">Пишите:</p>
+								<a href="mailto:hi@wallmake.com" class="link">hi@wallmake.com</a>
+							</div>
+							<div class="contacts-block ">
+								<p class="contacts-block__title">Мы в соц. сетях:</p>
+								{% include '../parts/components/socials.html' %}
+							</div>
+						</div>
+
+						<div class="contacts-col contacts-form">
+							<form>
+
+								<div class="form-group ">
+									<input type="text" class="form-input-rounded form-input-dark js-required-input" placeholder="Имя*" name="name">
+								</div>
+
+								<div class="form-group ">
+									<input type="tel" class="form-input-rounded form-input-dark js-required-input" placeholder="Телефон*" name="phone">
+								</div>
+
+								<div class="form-group ">
+									<input type="email" class="form-input-rounded form-input-dark" placeholder="E-mail" name="email">
+								</div>
+
+								<div class="form-group ">
+									<input type="text" class="form-input-rounded form-input-dark js-required-input" placeholder="Сообщение*" name="message">
+								</div>
+
+								<div class="form-group ">
+									<button class="btn btn-wide l-spacing" type="submit">Отправить</button>
+								</div>
+
+
+								<p class="form-notice l-spacing">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.</p>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<!-- //container -->
+			</section>
+
+
+
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>
